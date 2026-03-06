@@ -1,0 +1,829 @@
+data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_escape,notas,texto_original
+2026-01-13,ter,12:32,Samantha,nao_fez,,vaso,levei,,,"Levou no banheiro, não fez xixi"
+2026-01-13,ter,13:12,Samantha,xixi,sim,vaso,,,,Ele fez xixi 13:55
+2026-01-13,ter,14:00,Andreia,xixi,sim,vaso,,,,Fez xixi 14:00 hrs
+2026-01-13,ter,15:00,Andreia,xixi,sim,vaso,,,,Fez xixi 15:00hrs
+2026-01-13,ter,15:40,Andreia,xixi,sim,vaso,sozinho,,,Isaac foi no banheiro sozinho fazer xixi 15:40hrs
+2026-01-13,ter,16:30,Andreia,coco,sim,vaso,,,,16:30hr fez cocô
+2026-01-13,ter,18:15,Samantha,xixi,sim,vaso,,,,18:15 fez xixi no vaso
+2026-01-13,ter,19:17,Samantha,xixi,sim,vaso,,,,19:17 xixi no vaso
+2026-01-13,ter,20:42,Tony,xixi,sim,vaso,,,,xixi no vaso
+2026-01-13,ter,21:41,Tony,xixi,sim,vaso,,,,21:41 xixi no vaso
+2026-01-14,qua,09:11,Samantha,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-14,qua,10:11,Andreia,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-14,qua,11:14,Samantha,xixi,sim,vaso,,,,Xixi no vaso 11:10
+2026-01-14,qua,11:40,Samantha,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-14,qua,12:17,Samantha,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-14,qua,13:35,Andreia,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-14,qua,14:18,Samantha,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-14,qua,14:45,Samantha,xixi,sim,vaso,,,,Fez xixi no vaso as 14:45 e as 15:45
+2026-01-14,qua,17:42,Samantha,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-14,qua,19:31,Samantha,xixi,escape,roupa,,,,Escape na cozinha
+2026-01-14,qua,20:48,Tony,xixi+coco,escape,roupa,,,,cagou e mijou na cueca
+2026-01-14,qua,22:10,Tony,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-15,qui,11:29,Samantha,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-15,qui,12:26,Samantha,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-15,qui,13:12,Samantha,coco,sim,vaso,,,,Fez cocô no vaso
+2026-01-15,qui,14:23,Andreia,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-15,qui,15:15,Andreia,xixi,escape,sofa,,no sofa,,15:15hr escape no sofa da sala
+2026-01-15,qui,16:40,Andreia,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-15,qui,18:21,Tony,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-15,qui,18:36,Tony,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho.
+2026-01-15,qui,21:00,Tony,xixi,sim,vaso,,,,21:00 xixi no vaso
+2026-01-16,sex,09:38,Samantha,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-16,sex,10:03,Samantha,xixi,sim,vaso,,,,Xixi no vaso as 10:03
+2026-01-16,sex,10:50,Samantha,xixi,sim,vaso,,,,Fez xixi no vaso as 10:50
+2026-01-16,sex,11:34,Samantha,coco,sim,vaso,pediu,,,"Fez cocô no vaso, não pediu, percebi e levei ele"
+2026-01-16,sex,12:28,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-16,sex,13:03,Samantha,xixi,escape,roupa,levei,,,"Escape de xixi na cueca, terminou no banheiro, foi conduzido"
+2026-01-16,sex,13:36,Andreia,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-16,sex,14:21,Andreia,coco,escape,roupa,sozinho,,foi ao banheiro depois,"Foi no banheiro sozinho, mas ja tinha feito cocô (pastoso)  na cueca ."
+2026-01-16,sex,15:11,Andreia,xixi,escape,roupa,sozinho,,foi ao banheiro depois,"Escape de xixi, depois ele foi no banheiro sozinho"
+2026-01-16,sex,16:20,Andreia,xixi,sim,vaso,,,,16:20  xixi no vaso
+2026-01-16,sex,17:09,Samantha,xixi,escape,laboratorio,,,,Escape de xixi no laboratório
+2026-01-16,sex,18:06,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-16,sex,19:05,Tony,xixi,sim,vaso,levei,,,xixi no vaso. Levei
+2026-01-16,sex,21:09,Tony,xixi,sim,vaso,levei,,,"xixi no vaso, levei"
+2026-01-16,sex,21:55,Tony,xixi,sim,vaso,levei,,,xixi no vaso. Levei
+2026-01-16,sex,22:00,Tony,coco,sim,vaso,sozinho,,,Cocô no vaso. Foi sozinho 🤩
+2026-01-16,sex,23:14,Tony,xixi,escape,roupa,,,,Escape. Xixi na cueca
+2026-01-17,sab,08:13,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-17,sab,09:42,Tony,xixi,escape,roupa,,,,Escape. Minou na cueca
+2026-01-17,sab,10:33,Tony,xixi,escape,sofa,,no sofa,,Escape. Mijou no sofa.
+2026-01-17,sab,11:36,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-17,sab,12:43,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro 12:30 e ele não quis
+2026-01-17,sab,13:04,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-17,sab,13:50,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-17,sab,14:20,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-17,sab,14:55,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-17,sab,16:05,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro mas não fez xixi
+2026-01-17,sab,17:57,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-17,sab,18:34,Tony,xixi,escape,roupa,,,foi ao banheiro depois,Escape. Foi no banheiro mijar mas ja tava mijado
+2026-01-17,sab,19:37,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-17,sab,20:50,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-17,sab,21:03,Tony,coco,escape,roupa,,,,Escape. Coco na cueca. 💩🥲
+2026-01-17,sab,21:57,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-18,dom,09:38,Tony,nao_fez,,vaso,levei,,,Levei no banheiro mas nao fez xixi
+2026-01-18,dom,10:37,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-18,dom,11:46,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso 11:40, levei"
+2026-01-18,dom,12:57,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-18,dom,13:59,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-18,dom,14:54,Tony,xixi,sim,vaso,levei,,,Dixi no vaso. Levei
+2026-01-18,dom,15:45,Tony,nao_fez,,vaso,levei,,,15:45 Levei no banheiro. Nao fez xixi
+2026-01-18,dom,16:23,Samantha,xixi,escape,roupa,,,,Escape xixi na roupa dentro do banheiro
+2026-01-18,dom,18:22,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi 17:40
+2026-01-18,dom,18:38,Samantha,coco,sim,vaso,sozinho,,,Fez cocô no vaso e foi sozinho
+2026-01-18,dom,20:12,Samantha,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-18,dom,21:15,Tony,xixi,sim,vaso,levei,,,21:15 Xixi no vaso. Levei
+2026-01-18,dom,22:20,Samantha,xixi,sim,vaso,levei,,,"22:20 xixi no vaso, levei"
+2026-01-19,seg,11:30,Andreia,nao_fez,,vaso,levei,,,11:30hr levei no banheiro nao fez xixi
+2026-01-19,seg,11:55,Andreia,xixi,sim,vaso,levei,,,"11:55 hr xixi no vaso, levei"
+2026-01-19,seg,13:00,Andreia,xixi,sim,vaso,levei,,,"13:00hr xixi no vaso, levei"
+2026-01-19,seg,14:00,Andreia,xixi,sim,vaso,levei,,,"14:00hrxixi no vaso, levei"
+2026-01-19,seg,15:00,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-19,seg,16:25,Samantha,xixi,sim,vaso,,,,@⁨Andreia Takuva⁩ ele fez xixi aquela hora?
+2026-01-19,seg,16:00,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso as 16:00, foi levado"
+2026-01-19,seg,17:15,Samantha,xixi,escape,roupa,levei,,,Escape pequeno de xixi levei no banheiro e não fez as 17:15
+2026-01-19,seg,18:01,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-19,seg,19:09,Tony,xixi,sim,vaso,levei,,pouca quantidade,Levei no banheiro. Mijou so um pinguinho
+2026-01-19,seg,19:40,Tony,xixi,sim,banho,,,,19:40. Xixi no banho
+2026-01-19,seg,20:46,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-19,seg,21:07,Tony,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho mas a curca tava meio umida
+2026-01-20,ter,07:36,Samantha,xixi,sim,vaso,sozinho,,,"Xixi e cocó no vaso, foi sozinho"
+2026-01-20,ter,08:40,Dyani AT,xixi,sim,vaso,levei,,,"8:40 Xixi, levei"
+2026-01-20,ter,09:54,Dyani AT,xixi,sim,vaso,levei,,,"Xixi, levei"
+2026-01-20,ter,10:57,Dyani AT,xixi,sim,vaso,levei,,,"Xixi, levei"
+2026-01-20,ter,11:20,Dyani AT,xixi,escape,roupa,pediu,,,Pediu mas já tinha feito
+2026-01-20,ter,11:26,Dyani AT,xixi,sim,vaso,pediu,,,Xixi pediu 11:26
+2026-01-20,ter,12:32,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, foi levado"
+2026-01-20,ter,13:23,Samantha,nao_fez,,vaso,levei,,,Foi levado no banheiro mas não fez xixi
+2026-01-20,ter,14:00,Samantha,xixi,escape,roupa,,,,Xixi na roupa
+2026-01-20,ter,14:36,Samantha,coco,escape,roupa,,deitado,,Fez cocô na roupa deitado
+2026-01-20,ter,15:38,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-20,ter,16:44,Samantha,xixi,sim,vaso,levei,,,"Foi no banheiro mas não fiz xixi, levei"
+2026-01-20,ter,17:41,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-20,ter,18:40,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-20,ter,19:43,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não quis fazer xixi
+2026-01-20,ter,20:08,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-20,ter,21:08,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-20,ter,22:14,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-21,qua,10:34,Andreia,xixi,sim,vaso,sozinho,,,"Xixi no vaso, foi sozinho"
+2026-01-21,qua,11:30,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, foi levado"
+2026-01-21,qua,12:30,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro as 12:30 e não fez xixi
+2026-01-21,qua,13:16,Samantha,nao_fez,,vaso,levei,,,Foi no banheiro sozinho fez xixi e tentou fazer cocô mas não conseguiu
+2026-01-21,qua,14:22,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-21,qua,14:45,Samantha,xixi+coco,sim,vaso,pediu,,,"Foi no banheiro sozinho, falou cocô sentou mas fez xixi"
+2026-01-21,qua,15:02,Andreia,xixi,escape,cama,,na cama,,Escape de xixi na cama
+2026-01-21,qua,15:57,Andreia,xixi,escape,banco,,,,😱escape no banco do quarto dele
+2026-01-21,qua,16:41,Andreia,xixi,sim,vaso,levei,,,"Xixi no vaso, Thomas  levou"
+2026-01-21,qua,17:38,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-21,qua,18:50,Tony,xixi,escape,roupa,,,,Escape. Xixi na cueca
+2026-01-21,qua,19:50,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-21,qua,20:20,Samantha,xixi,sim,banho,,,,Fez xixi tomando banho as 20:20
+2026-01-21,qua,21:33,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-22,qui,14:10,Andreia,xixi+coco,sim,vaso,sozinho,,,Xixi e coco no vasofoi sozinho
+2026-01-22,qui,15:13,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-22,qui,16:18,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei 3"
+2026-01-22,qui,17:21,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro mas não fez xixi
+2026-01-22,qui,17:58,Samantha,xixi,escape,roupa,sozinho,,,Fez xixi na roupa e foi no banheiro sozinho
+2026-01-22,qui,19:01,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, foi levado"
+2026-01-22,qui,20:34,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-22,qui,21:40,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro mas não fez xixi
+2026-01-23,sex,08:05,Andreia,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-23,sex,09:09,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-23,sex,10:00,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-23,sex,10:14,Samantha,xixi,escape,roupa,sozinho,terapia,foi ao banheiro depois,"Escape na roupa aqui na Fono, foi no banheiro sozinho mas já tinha feito na roupa"
+2026-01-23,sex,10:16,Samantha,xixi,sim,vaso,,,deu descarga,Veio de novo no banheiro fez um pingo de xixi e deu descarga
+2026-01-23,sex,10:36,Samantha,xixi,sim,vaso,sozinho,,pouca quantidade; deu descarga,Foi de novo no banheiro sozinho e fez bem pouco xixi e deu descarga
+2026-01-23,sex,11:13,Samantha,xixi,sim,vaso,levei,,,Xixi no vaso levei
+2026-01-23,sex,12:54,Andreia,xixi,sim,vaso,levei,,,Xixino vaso. Levei
+2026-01-23,sex,13:54,Tia Angelica,nao_fez,,vaso,levei,,,Levei no banheiro: não fez xixi
+2026-01-23,sex,16:58,Tia Angelica,xixi,sim,vaso,,,,Fez xixi no banheiro
+2026-01-23,sex,17:55,Tia Angelica,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-23,sex,19:04,Tia Angelica,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-23,sex,19:59,Tia Angelica,xixi,sim,vaso,levei,,,Xixi no vaso levei
+2026-01-23,sex,21:02,Tia Angelica,xixi,escape,chao,,,,Escapou o xixi no banheiro ele fez no chão
+2026-01-23,sex,21:56,Tia Angelica,xixi,escape,roupa,,,,Xixi na cueca
+2026-01-23,sex,21:58,Tia Angelica,xixi,escape,roupa,,,,Xixi na calça
+2026-01-23,sex,22:11,Tia Angelica,xixi,escape,roupa,,,,Xixi na calça
+2026-01-23,sex,22:40,Tony,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-01-24,sab,08:32,Tia Angelica,xixi,sim,vaso,levei,,,"Xixi no vaso,levei"
+2026-01-24,sab,09:24,Tia Angelica,xixi,escape,roupa,,,,Fez xixi na roupa
+2026-01-24,sab,10:23,Tia Angelica,xixi,sim,vaso,levei,,,"Xixi no vaso,levei"
+2026-01-24,sab,11:11,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, foi levado as 11:11"
+2026-01-24,sab,11:47,Samantha,xixi,sim,vaso,sozinho,,,Foi sozinho agora e fez xixi no vaso
+2026-01-24,sab,11:51,Tony,xixi,sim,vaso,sozinho,,pouca quantidade,Xixi no vaso. So uns pinguinho. Foi sozinho
+2026-01-24,sab,12:00,Tony,xixi,escape,roupa,,,,Escape. Percebi agora que a cueca tava um pouco mijada
+2026-01-24,sab,12:48,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-24,sab,13:56,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-24,sab,14:49,Tony,coco,sim,vaso,sozinho,,,Cocô no vaso. Foi sozinho 😎
+2026-01-24,sab,15:30,Tony,xixi,sim,vaso,levei,,,15:30 xixi no vaso. Levei
+2026-01-24,sab,16:56,Tony,xixi,sim,vaso,levei,,,Agora. Xixi no vaso. Levei
+2026-01-24,sab,18:05,Tony,xixi,sim,vaso,sozinho,,pouca quantidade,Xixi no vaso. Foi sozinho mas tinha uns pinguinho na cueca
+2026-01-24,sab,18:54,Samantha,xixi,escape,roupa,sozinho,,foi ao banheiro depois,Fez xixi na roupa e depois foi no banheiro terminar sozinho
+2026-01-24,sab,19:02,Tony,xixi,escape,roupa,sozinho,,foi ao banheiro depois,"Fez xixi na roupa e depois foi no banheiro terminar sozinho
+(Sim de novo)"
+2026-01-24,sab,19:33,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-24,sab,20:27,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-24,sab,20:59,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-24,sab,22:04,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-25,dom,09:07,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-25,dom,10:07,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, foi levado as 10:07"
+2026-01-25,dom,11:09,Samantha,xixi,escape,roupa,sozinho,,foi ao banheiro depois,"Xixi na roupa, foi no banheiro sozinho mas não tinha quase nada para fazer"
+2026-01-25,dom,11:17,Samantha,xixi,escape,roupa,sozinho,,pouca quantidade,"Xixi na roupa, foi no banheiro sozinho e fez mais um pouquinho"
+2026-01-25,dom,12:13,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-25,dom,13:21,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-25,dom,14:00,Samantha,xixi,sim,vaso,pediu,,,"Xixi no vaso, percebi e perguntei, falou banheiro"
+2026-01-25,dom,15:01,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-25,dom,15:51,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-25,dom,16:15,Samantha,coco,sim,vaso,sozinho,,,Foi no banheiro sozinho fazer cocô as 16:15
+2026-01-25,dom,17:27,Samantha,xixi,sim,vaso,levei,,,"Xixi no banheiro, levei"
+2026-01-25,dom,18:28,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-25,dom,19:59,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-25,dom,20:17,Tony,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-01-25,dom,20:17,Tony,xixi,sim,vaso,,,pouca quantidade,(So uns pinguinho)
+2026-01-25,dom,21:07,Tony,xixi,escape,roupa,,,,Escape. Xixi na calça
+2026-01-25,dom,22:09,Tony,xixi,escape,sofa,,no sofa,,Escape. Xixi no sofá
+2026-01-26,seg,08:27,Andreia,nao_fez,,vaso,levei,,,"Levei no banheiro, NAO quis fazer xixi"
+2026-01-26,seg,08:51,Andreia,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-01-26,seg,10:29,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso as 10, levei"
+2026-01-26,seg,10:50,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso as 10:50, levei"
+2026-01-26,seg,12:01,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro mas não fez xixi
+2026-01-26,seg,12:56,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-26,seg,13:43,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-26,seg,15:10,Andreia,xixi,sim,vaso,levei,,,15:10hr Xixi no vaso. Levei
+2026-01-26,seg,16:13,Andreia,nao_fez,,vaso,levei,,,"Levei no banheiro, nao fez xixi"
+2026-01-26,seg,17:20,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Leveu
+2026-01-26,seg,18:15,Tony,xixi,sim,vaso,levei,,,18:15. Xixi no vaso. Levei
+2026-01-26,seg,18:27,Tony,xixi,escape,roupa,,,,Agora. Escape. Xixi na cueca
+2026-01-26,seg,18:50,Tony,xixi,escape,roupa,,,,18:50. Escape. Mijou na cueca
+2026-01-26,seg,20:54,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-26,seg,21:59,Tony,coco,sim,vaso,sozinho,,,Coco no vaso. Foi sozinho 😎
+2026-01-27,ter,07:36,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro mas não fez xixi
+2026-01-27,ter,08:36,Thomas,nao_fez,,vaso,levei,,,08:36 levei e não fez xixi
+2026-01-27,ter,09:36,Thomas,xixi,sim,vaso,levei,,pouca quantidade,09:36 levei e fez um pouquinho
+2026-01-27,ter,10:36,Tia Angelica,xixi,sim,vaso,levei,,,10:36 levei e fez xixi no vaso
+2026-01-27,ter,18:50,Gabriel Psico,xixi,escape,roupa,,correndo,,"Registro:
+Sempre que houver escape sinalizar o que estava acontecendo, exemplo:
+18:50. Escape. Mijou na cueca - estava correndo entre a sala e o corredor"
+2026-01-27,ter,13:40,Gabriel Psico,xixi,sim,vaso,sozinho,,,"** Exemplo sobre dar a oportunidade de ir ao banheiro sozinho: 
+O adulto levou Isaac 13h, as 13h40 perguntar, sinalizar ou indicar para ele ao banheiro.
+-Caso ele vá, seguir normalmente com os horários, levar novamente no próximo horário (15h) dando oportunidade (14:40)
+-Caso não vá, levar as 14h como o planejado"
+2026-01-27,ter,11:33,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-27,ter,12:22,Samantha,xixi,sim,vaso,sozinho,,,"Xixi no vaso, foi sozinho"
+2026-01-27,ter,13:30,Samantha,xixi,sim,vaso,levei,,,"Fez xixi no vaso, foi levado as 13:30"
+2026-01-27,ter,14:34,Tia Angelica,xixi,sim,vaso,levei,,,"Fez xixi no vaso ,ele levei 14:30"
+2026-01-27,ter,15:34,Tia Angelica,xixi,sim,vaso,,,,Fez xixi no vaso 15:30
+2026-01-27,ter,16:30,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no vaso às 16:30 levei
+2026-01-27,ter,17:30,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no vaso às 17:30 levei
+2026-01-27,ter,18:35,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no vaso às 18:35 levei
+2026-01-27,ter,19:27,Samantha,nao_fez,,vaso,levei,,,Levei não fez xixi
+2026-01-27,ter,20:02,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-28,qua,08:30,Dyani AT,nao_fez,,vaso,levei,,,"8:30 Levei ao banheiro, não fez xixi"
+2026-01-28,qua,09:00,Dyani AT,nao_fez,,vaso,levei,,,"9:00 Levei ao banheiro, não fez xixi novamente"
+2026-01-28,qua,09:16,Dyani AT,xixi,sim,vaso,levei,,,"9:16 Levei, fez xixi"
+2026-01-28,qua,10:41,Dyani AT,xixi,sim,vaso,levei,,,"Xixi, 10:25 levei"
+2026-01-28,qua,10:30,Samantha,xixi,sim,vaso,levei,,pouca quantidade,Levei no banheiro as 10:30 mas não fez quase nada
+2026-01-28,qua,12:13,Samantha,xixi,escape,roupa,sozinho,na rede/balancando,,"Escape de xixi,  foi no banheiro sozinho , estava na rede"
+2026-01-28,qua,12:47,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-28,qua,13:54,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-28,qua,14:55,Andreia,nao_fez,,vaso,levei,,,"Levei no banheiro, NAO quis fazer xixi"
+2026-01-28,qua,15:22,Andreia,xixi,sim,vaso,,,,Xixi no vaso. Foi dozinho
+2026-01-28,qua,16:38,Andreia,nao_fez,,vaso,levei,,,Nao quis fazer xixi. Levei
+2026-01-28,qua,16:56,Andreia,xixi,escape,roupa,sozinho,,foi ao banheiro depois,"Escape no banheiro, foi sozinho,  mas ja tinha feito na cueca"
+2026-01-28,qua,17:10,Andreia,xixi,escape,roupa,,correndo,,"Escape na cueca, estava correndo  no quintal, ae tirou toda a roupa."
+2026-01-28,qua,19:17,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-28,qua,20:21,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-28,qua,21:38,Tony,xixi,sim,vaso,levei,,,xixi no vaso. Levei
+2026-01-29,qui,06:08,Tony,xixi,sim,vaso,sozinho,,pouca quantidade,Acordou 5h. Ja foi no banheiro sozinho imas 3x. Coloca o peru pra fora e sai so uns pinguinho.
+2026-01-29,qui,06:13,Tony,xixi,sim,vaso,,,,"6:13. Foi de novo fingir que ia mijar. Tirou a roupa ficou pelado (tava de fralda)
+Samantha colocou cueca"
+2026-01-29,qui,07:28,Samantha,nao_fez,,vaso,levei,,,"Tentei levar no banheiro, não quis ir"
+2026-01-29,qui,08:20,Tony,nao_fez,,vaso,levei,,,8:20 tentei levar no banheiro. Nao quis ir
+2026-01-29,qui,08:40,Tony,nao_fez,,vaso,levei,,,Agora. Levei e não quis ir
+2026-01-29,qui,08:43,Samantha,xixi,sim,vaso,,,,"Estamos indo agora para São Paulo e vamos gastar aproximadamente 2 horas e não vamos parar, vamos ver se ele fez xixi"
+2026-01-29,qui,10:42,Samantha,xixi,escape,carro,,,,Fez xixi no carro e não avisou
+2026-01-29,qui,10:59,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-01-29,qui,11:15,Samantha,xixi,escape,cadeira,,sentado,,"Fez xixi na roupa, estava cadeira esperando"
+2026-01-29,qui,12:31,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-01-29,qui,12:57,Samantha,coco,sim,vaso,pediu,,,"Cocô no vaso, levei. Percebi que estava com vontade perguntei o que ele queria fazer e respondeu cocô"
+2026-01-29,qui,13:50,Tony,xixi,escape,roupa,levei,,,Escape. Levei no banheiro e percebi a cueca mijada
+2026-01-29,qui,15:02,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-29,qui,15:20,Tony,xixi,sim,vaso,pediu,,,xixi no vaso. Pediu
+2026-01-29,qui,15:38,Tony,xixi,sim,vaso,pediu,,,xixi no vaso. Pediu
+2026-01-29,qui,18:10,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-29,qui,20:27,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-30,sex,09:12,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro as 9 e não quis fazer
+2026-01-30,sex,09:24,Andreia,xixi,sim,vaso,sozinho,,pouca quantidade,Foi no banheiro sozinho e fez so uns pinguinhos
+2026-01-30,sex,09:29,Andreia,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-01-30,sex,10:35,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro mas não fez xixi
+2026-01-30,sex,10:55,Samantha,xixi,sim,vaso,mandei,,,Falei para ir no banheiro e ele foi e fez xixi
+2026-01-30,sex,11:21,Samantha,xixi,sim,vaso,pediu,,pouca quantidade,"Abriu a porta do banheiro, perguntei o que ele queria e falou xixi, fez uns pingos"
+2026-01-30,sex,11:23,Samantha,xixi,sim,vaso,pediu,,,Falou xixi e foi no banheiro fez um pouco de xixi
+2026-01-30,sex,11:27,Samantha,xixi,sim,vaso,pediu,,,"Pediu xixi de novo, mas acho que ele está querendo fugir da demanda da Fisio porque não parece engajado"
+2026-01-30,sex,11:34,Samantha,xixi,sim,vaso,,,,Abriu a porta do banheiro de novo e fez um pouco de xixi
+2026-01-30,sex,11:41,Samantha,xixi,sim,vaso,pediu,,,Pediu pra fazer xixi e foi de novo 🙄
+2026-01-30,sex,12:40,Tia Angelica,nao_fez,,vaso,levei,,,Não fez xixi 12:40
+2026-01-30,sex,13:12,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-30,sex,13:47,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-30,sex,14:49,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-30,sex,14:49,Vanessa AT,xixi,sim,vaso,,,pouca quantidade,Ele já chegou com uns pingos na  cueca. Precisa trocar?
+2026-01-30,sex,15:35,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-30,sex,16:28,Vanessa AT,xixi,escape,chao,,sentado,,Escape na roupa. Sala de aula sentado no chão
+2026-01-30,sex,16:51,Vanessa AT,xixi,escape,cadeira,,sentado,,Escape na roupa. Estava sentado na cadeira
+2026-01-30,sex,17:15,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-01-30,sex,17:24,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi no vaso. Independente
+2026-01-30,sex,18:30,Tia Angelica,nao_fez,,vaso,levei,,,Não quer fazer xixi
+2026-01-30,sex,18:43,Tia Angelica,xixi,sim,vaso,sozinho,,,Foi sozinho no banheiro e fez xixi
+2026-01-30,sex,19:46,Tia Angelica,nao_fez,,vaso,levei,,,Não fez xixi
+2026-01-30,sex,20:20,Tia Angelica,xixi,sim,vaso,sozinho,,,Foi sozinho fez xixi no vaso
+2026-01-30,sex,21:24,Tia Angelica,xixi,sim,banho,levei,,,Levei no banho fez xixi
+2026-01-31,sab,08:00,Tia Angelica,nao_fez,,vaso,levei,,,Não fez xixi
+2026-01-31,sab,08:33,Tia Angelica,xixi,sim,vaso,,,,Xixi no vaso
+2026-01-31,sab,09:47,Tia Angelica,xixi,sim,vaso,levei,,,Xixi no vaso 9;30 levei
+2026-01-31,sab,10:26,Tia Angelica,xixi+coco,sim,vaso,sozinho,,,"Foi sozinho no banheiro, fez xixi e cocô"
+2026-01-31,sab,10:56,Tia Angelica,xixi,sim,vaso,levei,,,"Fez xixi no vaso, levei no banheiro"
+2026-01-31,sab,12:03,Tony,xixi,escape,roupa,sozinho,,foi ao banheiro depois,"Escape. foi sozinho no banheiro, mas já estava mijado"
+2026-01-31,sab,12:15,Tony,xixi,sim,vaso,sozinho,,,12:15. xixi no vaso. foi sozinho.
+2026-01-31,sab,13:26,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no vaso levei
+2026-01-31,sab,13:32,Tia Angelica,xixi,sim,vaso,sozinho,,,Fez xixi no vaso foi sozinho
+2026-01-31,sab,14:30,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no vaso levei
+2026-01-31,sab,15:36,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no vaso levei
+2026-01-31,sab,16:31,Tia Angelica,nao_fez,,vaso,levei,,,Não fez xixi
+2026-01-31,sab,17:05,Tony,xixi,sim,vaso,mandei,,,Xixi no vaso. Falei pra ele ir e ele foi
+2026-01-31,sab,18:00,Tony,xixi,sim,vaso,sozinho,,,Zixi no vaso. Foi sozinho
+2026-01-31,sab,18:04,Tony,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho. De novo
+2026-01-31,sab,18:12,Tony,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-01-31,sab,18:22,Tony,xixi,sim,vaso,,,pouca quantidade,Foi de novo. Só os pinguinho
+2026-01-31,sab,20:31,Thomas,xixi,sim,vaso,levei,,,Levei no banheiro fez xixi
+2026-01-31,sab,21:12,Thomas,xixi,sim,vaso,levei,,,Levei no banheiro fez xixi
+2026-01-31,sab,21:13,Tony,xixi,sim,vaso,levei,,,Levei no banheiro fez xixi
+2026-01-31,sab,21:26,Tony,xixi+coco,escape,roupa,sozinho,,foi ao banheiro depois,Escape 💩. Foi sozinho mas ja tinha cocô na cueca. Terminou no caso
+2026-02-01,dom,10:09,Tia Angelica,nao_fez,,vaso,levei,,,Não fez xixi
+2026-02-01,dom,10:56,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no vaso levei
+2026-02-01,dom,11:55,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no vaso levei
+2026-02-01,dom,12:35,Tia Angelica,coco,escape,roupa,,,,Fez cocô na cueca
+2026-02-01,dom,13:29,Tony,nao_fez,,vaso,levei,,,Levei no banheiro. Não fez nada
+2026-02-01,dom,14:03,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-02-01,dom,15:09,Tony,nao_fez,,vaso,levei,,,Mandei ir no banheiro. Foi mas nao fez nada.
+2026-02-01,dom,15:21,Tia Angelica,xixi,sim,vaso,sozinho,,,Foi sozinho no banheiro fez xixi
+2026-02-01,dom,15:50,Tia Angelica,xixi,sim,vaso,sozinho,,,Foi sozinho ao banheiro e fez xixi no vaso
+2026-02-01,dom,16:52,Tia Angelica,nao_fez,,vaso,levei,,,Foi no banheiro e não fez xixi
+2026-02-01,dom,17:43,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro não fez xixi
+2026-02-01,dom,18:26,Tia Angelica,xixi,escape,roupa,,,,Fez xixi na cueca
+2026-02-01,dom,18:40,Tia Angelica,xixi,escape,roupa,levei,brincando,,Estava brincando e levei no banheiro e não deu tempo fez na cueca
+2026-02-01,dom,19:19,Tia Angelica,xixi,sim,vaso,sozinho,,,Foi sozinho no banheiro e fez xixi no vaso
+2026-02-01,dom,20:04,Tia Angelica,xixi,escape,roupa,,correndo,,Ele estava tomando suco e correndo e foi no banheiro e fez xixi na cueca
+2026-02-01,dom,20:30,Tia Angelica,xixi,sim,vaso,sozinho,,,Foi ao banheiro sozinho e fez xixi no vaso
+2026-02-01,dom,21:22,Tia Angelica,xixi,escape,roupa,,sentado,foi ao banheiro depois,"Estava sentado ,depois foi no banheiro mas já tinha feito na cueca"
+2026-02-02,seg,08:35,Tia Angelica,nao_fez,,vaso,levei,,,Foi no banheiro e não fez xixi eu levei
+2026-02-02,seg,09:08,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no vaso eu levei
+2026-02-02,seg,10:01,Samantha,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-02-02,seg,10:25,Samantha,xixi,escape,roupa,,,,Escape de xixi durante o atendimento da Lígia
+2026-02-02,seg,10:46,Samantha,xixi,sim,vaso,pediu,,,Fez xixi no vaso e pediu
+2026-02-02,seg,11:44,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro fez xixi no vaso
+2026-02-02,seg,12:45,Samantha,xixi,sim,vaso,levei,,,"Levei no banheiro, xixi no vaso"
+2026-02-02,seg,13:33,Samantha,xixi,escape,carro,sozinho,,foi ao banheiro depois; pouca quantidade,"Escape de xixi, estava no carro, foi no banheiro sozinho quando chegou, fez uns pingos mas já tinha feito na roupa"
+2026-02-02,seg,13:59,Vanessa AT,xixi,sim,vaso,sozinho,,,Chegou e foi ao banheiro.  Xixi independente
+2026-02-02,seg,14:33,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi independente.
+2026-02-02,seg,14:43,Vanessa AT,coco,sim,vaso,,,,Cocô levantou e foi ao banheiro
+2026-02-02,seg,15:03,Vanessa AT,xixi,sim,vaso,mandei,,,Xixi ofertei. Antes do lanche
+2026-02-02,seg,15:35,Vanessa AT,xixi,sim,vaso,mandei,,,"Xixi no vaso, ofertei antes do parque"
+2026-02-02,seg,16:31,Vanessa AT,xixi,sim,vaso,levei,,,"Xixi no vaso, levei"
+2026-02-02,seg,17:15,Vanessa AT,xixi,escape,roupa,,na biblioteca,,Escape xixi. Estávamos na biblioteca
+2026-02-02,seg,17:31,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi no vaso independente.
+2026-02-02,seg,17:47,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi no vaso independente
+2026-02-02,seg,19:49,Tony,xixi,sim,vaso,sozinho,,,xixi no vaso. foi sozinho
+2026-02-02,seg,20:46,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-02,seg,21:52,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-03,ter,09:39,Dyani AT,xixi,sim,vaso,levei,,,"Xixi, levei 8:45"
+2026-02-03,ter,09:39,Dyani AT,xixi,sim,vaso,levei,,,"Xixi, levei 9:40"
+2026-02-03,ter,10:18,Dyani AT,xixi,sim,vaso,sozinho,,,"Xixi, sozinho 10:18"
+2026-02-03,ter,11:15,Dyani AT,xixi,sim,vaso,sozinho,,,"Xixi, sozinho 11:13"
+2026-02-03,ter,11:15,Dyani AT,xixi,escape,roupa,,,pouca quantidade,Escape - um pouquinho na cueca
+2026-02-03,ter,11:39,Dyani AT,xixi,sim,vaso,sozinho,,,"Xixi, sozinho 11:38"
+2026-02-03,ter,11:40,Dyani AT,xixi,escape,roupa,,,pouca quantidade,Escape - um pouquinho na cueca
+2026-02-03,ter,12:03,Dyani AT,xixi,sim,vaso,sozinho,,,"Xixi Sozinho, 12:03"
+2026-02-03,ter,12:13,Dyani AT,xixi,sim,vaso,sozinho,,,"Xixi Sozinho, 12:13"
+2026-02-03,ter,13:42,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-03,ter,14:44,Samantha,xixi,sim,vaso,levei,,,Xixi no vaso levei
+2026-02-03,ter,15:06,Samantha,xixi,sim,vaso,levei,,pouca quantidade,Pediu pra fazer xixi e não fez quase nada
+2026-02-03,ter,15:24,Samantha,xixi,escape,cama,pediu,na cama,,"Pediu para fazer xixi mas já tinha feito um pouco na roupa, estava na cama"
+2026-02-03,ter,16:47,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro mas não fez xixi
+2026-02-03,ter,19:49,Tony,xixi,escape,sofa,,dormindo,,Escape. Acordou mijado no sofa. Tava dormindo desde ~17:30
+2026-02-04,qua,08:52,Dyani AT,xixi,sim,vaso,levei,,,Xixi - Levei - 8:35
+2026-02-04,qua,09:44,Dyani AT,xixi,sim,vaso,levei,,,Xixi - Levei - 9:33
+2026-02-04,qua,11:26,Dyani AT,xixi,sim,vaso,levei,,,Xixi - levei - 10:20
+2026-02-04,qua,11:26,Dyani AT,xixi,sim,vaso,levei,,,Xixi - levei - 10:55 chegando na TO
+2026-02-04,qua,11:28,Dyani AT,xixi,sim,vaso,levei,,,Xixi - levei - 11:28
+2026-02-04,qua,12:53,Andreia,xixi,sim,vaso,sozinho,,,Xixi foi sozinho
+2026-02-04,qua,13:02,Andreia,coco,sim,vaso,sozinho,,,coco no vaso. Foi sozinho
+2026-02-04,qua,13:52,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levek
+2026-02-04,qua,14:20,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi no vaso. Sozinho 14h20
+2026-02-04,qua,16:01,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso.  Levei
+2026-02-04,qua,16:47,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi no vaso. Abriu a porta e foi
+2026-02-04,qua,17:18,Vanessa AT,xixi,escape,roupa,,na escola,,Escape xixi. Sala de aula. Foi até o banheiro mas fez na cueca
+2026-02-04,qua,17:44,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-04,qua,19:33,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro não fez xixi
+2026-02-04,qua,20:42,Samantha,xixi,escape,cadeira,,sentado,,"Escape xixi, estava sentado na cadeira no shopping esperando"
+2026-02-04,qua,21:25,Tony,xixi,escape,roupa,,na rede/balancando,,Escope. Mijou na cueca. tava balançando na rede comigo
+2026-02-04,qua,22:07,Samantha,xixi+coco,sim,vaso,levei,,,Levei no banheiro fez xixi e cocô
+2026-02-05,qui,08:06,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro as 8 e fez xixi
+2026-02-05,qui,09:02,Dyani AT,xixi,sim,vaso,levei,,,9:02 levei xixi
+2026-02-05,qui,09:32,Dyani AT,xixi+coco,sim,vaso,sozinho,,,9:32 sozinho xixi e cocô
+2026-02-05,qui,10:02,Dyani AT,xixi,sim,vaso,sozinho,,,10:02 sozinho xixi
+2026-02-05,qui,11:00,Dyani AT,xixi,sim,vaso,levei,,,11:00 levei xixi
+2026-02-05,qui,11:40,Dyani AT,xixi,escape,roupa,pediu,,,11:40 escape pediu depois que já tinha feito
+2026-02-05,qui,12:20,Samantha,xixi,sim,vaso,levei,,,Foi levado no banheiro e fez xixi
+2026-02-05,qui,13:20,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-05,qui,13:34,Vanessa AT,xixi,sim,vaso,levei,,,Chegou e levei ao banheiro.  Fez xixi mas a cueca estava molhada
+2026-02-05,qui,13:42,Vanessa AT,coco,sim,vaso,sozinho,,,Cocô no caso. Foi sozinho
+2026-02-05,qui,14:09,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi no vaso. Sozinho
+2026-02-05,qui,15:02,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-05,qui,15:41,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-05,qui,16:41,Vanessa AT,xixi,escape,roupa,,na escola,,Escape  xixi. Sala de aula
+2026-02-05,qui,16:43,Vanessa AT,coco,sim,vaso,,,,Cocô no vaso.
+2026-02-05,qui,18:57,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro mas não fez
+2026-02-05,qui,19:35,Samantha,xixi,sim,vaso,mandei,,,"Mostrei no iPad ir ao banheiro, ele foi, depois mostrei fazer xixi, ele fez, depois mostrei, descarga"
+2026-02-05,qui,20:31,Samantha,xixi,sim,vaso,levei,,,"Fez xixi no vaso, foi levado"
+2026-02-05,qui,21:27,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-06,sex,08:30,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro as 8:30 mas não fez xixi.
+2026-02-06,sex,09:10,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-06,sex,09:34,Andreia,coco,escape,roupa,,,,"Coco na cueca, depois avisou que tinha feito."
+2026-02-06,sex,09:35,Andreia,xixi,sim,vaso,,,,Xixi no vaso.
+2026-02-06,sex,10:57,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-06,sex,11:49,Tia Angelica,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-06,sex,12:29,Tony,nao_fez,,vaso,levei,,,Foi levado no banheiro mas nao fez xixi.
+2026-02-06,sex,13:10,Tia Angelica,nao_fez,,vaso,levei,,,Foi sozinho no banheiro mas não fez nada
+2026-02-06,sex,14:20,Vanessa AT,xixi,sim,vaso,mandei,,,Xixi no vaso. Ofertei e usamos o ipad para modelar
+2026-02-06,sex,15:02,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi no vaso.sozinho Ofertei e usamos o ipad para modelar
+2026-02-06,sex,15:48,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi no vaso.sozinho usamos o ipad para modelar
+2026-02-06,sex,16:23,Vanessa AT,xixi,sim,vaso,mandei,,com iPad,"Xixi no vaso. Ofertei
+Modelei com ipad"
+2026-02-06,sex,17:16,Vanessa AT,xixi,sim,vaso,,,com iPad,17h xixi no vaso. Modelei com ipad
+2026-02-06,sex,17:17,Vanessa AT,xixi,escape,roupa,,,,Escape xixi. Mas foi até o banheiro começou na cueca e  terminou no vaso
+2026-02-06,sex,18:26,Tia Angelica,nao_fez,,vaso,levei,,,Foi ao banheiro e não fez xixi levei
+2026-02-06,sex,18:48,Tia Angelica,xixi,sim,vaso,levei,,,Foi ao banheiro e fez xixi levei
+2026-02-06,sex,19:50,Tia Angelica,xixi,sim,vaso,levei,,,Foi no banheiro e não faz xixi levei
+2026-02-06,sex,20:26,Tia Angelica,nao_fez,,vaso,levei,,,Foi no banheiro e não fez xixi levei
+2026-02-06,sex,21:21,Tia Angelica,xixi,escape,tapete,,brincando,,Isaac estava no tapete brincando e escapou o xixi
+2026-02-07,sab,10:05,Tony,xixi,sim,vaso,sozinho,,,Falei pra ir no banheiro e foi sozinho. Fez um xixizão.
+2026-02-07,sab,11:31,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-07,sab,12:04,Tony,nao_fez,,vaso,levei,,,Levei no banheiro e nao fez xixi
+2026-02-07,sab,12:34,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-07,sab,13:03,Tony,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-02-07,sab,13:16,Tony,nao_fez,,vaso,levei,,,Pediu pra fazer xixi. Foi no banheiro e nao fez nada
+2026-02-07,sab,13:54,Tony,nao_fez,,vaso,levei,,,Levei no banheiro. Nao fez xixi
+2026-02-07,sab,14:34,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-07,sab,15:15,Samantha,xixi,sim,vaso,sozinho,,,Foi sozinho e fez xixi
+2026-02-07,sab,16:28,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-07,sab,17:28,Tony,xixi,sim,vaso,sozinho,,,Mandei ir no banheiro. Foi e fez xixi sozinho.
+2026-02-07,sab,18:42,Tony,xixi,sim,vaso,levei,,pouca quantidade,Levei no banheiro. Fez pouco xixi
+2026-02-07,sab,19:34,Samantha,xixi,escape,sofa,,no sofa,,"Escape xixi, estava no sofá"
+2026-02-08,dom,08:21,Tony,nao_fez,,vaso,levei,,,Levei no banheiro. Nao fez xixi
+2026-02-08,dom,08:35,Tony,coco,sim,vaso,sozinho,,,Cocô no vaso. Foi sozinho 😎
+2026-02-08,dom,09:32,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-08,dom,10:31,Samantha,xixi,escape,sofa,sozinho,jogando/tela,foi ao banheiro depois,Foi sozinho no banheiro mas já tinha feito xixi na roupa. Estava no sofá jogando joguinho no celular
+2026-02-08,dom,10:42,Samantha,xixi,sim,vaso,sozinho,,,"Agora foi correndo no banheiro sozinho, fez xixi no vaso e estava com a roupa limpa"
+2026-02-08,dom,10:49,Samantha,xixi,escape,sofa,sozinho,jogando/tela,foi ao banheiro depois,Foi sozinho no banheiro mas já tinha feito xixi na roupa. Estava no sofá jogando joguinho no celular
+2026-02-08,dom,10:53,Samantha,xixi,escape,sofa,sozinho,jogando/tela,foi ao banheiro depois,Foi sozinho no banheiro mas já tinha feito xixi na roupa. Estava no sofá jogando joguinho no celular
+2026-02-08,dom,11:56,Samantha,xixi,sim,vaso,levei,,,Levei ao banheiro e fez xixi
+2026-02-08,dom,12:58,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro fez xixi
+2026-02-08,dom,13:44,Samantha,xixi,escape,roupa,pediu,comendo,,"Levantou, foi bloqueado, perguntamos o que queria, disse fazer xixi, foi levado no banheiro mas já tinha feito na roupa. Estava almoçando"
+2026-02-08,dom,15:25,Tony,nao_fez,,vaso,levei,,,Levei no banheiro. Nao fez xixi
+2026-02-08,dom,16:03,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-08,dom,16:58,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro não fez xixi
+2026-02-08,dom,17:46,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro fez xixi
+2026-02-08,dom,18:47,Tony,xixi,escape,roupa,mandei,,,Mandei ir no banheiro fazer xixi. foi no banheiro e fez xixi na calça
+2026-02-08,dom,19:16,Tony,xixi,escape,roupa,sozinho,,foi ao banheiro depois,Escape. Foi no banheiro sozinho mas ja tava mijado.
+2026-02-08,dom,20:14,Tony,xixi,sim,vaso,levei,,,Xixi no caso. Levei
+2026-02-08,dom,21:53,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-09,seg,09:15,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro as 9:15 e não fez xixi
+2026-02-09,seg,10:05,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-09,seg,10:33,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-09,seg,11:50,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-09,seg,12:41,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-09,seg,13:40,Vanessa AT,xixi,sim,vaso,levei,,,13h40 xixi no banheiro.  Levei
+2026-02-09,seg,14:10,Vanessa AT,coco,sim,vaso,pediu,,,Cocô no banheiro.  Pediu
+2026-02-09,seg,14:10,Vanessa AT,coco,sim,vaso,pediu,,,Soltou um pum e falou cocô
+2026-02-09,seg,14:31,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-02-09,seg,15:05,Vanessa AT,xixi,sim,vaso,,,,Abriu a sala e foi fazer xixi.
+2026-02-09,seg,16:08,Vanessa AT,xixi,sim,vaso,mandei,,,Estava na brinquedoteca e falei Isaac vai fazer xixi. Levantou e fez xixi no vaso.
+2026-02-09,seg,17:23,Vanessa AT,xixi,sim,vaso,pediu,,com iPad,Xixi no vaso. Pediu com autonomia e modelei pelo ipad
+2026-02-09,seg,18:40,Tony,xixi,escape,sofa,,assistindo TV,,18:40 escape. Mijou no sofa. Tava vendo o Thomas jogar videogame
+2026-02-09,seg,20:15,Tony,xixi,escape,roupa,,Dr. Melillo,,Agora. Escape. Mijou na roupa. Tava fazendo dr. Melillo
+2026-02-09,seg,21:00,Samantha,xixi,escape,roupa,,atividade fisica,,"Xixi na roupa, estava descendo e subindo escada"
+2026-02-09,seg,21:17,Samantha,xixi,escape,roupa,sozinho,,foi ao banheiro depois,Foi no banheiro sozinho mas já tinha feito na roupa xixi
+2026-02-09,seg,21:25,Tony,xixi,sim,vaso,,,pouca quantidade,Foi sizinho. Fez so uns pinguinhos.
+2026-02-09,seg,21:38,Tony,nao_fez,,vaso,levei,,,Levei no banheiro. Nao fez xixi. Percebo a cueca levemente umida
+2026-02-09,seg,21:44,Samantha,xixi,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez um pouco de xixi
+2026-02-10,ter,06:18,Tony,xixi,sim,vaso,sozinho,,pouca quantidade,Foi sozinho. Fez uns pinguinho
+2026-02-10,ter,09:21,Dyani AT,xixi,escape,roupa,sozinho,,,"Xixi levei 8:30 
+Xixi sozinho 8:50
+Xixi sozinho 9:10 escape"
+2026-02-10,ter,09:37,Gabriel Psico,xixi,escape,roupa,,,,Estava fazendo o que no escape
+2026-02-10,ter,09:20,Dyani AT,xixi,escape,roupa,sozinho,,,9:20 sozinho xixi escape só na cueca
+2026-02-10,ter,09:48,Dyani AT,xixi,sim,vaso,sozinho,,,9:48 xixi sozinho
+2026-02-10,ter,09:54,Dyani AT,xixi,sim,vaso,sozinho,,pouca quantidade,9:54 sozinho pouquinho xixi
+2026-02-10,ter,10:00,Dyani AT,xixi,sim,vaso,sozinho,,,10:00 xixi sozinho
+2026-02-10,ter,10:30,Dyani AT,xixi,sim,vaso,sozinho,,,10:30 xixi sozinho
+2026-02-10,ter,11:00,Dyani AT,xixi,sim,vaso,levei,,,11:00 xixi Levei
+2026-02-10,ter,11:15,Dyani AT,xixi,sim,vaso,sozinho,,,11:15 xixi sozinho
+2026-02-10,ter,12:57,Samantha,xixi,sim,vaso,levei,,,1 2:10 levei e fez xixi
+2026-02-10,ter,13:15,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-10,ter,13:33,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-10,ter,16:44,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi banheiro. Pediu
+2026-02-10,ter,17:50,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-10,ter,18:15,Samantha,coco,sim,vaso,sozinho,,,Foi sozinho no banheiro e fez cocô
+2026-02-10,ter,19:45,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-10,ter,21:22,Samantha,nao_fez,,vaso,levei,,,Levei 21:20 no banheiro e não fez xix
+2026-02-11,qua,07:34,Samantha,xixi,escape,roupa,,assistindo TV,,Escape xixi estava assistindo TV
+2026-02-11,qua,08:34,Dyani AT,xixi,sim,vaso,levei,,,Xixi levei
+2026-02-11,qua,09:51,Dyani AT,xixi,sim,vaso,levei,,,Xixi levei 9:33
+2026-02-11,qua,10:29,Dyani AT,coco,sim,vaso,sozinho,,,Cocô Sozinho
+2026-02-11,qua,11:07,Dyani AT,xixi,sim,vaso,levei,,,Xixi levei
+2026-02-11,qua,12:02,Dyani AT,xixi,sim,vaso,levei,,,Xixi levei 11:50
+2026-02-11,qua,12:13,Andreia,xixi,sim,vaso,sozinho,,,"Xixi no vaso, foi sozinho"
+2026-02-11,qua,12:50,Samantha,nao_fez,,vaso,levei,,,Levei as 12:50 e não fez
+2026-02-11,qua,13:36,Vanessa AT,xixi,escape,roupa,,,,Isaac já tinha feito xixi na roupa.  Trocando agora
+2026-02-11,qua,14:10,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi 14h10 sozinho
+2026-02-11,qua,14:55,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi sozinho
+2026-02-11,qua,16:02,Vanessa AT,xixi,sim,vaso,levei,,,"Xixi no vaso.
+Levei"
+2026-02-11,qua,16:45,Vanessa AT,xixi,sim,vaso,mandei,,,Xixi no vaso. Só falei Isaac vai fazer xixi ele foi.
+2026-02-11,qua,17:23,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi no vaso. Sozinho
+2026-02-11,qua,17:47,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi no vaso. Sozinho
+2026-02-11,qua,20:13,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-11,qua,21:03,Tony,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-02-11,qua,21:12,Samantha,xixi,sim,vaso,sozinho,,pouca quantidade,Foi sozinho no banheiro e fez uns pingos de xixi
+2026-02-11,qua,21:24,Samantha,xixi,escape,sofa,,no sofa,,"Fez xixi na roupa, estava sentado no sofá"
+2026-02-12,qui,08:50,Dyani AT,xixi,sim,vaso,levei,,,8:50 levei xixi
+2026-02-12,qui,09:40,Dyani AT,xixi+coco,escape,roupa,sozinho,,foi ao banheiro depois,9:40 fez cocô na calça - correu sozinho no banheiro - terminou o cocô e fez xixi no vaso
+2026-02-12,qui,11:12,Samantha,xixi,sim,vaso,levei,,,Foi levado no banheiro e fez xixi
+2026-02-12,qui,11:48,Dyani AT,xixi,sim,vaso,levei,,,Xixi 11:40 levei
+2026-02-12,qui,12:21,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-12,qui,13:04,Andreia,xixi,sim,vaso,sozinho,,,Xixi no vaso. Sozinho
+2026-02-12,qui,13:47,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no caso. Levei
+2026-02-12,qui,14:19,Vanessa AT,xixi,sim,vaso,sozinho,,com iPad,Xixi no vaso. Sozinho nomeando pelo ipad
+2026-02-12,qui,15:03,Vanessa AT,xixi,sim,vaso,pediu,,com iPad,Xixi no vaso. Pediu verbalmente e modelei pelo ipad
+2026-02-12,qui,15:32,Vanessa AT,xixi,escape,roupa,,comendo,,Escape xixi na cueca.  Estava lanchando
+2026-02-12,qui,16:41,Vanessa AT,xixi,sim,vaso,pediu,,com iPad,Xixi no vaso. Pediu sozinho. Modelei pelo ipad
+2026-02-12,qui,18:07,Samantha,xixi,sim,vaso,mandei,,,Falei para ir ao banheiro foi e fez xixi
+2026-02-12,qui,18:27,Samantha,xixi,escape,sofa,,jogando/tela,,"Fez xixi na roupa, estava no sofá jogando joguinho"
+2026-02-12,qui,19:20,Samantha,xixi,sim,vaso,levei,,pouca quantidade,"Falou que queria fazer xixi, levei no banheiro e fez um pouquinho"
+2026-02-12,qui,19:55,Samantha,xixi,escape,roupa,,,,Escape xixi não sei o que ele estava fazendo rs
+2026-02-12,qui,20:50,Samantha,xixi,sim,vaso,levei,,,Xixi no vaso foi levado
+2026-02-13,sex,08:11,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-13,sex,09:10,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-13,sex,10:13,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-13,sex,11:01,Samantha,xixi,escape,roupa,,correndo,,"Escape xixi, estava correndo"
+2026-02-13,sex,14:13,Andreia,xixi,escape,roupa,,dormindo,,Escape xixi estava dormindo
+2026-02-13,sex,15:23,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-13,sex,16:26,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no banheiro levei
+2026-02-13,sex,17:26,Tia Angelica,nao_fez,,vaso,levei,,,Foi no banheiro e não fez xixi as 17:26
+2026-02-13,sex,17:53,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no banheiro levei
+2026-02-13,sex,18:34,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no banheiro eu levei
+2026-02-13,sex,19:35,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no banheiro eu levei
+2026-02-13,sex,20:04,Tia Angelica,xixi,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez xixi no vaso e deu discarga
+2026-02-13,sex,21:07,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no vaso eu levei
+2026-02-13,sex,21:25,Tia Angelica,xixi,escape,sofa,,assistindo TV,,O Isaac estava no sofá assistindo escapou o xixi
+2026-02-13,sex,21:25,Tia Angelica,xixi,sim,vaso,levei,,,Eu levei no banheiro e fez xixi
+2026-02-14,sab,09:23,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no banheiro eu levei
+2026-02-14,sab,10:25,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no banheiro eu levei
+2026-02-14,sab,11:31,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no banheiro eu levei
+2026-02-14,sab,12:14,Samantha,coco,escape,roupa,pediu,no jardim,,"Escape cocô, estava no jardim. Eu percebi, levei no banheiro e ele fez mais no banheiro. Depois coloquei no iPad, acabou o cocô, ele mostrou que queria pegar o lenço umedecido e daí mostrei no iPad limpar o bumbum"
+2026-02-14,sab,12:53,Thomas,xixi,sim,vaso,levei,,,12:53 levei e fez xixi
+2026-02-14,sab,13:50,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-14,sab,15:30,Samantha,xixi+coco,sim,vaso,,,,Xixi estava todo cagado não sei o que estava fazendo estava com o pai dele
+2026-02-14,sab,16:30,Tony,xixi,sim,vaso,levei,,,xixi no vaso. Levei
+2026-02-14,sab,17:53,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-14,sab,19:01,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-14,sab,20:11,Samantha,xixi,sim,vaso,levei,,,Foi levado e fez xixi
+2026-02-14,sab,21:14,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-14,sab,21:59,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-15,dom,07:59,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-15,dom,10:45,Tony,xixi,escape,roupa,,Dr. Melillo,,Escape. Tava fazendo dr melillo. Culpa minha. Deixei passar 25m
+2026-02-15,dom,11:35,Tony,xixi,escape,roupa,,na rede/balancando,,escape tava balançando na rede
+2026-02-15,dom,12:30,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro mas não fez xixi as 12:30
+2026-02-15,dom,13:10,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-15,dom,13:33,Samantha,xixi,escape,cadeira,pediu,sentado,,"Escape xixi. Estava sentado na cadeira do restaurante. Dei o iPad para ele pensando que ele queria dizer outra coisa, ele mostrou xixi no iPad e tinha feito já"
+2026-02-15,dom,14:40,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-15,dom,17:10,Samantha,xixi,escape,sofa,,dormindo,,Escape xixi estava dormindo no sofá
+2026-02-15,dom,18:11,Tony,nao_fez,,vaso,levei,,,Levei. Nao fez xixi
+2026-02-15,dom,18:46,Tony,xixi,escape,roupa,,comendo,,Escape. Tava andando pela casa e comendo broa
+2026-02-15,dom,19:28,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-15,dom,21:29,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-15,dom,22:35,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-16,seg,09:47,Tia Angelica,xixi,sim,vaso,levei,,,"Fez xixi no banheiro, levei"
+2026-02-16,seg,10:52,Tia Angelica,xixi,sim,vaso,levei,,,"Fez xixi no banheiro, levei"
+2026-02-16,seg,11:54,Tia Angelica,xixi,sim,vaso,levei,,,"Fez xixi no banheiro, levei"
+2026-02-16,seg,13:07,Tia Angelica,xixi,sim,banho,levei,,,"Fez xixi na banheira, eu levei"
+2026-02-16,seg,14:09,Thomas,xixi,sim,vaso,levei,,,Levei fez xixi
+2026-02-16,seg,14:16,Thomas,xixi,sim,vaso,sozinho,,pouca quantidade,Foi sozinho fez um pouquinho de xixi
+2026-02-16,seg,15:15,Samantha,xixi,escape,sofa,,jogando/tela,,"Escape xixi, no sofá jogando no iPad"
+2026-02-16,seg,15:29,Thomas,xixi,sim,vaso,sozinho,,,15:29 foi sozinho fez xixi
+2026-02-16,seg,15:35,Thomas,xixi,sim,vaso,sozinho,,pouca quantidade,Foi sozinho fez um pouquinho de xixi
+2026-02-16,seg,15:41,Thomas,xixi,sim,vaso,pediu,,pouca quantidade,"Pediu pra ir sozinho ""xixi"" mas só fez uns pinginhos"
+2026-02-16,seg,16:53,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no banheiro eu levei
+2026-02-16,seg,18:00,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no banheiro às 18:00 eu levei
+2026-02-16,seg,19:25,Samantha,xixi,sim,vaso,,,,Foi 19:00 no banheiro e fez xixi
+2026-02-16,seg,20:00,Tia Angelica,xixi,sim,vaso,,,,Foi às 20:00 no banheiro e fez xixi no vaso
+2026-02-16,seg,20:39,Tony,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-02-16,seg,21:06,Tony,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-02-16,seg,21:35,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-17,ter,07:05,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no vaso eu levei
+2026-02-17,ter,08:06,Tia Angelica,nao_fez,,vaso,levei,,,Não fez xixi
+2026-02-17,ter,08:34,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no vaso levei
+2026-02-17,ter,09:29,Tia Angelica,xixi,escape,tapete,,assistindo TV,,Escape fez xixi no tapete e estava assistindo tv
+2026-02-17,ter,10:29,Samantha,xixi,sim,vaso,levei,,,Foi levado no banheiro e fez xixi
+2026-02-17,ter,11:31,Tia Angelica,xixi,sim,vaso,levei,,,Xixi no vaso levei
+2026-02-17,ter,11:43,Tia Angelica,xixi,escape,roupa,,na rede/balancando,foi ao banheiro depois,"Escape correu para o banheiro para fazer xixi e já tinha feito na cueca, estava deitado na rede"
+2026-02-17,ter,12:22,Tony,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-02-17,ter,13:18,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-17,ter,13:55,Samantha,xixi,sim,vaso,,,,Foi no banheiro e fez xixi
+2026-02-17,ter,14:35,Samantha,coco,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez cocô
+2026-02-17,ter,15:07,Samantha,xixi,escape,sofa,,jogando/tela,,"Escape xixi no sofá, estava jogando no celular"
+2026-02-17,ter,18:46,Tony,xixi,escape,sofa,,dormindo,,Escape. Xixi na calça. Tava dormindo no sofá.
+2026-02-17,ter,19:19,Tony,nao_fez,,vaso,levei,,,Levei no banheiro. Nao fez xixi
+2026-02-17,ter,20:02,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-17,ter,21:09,Samantha,xixi,sim,vaso,levei,,pouca quantidade,Levei no banheiro fez pouco xixi
+2026-02-17,ter,21:59,Tony,nao_fez,,vaso,levei,,,Levei no banheiro. Nao fez xixi. Pus fralda
+2026-02-18,qua,08:54,Dyani AT,xixi,sim,vaso,levei,,,Levei 8:45 xixi
+2026-02-18,qua,10:04,Dyani AT,xixi,sim,vaso,levei,,,Levei 10:00 xixi
+2026-02-18,qua,10:57,Dyani AT,xixi,sim,vaso,levei,,,Levei 10:57 xixi
+2026-02-18,qua,11:21,Dyani AT,xixi,sim,vaso,sozinho,,,"Sozinho 11:08 xixi
+Sozinho 11:15 xixi"
+2026-02-18,qua,12:20,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi as 12:20
+2026-02-18,qua,13:13,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-18,qua,14:40,Samantha,xixi,sim,vaso,levei,,,Foi levado no banheiro e fez xixi
+2026-02-18,qua,15:35,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-18,qua,17:09,Samantha,xixi,escape,roupa,,na rede/balancando,,"Escape xixi estava rede, esqueci de levar o banheiro"
+2026-02-18,qua,18:10,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi as 18:10
+2026-02-18,qua,19:11,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-18,qua,20:16,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-18,qua,21:12,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-18,qua,22:03,Samantha,coco,escape,roupa,,jogando/tela,,Escape de cocô estava jogando no tablet
+2026-02-18,qua,22:03,Samantha,xixi,sim,banho,,,,Fez xixi no banho
+2026-02-19,qui,09:59,Dyani AT,nao_fez,,vaso,levei,,,"Levei 9:00 não fez 
+Levei 9:30 xixi"
+2026-02-19,qui,10:15,Dyani AT,xixi,escape,roupa,,,,"10:15 xixi escape
+Fazendo atividade motora de subir e pular"
+2026-02-19,qui,10:42,Dyani AT,xixi,escape,sofa,,no sofa,,"Xixi Escape guardando os dinossauros - não queria guardar, queria deitar no sofá"
+2026-02-19,qui,11:06,Andreia,xixi,sim,vaso,sozinho,,,"Xixi no vaso
+Foi sozinho"
+2026-02-19,qui,12:13,Andreia,xixi,sim,vaso,levei,,,Xixi no gaso. Levei
+2026-02-19,qui,13:24,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro fez xixi
+2026-02-19,qui,14:04,Andreia,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-02-19,qui,14:46,Samantha,xixi,sim,vaso,mandei,,,Falei para ir ao banheiro foi e fez xixi
+2026-02-19,qui,15:45,Samantha,xixi,sim,vaso,,,,Foi no banheiro e fez xixi
+2026-02-19,qui,16:49,Andreia,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-02-19,qui,17:51,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-19,qui,18:22,Samantha,xixi,escape,roupa,sozinho,,foi ao banheiro depois,Escape de xixi. Foi no banheiro sozinho mas já tinha feito um pouco na roupa. Estava na sala
+2026-02-19,qui,18:32,Samantha,xixi,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez xixi
+2026-02-19,qui,19:40,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-19,qui,20:50,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-20,sex,08:57,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-20,sex,09:30,Andreia,xixi,sim,vaso,sozinho,,,Foi no banheiro sozinho. Xixi no vaso
+2026-02-20,sex,10:30,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei as 10:30 hr
+2026-02-20,sex,11:26,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-20,sex,11:43,Samantha,xixi,escape,roupa,sozinho,,foi ao banheiro depois,"Escape xixi, foi no banheiro sozinho mas já tinha feito um pouco na cueca. Estava na sala"
+2026-02-20,sex,12:29,Andreia,nao_fez,,vaso,levei,,,"Foi no banheiro sozinho, mas nao fez xixi"
+2026-02-20,sex,13:06,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-20,sex,14:08,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro mas não fez xixi
+2026-02-20,sex,14:29,Samantha,xixi,sim,vaso,sozinho,,,Foi sozinho e fez xixi
+2026-02-20,sex,18:08,Tia Angelica,xixi,escape,roupa,,dormindo,,Ele teve escape porque estava dormindo levantou 5:50
+2026-02-20,sex,18:54,Tia Angelica,xixi,sim,vaso,levei,,,"Fez xixi no vaso, levei"
+2026-02-20,sex,19:56,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no vaso eu levei
+2026-02-20,sex,21:02,Tia Angelica,nao_fez,,vaso,levei,,,Levei no banheiro ele não conseguiu fazer xixi no vaso fez no shot espacou
+2026-02-20,sex,21:46,Tia Angelica,xixi,sim,vaso,levei,,apertando pipi,"Fez xixi no vaso e estava apertando o pipi, eu levei"
+2026-02-20,sex,22:23,Samantha,coco,sim,vaso,sozinho,,,Foi sozinho fazer cocô
+2026-02-20,sex,22:56,Tony,xixi+coco,sim,vaso,sozinho,,,"Foi sozinho e sentou na privada.
+Nao fez cocô nenhum.
+Nem xixi.
+Mas fez questão de dar descarga"
+2026-02-21,sab,10:07,Tia Angelica,xixi,escape,fralda,,,,Fez xixi na fralda quando acordou
+2026-02-21,sab,11:11,Tia Angelica,xixi,escape,roupa,,brincando,,Escape estava brincando e fez xixi
+2026-02-21,sab,12:06,Tia Angelica,nao_fez,,vaso,levei,,,Foi no banheiro não fez xixi
+2026-02-21,sab,13:02,Tia Angelica,xixi,sim,vaso,levei,,apertando pipi,Fez xixi no vaso estava apertando o pipi eu levei
+2026-02-21,sab,13:04,Tia Angelica,xixi,sim,vaso,sozinho,,pouca quantidade,Voltou no banheiro sozinho para fazer xixi fez um pouquinho
+2026-02-21,sab,13:10,Tia Angelica,xixi,sim,vaso,sozinho,,,Foi ao banheiro sozinho e fez xixi
+2026-02-21,sab,14:10,Tia Angelica,nao_fez,,vaso,levei,,,Não fez xixi no banheiro levei
+2026-02-21,sab,14:32,Tia Angelica,xixi,sim,vaso,levei,,,Foi no banheiro e fez xixi levei
+2026-02-21,sab,16:45,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-21,sab,17:30,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro as 17:30 e não fez xixi
+2026-02-21,sab,18:22,Tony,xixi,sim,vaso,levei,,,xixi no vaso. Levei
+2026-02-22,dom,08:55,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-22,dom,10:19,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-22,dom,15:57,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-22,dom,16:52,Tony,coco,sim,vaso,sozinho,,,Coco no caso. Foi sozinho
+2026-02-22,dom,18:02,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-22,dom,19:02,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-22,dom,20:29,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-22,dom,21:07,Samantha,xixi,escape,cadeira,,correndo,,"Escape de xixi, saiu correndo para ir ao banheiro mas já tinha feito na roupa. Estava na cadeira da mesinha pintando dinossauro"
+2026-02-22,dom,21:22,Samantha,xixi,escape,roupa,pediu,,,"Escape de xixi, falou xixi mas já tinha feito na cueca. Estava fazendo a mesma coisa"
+2026-02-22,dom,21:38,Tony,xixi,sim,vaso,sozinho,,pouca quantidade,Xixi no vaso. Foi sozinho. So uns pinguinho
+2026-02-22,dom,22:34,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-23,seg,08:53,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-23,seg,09:52,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-23,seg,10:50,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro as 10:50 mas não fez xixi
+2026-02-23,seg,11:18,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-23,seg,11:54,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-23,seg,13:06,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-23,seg,13:38,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei 13h38
+2026-02-23,seg,14:44,Vanessa AT,xixi,sim,vaso,sozinho,,com iPad,Xixi no vaso. Sozinho modelei pelo ipad
+2026-02-23,seg,15:18,Vanessa AT,xixi,sim,vaso,,,com iPad,Xixi no vaso. Modelei pelo ipad
+2026-02-23,seg,17:13,Vanessa AT,xixi,sim,vaso,sozinho,,com iPad,Xixi no vaso. Sozinho modelei pelo ipad
+2026-02-23,seg,17:47,Vanessa AT,xixi,sim,vaso,levei,,com iPad,Xixi no vaso. Levei e modelei pelo ipad
+2026-02-23,seg,20:02,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-23,seg,21:00,Tony,xixi,escape,sofa,,assistindo TV,,Escape. Tava no sofa vendo tv
+2026-02-23,seg,21:10,Tony,xixi,escape,roupa,,,,Escape de novo 🥲
+2026-02-23,seg,21:53,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei. Coloquei fralda pra dormir
+2026-02-24,ter,09:24,Dyani AT,xixi,escape,roupa,,comendo,,Escape 9:10 tomando café
+2026-02-24,ter,10:16,Dyani AT,xixi,sim,vaso,levei,,,Levei xixi 10:00
+2026-02-24,ter,10:17,Dyani AT,xixi,escape,roupa,sozinho,,,Escape 10:16 sozinho - estava montando o jogo
+2026-02-24,ter,10:38,Gabriel Psico,nao_fez,,vaso,levei,,,Levei no banheiro - não fez xixi
+2026-02-24,ter,11:16,Gabriel Psico,xixi,sim,vaso,,,pouca quantidade,Fez pouco xixi
+2026-02-24,ter,12:20,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-24,ter,13:00,Gabriel Psico,xixi,sim,banho,,,,Fez xixi no banho - chão do box
+2026-02-24,ter,13:30,Vanessa AT,xixi,sim,vaso,,,,Xixi vaso. Modelei
+2026-02-24,ter,13:57,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi no vaso. Sozinho
+2026-02-24,ter,14:08,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi no vaso. Sozinho
+2026-02-24,ter,14:52,Vanessa AT,xixi,sim,vaso,mandei,,,Xixi no vaso. Ofertei e  modelei pelo ipa
+2026-02-24,ter,15:01,Vanessa AT,xixi,sim,vaso,pediu,,com iPad,"Xixi no vaso. Pediu
+Modelo pelo ipad"
+2026-02-24,ter,15:34,Gabriel Psico,xixi,sim,vaso,levei,,,Xixi no vaso Vanessa levou
+2026-02-24,ter,15:58,Vanessa AT,coco,escape,roupa,,no parque,,Escape  cocô.  Parque
+2026-02-24,ter,17:00,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-24,ter,18:11,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-24,ter,19:13,Samantha,xixi,sim,banho,,,,Fez xixi no banho
+2026-02-24,ter,20:26,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-24,ter,21:05,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-25,qua,10:09,Dyani AT,xixi,sim,vaso,sozinho,,,"Levei 8:50 xixi
+Levei 9:30 xixi
+Sozinho 10:00 xixi"
+2026-02-25,qua,10:42,Dyani AT,xixi,sim,vaso,levei,,,Levei 10:40 xixi
+2026-02-25,qua,12:02,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-25,qua,12:08,Dyani AT,xixi,sim,vaso,levei,,,Levei 11:40 xixi
+2026-02-25,qua,12:21,Samantha,xixi,sim,vaso,sozinho,,,Foi sozinho e fez xixi
+2026-02-25,qua,13:22,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-25,qua,13:33,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-25,qua,13:59,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-02-25,qua,14:30,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi pediu 14h30
+2026-02-25,qua,15:10,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi sozinho 15h10
+2026-02-25,qua,15:46,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi sozinho
+2026-02-25,qua,16:45,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi sozinho
+2026-02-25,qua,17:27,Vanessa AT,coco,escape,roupa,,,,Escape cocô.  Estava na sala eu no banheir9
+2026-02-25,qua,19:18,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro não fez xixi
+2026-02-25,qua,19:50,Samantha,xixi,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez xixi
+2026-02-25,qua,20:52,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-25,qua,20:55,Tony,coco,sim,vaso,sozinho,,,Coco no vaso. Foi sozinho
+2026-02-26,qui,14:01,Andreia,nao_fez,,vaso,levei,,,"Levei no banheiro, nao fez xixi"
+2026-02-26,qui,15:40,Samantha,xixi,escape,sofa,,no sofa,,"Escape xixi, estava no sofá"
+2026-02-26,qui,16:43,Andreia,xixi+coco,sim,vaso,,,,Foi sozinhp no banheiro. Fez xixi e coco
+2026-02-26,qui,17:49,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-26,qui,18:14,Samantha,xixi,escape,roupa,,na rede/balancando,,Escape xixi estava balançando na rede
+2026-02-26,qui,18:35,Samantha,coco,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez cocô
+2026-02-26,qui,19:00,Samantha,xixi,escape,cama,,na cama,,"Escape xixi, estava na cama"
+2026-02-26,qui,19:55,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro mas não fez xixi
+2026-02-26,qui,20:05,Samantha,xixi,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez xixi
+2026-02-26,qui,20:10,Samantha,xixi,sim,vaso,,,pouca quantidade,Foi no banheiro e fez uns pingos de xixi
+2026-02-26,qui,20:14,Tony,xixi,sim,vaso,,,pouca quantidade,Foi no banheiro e fez uns pingos de xixi
+2026-02-27,sex,10:17,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-27,sex,10:43,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro mas não fez xixi
+2026-02-27,sex,11:28,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-27,sex,12:46,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-27,sex,13:42,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-27,sex,15:18,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-02-27,sex,16:15,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei 16h15
+2026-02-27,sex,17:26,Vanessa AT,xixi,sim,vaso,sozinho,,,Xixi no vaso. Sozinho
+2026-02-27,sex,18:28,Tia Angelica,xixi,sim,vaso,levei,,,Xixi no vaso levei
+2026-02-27,sex,19:28,Tia Angelica,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-27,sex,19:51,Tia Angelica,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-02-27,sex,20:22,Tia Angelica,xixi,sim,vaso,levei,,,Levei no banheiro fez xixi
+2026-02-27,sex,21:06,Tia Angelica,xixi,sim,vaso,levei,,apertando pipi,Levei no banheiro porque estava apertando o pipi e fez xixi
+2026-02-28,sab,06:45,Tia Angelica,xixi,sim,vaso,levei,,,Levei ao banheiro fez xixi
+2026-02-28,sab,07:45,Tia Angelica,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-28,sab,08:46,Tia Angelica,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-28,sab,09:43,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-28,sab,10:59,Samantha,xixi,escape,roupa,levei,,,"Escape, levou no banheiro mas já está tinha feito na roupa"
+2026-02-28,sab,11:56,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-28,sab,14:07,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-02-28,sab,15:07,Tony,nao_fez,,vaso,levei,,,Levei no banheiro mas nao fez xixi
+2026-02-28,sab,16:19,Tony,xixi,escape,sofa,,no sofa,,Escape. Tava sentado no sofá. SACOU O PERU PRA FORA E MIJOU NO TAPETE
+2026-02-28,sab,17:16,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro não fez xixi
+2026-02-28,sab,17:40,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro as 17:40 e fez xixi
+2026-02-28,sab,18:34,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-02-28,sab,18:53,Samantha,xixi+coco,escape,roupa,sozinho,,,Foi sozinho banheiro fazer cocô e já estava com a cueca suja de xixi
+2026-02-28,sab,19:33,Samantha,xixi,escape,roupa,,andando,,"Escape xixi, estava andando pela sala"
+2026-02-28,sab,20:19,Tony,xixi,sim,banho,,,,Xixi no banho
+2026-03-01,dom,10:45,Tony,nao_fez,,vaso,levei,,,10:45 levei no banheiro. Não fez xixi
+2026-03-01,dom,11:30,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-03-01,dom,12:30,Tony,xixi,sim,vaso,levei,,,Xixi mo vaso. Levei
+2026-03-01,dom,13:05,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-03-01,dom,14:05,Tony,xixi,escape,cadeira,,sentado,,Escape. Tava almocando no restaurante. Fez xixi na cadeira
+2026-03-01,dom,15:05,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-03-01,dom,16:08,Tony,nao_fez,,vaso,levei,,,Levei no banheiro. Nao fez xixi
+2026-03-01,dom,16:42,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-03-01,dom,17:42,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-03-01,dom,18:41,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-03-01,dom,19:54,Tony,xixi,escape,roupa,,comendo,,Escape. Tava jantando. Percebi o calcao molhado
+2026-03-01,dom,20:41,Tony,xixi,escape,chao,,correndo,,Escape. Tava correndo pela casa. Ai decidiu sentar no chao e se mijou todo.
+2026-03-01,dom,21:40,Tony,xixi,escape,chao,,correndo,,Escape. Tava correndo pela casa. Ai decidiu sentar no chao e se mijou todo.
+2026-03-02,seg,08:42,Andreia,xixi,escape,sofa,,no sofa,,Escape. Estava deitado no sofá
+2026-03-02,seg,09:15,Andreia,xixi,sim,vaso,sozinho,,,Fez xixi no vaso. Foi sozinho as 09:15hr
+2026-03-02,seg,10:09,Samantha,xixi,sim,vaso,pediu,,,Pediu para fazer xixi e foi no banheiro
+2026-03-02,seg,11:07,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-03-02,seg,11:38,Samantha,xixi,escape,arvore,,no quintal,,"Escape xixi, desceu o shorts para fazer xixi na árvore no quintal e já tinha feito na roupa"
+2026-03-02,seg,13:07,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-03-02,seg,14:14,Vanessa AT,coco,sim,vaso,sozinho,,,Cocô no vaso. Foi sozinho
+2026-03-02,seg,14:55,Vanessa AT,coco,sim,vaso,pediu,,,Cocô no vaso. Pediu
+2026-03-02,seg,15:30,Vanessa AT,xixi,sim,vaso,,,,Xixi no vaso. 15h30
+2026-03-02,seg,15:48,Vanessa AT,coco,sim,vaso,,,,Cocô no vaso 15h48
+2026-03-02,seg,16:41,Vanessa AT,xixi,sim,vaso,,,,Xixi no vaso 16h41
+2026-03-02,seg,17:27,Vanessa AT,xixi,escape,roupa,,dormindo,,Escape xixi. Estava deitado quase dormindo
+2026-03-02,seg,18:33,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro mas não fez xixi
+2026-03-02,seg,19:00,Tony,xixi,sim,banho,,,,19:00 xixi no banho
+2026-03-02,seg,20:32,Samantha,xixi,escape,roupa,,,,Escape xixi estava na sala
+2026-03-03,ter,09:08,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-03-03,ter,10:12,Samantha,nao_fez,,vaso,levei,,,foi no banheiro e não fez xixi
+2026-03-03,ter,10:52,Andreia,xixi,escape,roupa,,na rede/balancando,,"Escape xixi, estava na rede balançando"
+2026-03-03,ter,11:30,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro as 11:30 e não fez xixi
+2026-03-03,ter,12:15,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro as 12:15 e fez xixi
+2026-03-03,ter,13:36,Vanessa AT,xixi,sim,vaso,levei,,,Levei ao banheiro e fez xixi
+2026-03-03,ter,14:19,Vanessa AT,xixi,escape,roupa,,na escola,,Escape xixi. Estávamos na aula de inglês
+2026-03-03,ter,14:40,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-03-03,ter,15:12,Vanessa AT,xixi,sim,vaso,sozinho,,com iPad,Xixi no vaso. Sozinho modelei pelo ipad
+2026-03-03,ter,16:10,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-03-03,ter,17:44,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-03-03,ter,18:40,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro as 18:40 e fez xixi
+2026-03-03,ter,19:18,Samantha,xixi,sim,vaso,sozinho,,,Foi no banheiro sozinho agora e fez xixi
+2026-03-03,ter,20:26,Samantha,xixi,escape,roupa,,brincando,,Escape xixi estava em cima da bola de pilates
+2026-03-03,ter,20:46,Samantha,xixi+coco,escape,roupa,sozinho,brincando,foi ao banheiro depois,Escape xixi e cocô. Estava brincando de lego e foi no banheiro sozinho mas já tinha feito na roupa
+2026-03-03,ter,21:22,Tony,xixi,sim,vaso,,,,Xixi no vaso. Botei fralda pra dormir.
+2026-03-04,qua,08:35,Andreia,nao_fez,,vaso,levei,,,Levei no vanheiro e nao fez xixi
+2026-03-04,qua,08:56,Andreia,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-03-04,qua,10:29,Samantha,nao_fez,,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-03-04,qua,11:02,Samantha,xixi,escape,roupa,,esperando,,"Escape de xixi, estava comigo esperando"
+2026-03-04,qua,13:17,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-03-04,qua,13:38,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-03-04,qua,14:20,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei 14h20
+2026-03-04,qua,15:13,Vanessa AT,xixi,escape,roupa,,na escola,,Escape xixi. Estava fazendo prova
+2026-03-04,qua,15:13,Vanessa AT,coco,sim,vaso,,,,Cocô no vaso. Fui fazer a troca
+2026-03-04,qua,18:35,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-03-04,qua,19:36,Samantha,xixi,sim,vaso,levei,,,Levou no banheiro e fez xixi
+2026-03-04,qua,20:41,Tony,xixi,escape,chao,,jogando/tela,,"Escape. Fez xixi sentado no chão. Antes disso tava correndo, dando risada, se jogando no chão. Bem desregulado (ainda está)"
+2026-03-05,qui,09:03,Andreia,xixi,sim,vaso,sozinho,,,Xixi no vaso.  Foi sozinho
+2026-03-05,qui,10:09,Samantha,xixi,sim,vaso,mandei,,,"Falei para ir no banheiro, foi e fez xixi"
+2026-03-05,qui,10:25,Samantha,xixi,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez xixi
+2026-03-05,qui,10:37,Samantha,xixi,sim,vaso,,,,Foi no banheiro e fez xixi
+2026-03-05,qui,12:47,Samantha,xixi,sim,vaso,mandei,,,Mandei ir ao banheiro e fez xixi
+2026-03-05,qui,14:10,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-03-05,qui,14:55,Samantha,xixi,sim,vaso,sozinho,,pouca quantidade,Foi no banheiro sozinho e fez uns pingos de xixi
+2026-03-05,qui,16:01,Samantha,xixi+coco,escape,roupa,sozinho,,foi ao banheiro depois,"Foi no banheiro sozinho e fez cocô, mas está com escape de xixi na cueca"
+2026-03-05,qui,18:15,Samantha,xixi,escape,chao,,sentado,,Escape xixi estava sentado no chão da sala
+2026-03-05,qui,20:05,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-03-05,qui,20:56,Tony,xixi,escape,roupa,,assistindo TV,,Escape. Tava sentado jo sofa vendo tv
+2026-03-05,qui,21:08,Tony,xixi,sim,vaso,sozinho,,pouca quantidade,Xixi (pinguinho) no vaso. Foi sozinho
+2026-03-05,qui,21:25,Tony,xixi+coco,escape,roupa,sozinho,,foi ao banheiro depois,Escape. Foi no banheiro sozinho mas ja tava mijado. Depois fez cocô sozinho.
+2026-03-06,sex,09:26,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relatorio Desfralde - Isaac</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --blue: #3b82f6;
+    --green: #22c55e;
+    --red: #ef4444;
+    --orange: #f59e0b;
+    --purple: #8b5cf6;
+    --gray: #6b7280;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --muted: #64748b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .kpi {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+  }
+  .kpi .value {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .kpi .label {
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .kpi.green .value { color: var(--green); }
+  .kpi.red .value { color: var(--red); }
+  .kpi.blue .value { color: var(--blue); }
+  .kpi.orange .value { color: var(--orange); }
+  .kpi.purple .value { color: var(--purple); }
+
+  .section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section h2 .icon { font-size: 1.3rem; }
+
+  .chart-container {
+    position: relative;
+    height: 280px;
+    width: 100%;
+  }
+  .chart-container.tall {
+    height: 320px;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 768px) {
+    .grid-2 { grid-template-columns: 1fr; }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+  th {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 2px solid var(--border);
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  td {
+    padding: 7px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  tr:last-child td { border-bottom: none; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .good { color: var(--green); font-weight: 600; }
+  .bad { color: var(--red); font-weight: 600; }
+  .neutral { color: var(--muted); }
+
+  .bar-bg {
+    background: #e2e8f0;
+    border-radius: 4px;
+    height: 8px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s;
+  }
+  .bar-fill.green { background: var(--green); }
+  .bar-fill.red { background: var(--red); }
+  .bar-fill.blue { background: var(--blue); }
+
+  .insight {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+  }
+  .insight strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #92400e;
+  }
+  .insight:last-child { margin-bottom: 0; }
+
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .tag-green { background: #dcfce7; color: #166534; }
+  .tag-red { background: #fee2e2; color: #991b1b; }
+  .tag-blue { background: #dbeafe; color: #1e40af; }
+  .tag-orange { background: #fef3c7; color: #92400e; }
+
+  .footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin-top: 24px;
+    padding: 12px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Relatorio de Desfralde - Isaac</h1>
+<p class="subtitle">Periodo: 2026-01-13 a 2026-03-06 (53 dias) &middot; 807 registros totais</p>
+
+<!-- KPIs -->
+<div class="kpi-grid">
+  <div class="kpi green">
+    <div class="value">79%</div>
+    <div class="label">Taxa de Sucesso</div>
+  </div>
+  <div class="kpi red">
+    <div class="value">2.7</div>
+    <div class="label">Escapes / Dia</div>
+  </div>
+  <div class="kpi blue">
+    <div class="value">11</div>
+    <div class="label">Sucessos / Dia</div>
+  </div>
+  <div class="kpi purple">
+    <div class="value">27%</div>
+    <div class="label">Independencia</div>
+  </div>
+  <div class="kpi orange">
+    <div class="value">59min</div>
+    <div class="label">Intervalo Medio</div>
+  </div>
+  <div class="kpi green">
+    <div class="value">69%</div>
+    <div class="label">Coco no Vaso</div>
+  </div>
+</div>
+
+<!-- Weekly Evolution Chart -->
+<div class="section">
+  <h2><span class="icon">📈</span> Evolucao Semanal</h2>
+  <div class="chart-container tall">
+    <canvas id="weeklyChart"></canvas>
+  </div>
+</div>
+
+<!-- Success Rate Trend -->
+<div class="section">
+  <h2><span class="icon">📊</span> Taxa de Sucesso - Media Movel 7 dias</h2>
+  <div class="chart-container">
+    <canvas id="trendChart"></canvas>
+  </div>
+</div>
+
+<div class="grid-2">
+  <!-- Independence Trend -->
+  <div class="section">
+    <h2><span class="icon">🧠</span> Independencia por Semana</h2>
+    <div class="chart-container">
+      <canvas id="indepChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Period of Day -->
+  <div class="section">
+    <h2><span class="icon">🕐</span> Escapes por Periodo</h2>
+    <div class="chart-container">
+      <canvas id="periodChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<div class="grid-2">
+  <!-- Day of Week -->
+  <div class="section">
+    <h2><span class="icon">📅</span> Escapes por Dia da Semana</h2>
+    <div class="chart-container">
+      <canvas id="dowChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Activities -->
+  <div class="section">
+    <h2><span class="icon">🎯</span> Atividade Durante Escapes</h2>
+    <div class="chart-container">
+      <canvas id="actChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- Weekly Table -->
+<div class="section">
+  <h2><span class="icon">📋</span> Dados Semanais Detalhados</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Semana</th>
+        <th class="num">Dias</th>
+        <th class="num">Sucesso</th>
+        <th class="num">Escape</th>
+        <th class="num">Nao Fez</th>
+        <th class="num">% Sucesso</th>
+        <th class="num">Esc/Dia</th>
+        <th class="num">% Indep.</th>
+        <th>Tendencia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>12/01</td>
+        <td class="num">6</td>
+        <td class="num good">59</td>
+        <td class="num bad">13</td>
+        <td class="num neutral">5</td>
+        <td class="num good">82%</td>
+        <td class="num ">2.2</td>
+        <td class="num">8%</td>
+        <td><div class="bar-bg"><div class="bar-fill green" style="width:81.94444444444444%"></div></div></td>
+      </tr>
+      <tr>
+        <td>19/01</td>
+        <td class="num">7</td>
+        <td class="num good">78</td>
+        <td class="num bad">21</td>
+        <td class="num neutral">8</td>
+        <td class="num ">79%</td>
+        <td class="num bad">3.0</td>
+        <td class="num">19%</td>
+        <td><div class="bar-bg"><div class="bar-fill green" style="width:78.78787878787878%"></div></div></td>
+      </tr>
+      <tr>
+        <td>26/01</td>
+        <td class="num">7</td>
+        <td class="num good">83</td>
+        <td class="num bad">18</td>
+        <td class="num neutral">26</td>
+        <td class="num good">82%</td>
+        <td class="num ">2.6</td>
+        <td class="num">33%</td>
+        <td><div class="bar-bg"><div class="bar-fill green" style="width:82.17821782178218%"></div></div></td>
+      </tr>
+      <tr>
+        <td>02/02</td>
+        <td class="num">7</td>
+        <td class="num good">80</td>
+        <td class="num bad">22</td>
+        <td class="num neutral">19</td>
+        <td class="num ">78%</td>
+        <td class="num bad">3.1</td>
+        <td class="num">34%</td>
+        <td><div class="bar-bg"><div class="bar-fill green" style="width:78.43137254901961%"></div></div></td>
+      </tr>
+      <tr>
+        <td>09/02</td>
+        <td class="num">7</td>
+        <td class="num good">81</td>
+        <td class="num bad">23</td>
+        <td class="num neutral">9</td>
+        <td class="num ">78%</td>
+        <td class="num bad">3.3</td>
+        <td class="num">32%</td>
+        <td><div class="bar-bg"><div class="bar-fill green" style="width:77.88461538461539%"></div></div></td>
+      </tr>
+      <tr>
+        <td>16/02</td>
+        <td class="num">7</td>
+        <td class="num good">75</td>
+        <td class="num bad">16</td>
+        <td class="num neutral">11</td>
+        <td class="num good">82%</td>
+        <td class="num ">2.3</td>
+        <td class="num">28%</td>
+        <td><div class="bar-bg"><div class="bar-fill green" style="width:82.41758241758242%"></div></div></td>
+      </tr>
+      <tr>
+        <td>23/02</td>
+        <td class="num">7</td>
+        <td class="num good">68</td>
+        <td class="num bad">17</td>
+        <td class="num neutral">18</td>
+        <td class="num good">80%</td>
+        <td class="num ">2.4</td>
+        <td class="num">26%</td>
+        <td><div class="bar-bg"><div class="bar-fill green" style="width:80.0%"></div></div></td>
+      </tr>
+      <tr>
+        <td>02/03</td>
+        <td class="num">5</td>
+        <td class="num good">37</td>
+        <td class="num bad">15</td>
+        <td class="num neutral">5</td>
+        <td class="num bad">71%</td>
+        <td class="num bad">3.0</td>
+        <td class="num">32%</td>
+        <td><div class="bar-bg"><div class="bar-fill green" style="width:71.15384615384616%"></div></div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Initiative Breakdown -->
+<div class="grid-2">
+  <div class="section">
+    <h2><span class="icon">🤝</span> Iniciativa nos Sucessos</h2>
+    <table>
+      <thead><tr><th>Tipo</th><th class="num">Qtd</th><th class="num">%</th><th></th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-blue">Adulto levou</span></td>
+          <td class="num">323</td>
+          <td class="num">58%</td>
+          <td><div class="bar-bg"><div class="bar-fill blue" style="width:57.57575757575758%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-green">Foi sozinho</span></td>
+          <td class="num">124</td>
+          <td class="num">22%</td>
+          <td><div class="bar-bg"><div class="bar-fill green" style="width:22.10338680926916%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-neutral">Nao especificado</span></td>
+          <td class="num">73</td>
+          <td class="num">13%</td>
+          <td><div class="bar-bg"><div class="bar-fill neutral" style="width:13.01247771836007%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-green">Pediu</span></td>
+          <td class="num">27</td>
+          <td class="num">5%</td>
+          <td><div class="bar-bg"><div class="bar-fill green" style="width:4.81283422459893%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-blue">Adulto mandou/ofertou</span></td>
+          <td class="num">14</td>
+          <td class="num">2%</td>
+          <td><div class="bar-bg"><div class="bar-fill blue" style="width:2.4955436720142603%"></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2><span class="icon">💩</span> Analise de Coco</h2>
+    <table>
+      <thead><tr><th>Metrica</th><th class="num">Valor</th></tr></thead>
+      <tbody>
+        <tr><td>Total de cocos</td><td class="num">51</td></tr>
+        <tr><td>No vaso</td><td class="num good">35 (69%)</td></tr>
+        <tr><td>Escape</td><td class="num bad">16 (31%)</td></tr>
+        <tr><td>Foi sozinho</td><td class="num good">20 (39%)</td></tr>
+        <tr><td>Media por semana</td><td class="num">6.4</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Insights -->
+<div class="section">
+  <h2><span class="icon">💡</span> Insights e Observacoes</h2>
+
+  <div class="insight">
+    <strong>1. Plato na taxa de sucesso</strong>
+    A taxa de sucesso oscila entre 71-82% ao longo de 8 semanas sem tendencia clara de melhora.
+    O protocolo atual (levar a cada 1h) parece ter atingido seu limite de eficacia.
+    A alta dependencia do adulto (57% "levei") sugere que Isaac ainda nao internalizou a rotina.
+  </div>
+
+  <div class="insight">
+    <strong>2. Noite e o periodo mais critico</strong>
+    60 escapes a noite (27.9% de taxa de escape)
+    vs 46 a tarde (15.2%).
+    Possiveis fatores: cansaco, desregulacao sensorial, menor supervisao.
+  </div>
+
+  <div class="insight">
+    <strong>3. Domingos tem mais escapes (31%)</strong>
+    Taxa de escape no domingo e quase o dobro da segunda-feira (16.7%).
+    Rotina menos estruturada no fim de semana pode ser um fator.
+  </div>
+
+  <div class="insight">
+    <strong>4. Coco mostra boa autonomia</strong>
+    39% dos cocos Isaac foi sozinho. A autopercecao para coco
+    parece mais desenvolvida que para xixi. Possivel hipotese: coco da sinais corporais mais claros.
+  </div>
+
+  <div class="insight">
+    <strong>5. Escapes ligados a hiperfoco e sedentarismo</strong>
+    Atividades mais comuns durante escapes: sofa/TV, jogando/tela, rede.
+    Quando Isaac esta em hiperfoco (tela, brincadeira), parece nao perceber a necessidade.
+    Considerar timer visual ou alerta durante atividades de tela.
+  </div>
+
+  <div class="insight">
+    <strong>6. Independencia cresceu mas estabilizou em ~30%</strong>
+    Crescimento rapido nas primeiras 3 semanas (7% &rarr; 33%), depois estabilizou.
+    "Pediu" (comunicacao ativa) ainda muito baixo: apenas 27 vezes (4.8%).
+    O uso do iPad para modelagem na escola esta dando resultados (Vanessa registra mais pedidos).
+  </div>
+
+  <div class="insight">
+    <strong>7. Padrao de "pinguinhos" frequentes</strong>
+    Isaac vai frequentemente ao banheiro fazer pouca quantidade.
+    Possibilidades: fuga de demanda (confirmado pelo psicologo em algumas situacoes),
+    dificuldade de esvaziar completamente a bexiga, ou fase de aprendizado do controle do esfincter.
+  </div>
+
+  <div class="insight">
+    <strong>8. "Levou mas nao fez" = 101 vezes (1.9/dia)</strong>
+    Alta frequencia de idas improdutivas. Pode estar gerando resistencia.
+    Semanas com mais "nao fez" (W03-W04: 26) coincidem com mudanca no protocolo (levar a cada 40min).
+  </div>
+</div>
+
+<div class="footer">
+  Gerado em 06/03/2026 11:29 &middot; Dados de 53 dias de registro &middot; 807 eventos totais
+</div>
+
+<script>
+const chartColors = {
+  green: '#22c55e',
+  red: '#ef4444',
+  blue: '#3b82f6',
+  orange: '#f59e0b',
+  purple: '#8b5cf6',
+  gray: '#94a3b8',
+  greenBg: 'rgba(34,197,94,0.15)',
+  redBg: 'rgba(239,68,68,0.15)',
+  blueBg: 'rgba(59,130,246,0.15)',
+};
+
+Chart.defaults.font.family = "-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif";
+Chart.defaults.font.size = 12;
+Chart.defaults.plugins.legend.labels.usePointStyle = true;
+Chart.defaults.plugins.legend.labels.pointStyle = 'circle';
+
+// Weekly stacked bar
+new Chart(document.getElementById('weeklyChart'), {
+  type: 'bar',
+  data: {
+    labels: ['12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03'],
+    datasets: [
+      { label: 'Sucesso', data: [59, 78, 83, 80, 81, 75, 68, 37], backgroundColor: chartColors.green, borderRadius: 4 },
+      { label: 'Escape', data: [13, 21, 18, 22, 23, 16, 17, 15], backgroundColor: chartColors.red, borderRadius: 4 },
+      { label: 'Nao Fez', data: [5, 8, 26, 19, 9, 11, 18, 5], backgroundColor: chartColors.gray, borderRadius: 4 },
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      tooltip: {
+        callbacks: {
+          afterBody: function(ctx) {
+            const i = ctx[0].dataIndex;
+            const s = [59, 78, 83, 80, 81, 75, 68, 37][i];
+            const e = [13, 21, 18, 22, 23, 16, 17, 15][i];
+            const pct = Math.round(100 * s / (s + e));
+            return 'Taxa sucesso: ' + pct + '%';
+          }
+        }
+      }
+    },
+    scales: {
+      x: { stacked: true, grid: { display: false } },
+      y: { stacked: true, grid: { color: '#f1f5f9' } }
+    }
+  }
+});
+
+// 7-day rolling trend
+new Chart(document.getElementById('trendChart'), {
+  type: 'line',
+  data: {
+    labels: ["'01-13'", "'01-14'", "'01-15'", "'01-16'", "'01-17'", "'01-18'", "'01-19'", "'01-20'", "'01-21'", "'01-22'", "'01-23'", "'01-24'", "'01-25'", "'01-26'", "'01-27'", "'01-28'", "'01-29'", "'01-30'", "'01-31'", "'02-01'", "'02-02'", "'02-03'", "'02-04'", "'02-05'", "'02-06'", "'02-07'", "'02-08'", "'02-09'", "'02-10'", "'02-11'", "'02-12'", "'02-13'", "'02-14'", "'02-15'", "'02-16'", "'02-17'", "'02-18'", "'02-19'", "'02-20'", "'02-21'", "'02-22'", "'02-23'", "'02-24'", "'02-25'", "'02-26'", "'02-27'", "'02-28'", "'03-01'", "'03-02'", "'03-03'", "'03-04'", "'03-05'", "'03-06'"],
+    datasets: [{
+      label: '% Sucesso (7d)',
+      data: [100.0, 90.5, 90.0, 83.0, 80.3, 81.9, 83.3, 81.3, 80.2, 79.5, 79.5, 80.6, 78.8, 77.8, 79.2, 79.2, 78.6, 82.1, 84.0, 82.2, 82.4, 79.8, 80.5, 82.2, 80.0, 78.8, 78.4, 76.5, 78.2, 78.6, 76.2, 76.7, 77.8, 77.9, 81.1, 79.6, 80.0, 80.6, 81.4, 79.3, 82.4, 80.5, 82.0, 83.1, 81.9, 83.5, 82.1, 80.0, 77.9, 76.2, 72.2, 72.6, 69.7],
+      borderColor: chartColors.green,
+      backgroundColor: chartColors.greenBg,
+      fill: true,
+      tension: 0.3,
+      pointRadius: 0,
+      borderWidth: 2.5,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false }
+    },
+    scales: {
+      x: { grid: { display: false }, ticks: { maxTicksLimit: 10 } },
+      y: { min: 50, max: 100, grid: { color: '#f1f5f9' },
+        ticks: { callback: v => v + '%' } }
+    }
+  }
+});
+
+// Independence trend
+new Chart(document.getElementById('indepChart'), {
+  type: 'bar',
+  data: {
+    labels: ['12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03'],
+    datasets: [{
+      label: '% Independente',
+      data: [8, 19, 33, 34, 32, 28, 26, 32],
+      backgroundColor: chartColors.purple,
+      borderRadius: 6,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { display: false } },
+      y: { min: 0, max: 50, grid: { color: '#f1f5f9' },
+        ticks: { callback: v => v + '%' } }
+    }
+  }
+});
+
+// Period chart
+new Chart(document.getElementById('periodChart'), {
+  type: 'bar',
+  data: {
+    labels: ["'Manha (6-12h)'", "'Tarde (12-18h)'", "'Noite (18-24h)'"],
+    datasets: [{
+      label: '% Escape',
+      data: [20.6, 15.2, 27.9],
+      backgroundColor: [chartColors.orange, chartColors.green, chartColors.red],
+      borderRadius: 6,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          afterLabel: function(ctx) {
+            const totals = [189, 302, 215];
+            const escs = [39, 46, 60];
+            return escs[ctx.dataIndex] + ' escapes de ' + totals[ctx.dataIndex] + ' eventos';
+          }
+        }
+      }
+    },
+    scales: {
+      x: { min: 0, max: 35, grid: { color: '#f1f5f9' },
+        ticks: { callback: v => v + '%' } },
+      y: { grid: { display: false } }
+    }
+  }
+});
+
+// Day of week
+new Chart(document.getElementById('dowChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab', 'Dom'],
+    datasets: [{
+      label: '% Escape',
+      data: [16.7, 19.5, 18.2, 21.6, 19.4, 19.1, 31.0],
+      backgroundColor: [16.7, 19.5, 18.2, 21.6, 19.4, 19.1, 31.0].map(v => v >= 25 ? chartColors.red : (v >= 20 ? chartColors.orange : chartColors.blue)),
+      borderRadius: 6,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { display: false } },
+      y: { min: 0, max: 40, grid: { color: '#f1f5f9' },
+        ticks: { callback: v => v + '%' } }
+    }
+  }
+});
+
+// Activities
+new Chart(document.getElementById('actChart'), {
+  type: 'bar',
+  data: {
+    labels: ['no sofa','sentado','jogando/tela','correndo','na rede/balancando','dormindo','assistindo TV','brincando','comendo','na escola'],
+    datasets: [{
+      label: 'Escapes',
+      data: [9, 8, 8, 7, 7, 6, 6, 5, 5, 4],
+      backgroundColor: chartColors.orange,
+      borderRadius: 6,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { color: '#f1f5f9' } },
+      y: { grid: { display: false } }
+    }
+  }
+});
+</script>
+
+</body>
+</html>

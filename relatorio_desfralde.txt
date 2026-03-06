@@ -1,0 +1,168 @@
+CSV salvo: isaac_desfralde.csv (807 registros)
+
+======================================================================
+RELATORIO DE DESFRALDE - ISAAC
+Periodo: 2026-01-13 a 2026-03-06 (53 dias)
+Total de registros: 807
+  Eventos (xixi/coco efetivos): 706
+  'Levou mas nao fez': 101
+======================================================================
+
+======================================================================
+1. TAXA DE SUCESSO GERAL
+======================================================================
+  Sucesso (vaso/banho): 561 (79.5%)
+  Escape:               145 (20.5%)
+  Media escapes/dia:    2.7
+  Media sucessos/dia:   10.6
+
+======================================================================
+2. POR TIPO DE EVENTO
+======================================================================
+        xixi:  655 total | 526 sucesso (80%) | 129 escape (20%)
+        coco:   36 total |  27 sucesso (75%) |   9 escape (25%)
+   xixi+coco:   15 total |   8 sucesso (53%) |   7 escape (47%)
+
+======================================================================
+3. INICIATIVA NOS SUCESSOS
+======================================================================
+                 levei:  323 (57.6%)
+               sozinho:  124 (22.1%)
+    (nao especificado):   73 (13.0%)
+                 pediu:   27 (4.8%)
+                mandei:   14 (2.5%)
+
+======================================================================
+4. EVOLUCAO SEMANAL
+======================================================================
+  Sem.inicio   Dias  Suces  Escap  NaoFz   %Suc  Esc/d  %Indep
+  ------------------------------------------------------
+  01/12           6     59     13      5    82%   2.2      8%
+  01/19           7     78     21      8    79%   3.0     19%
+  01/26           7     83     18     26    82%   2.6     33%
+  02/02           7     80     22     19    78%   3.1     34%
+  02/09           7     81     23      9    78%   3.3     32%
+  02/16           7     75     16     11    82%   2.3     28%
+  02/23           7     68     17     18    80%   2.4     26%
+  03/02           5     37     15      5    71%   3.0     32%
+
+======================================================================
+5. ESCAPES POR PERIODO DO DIA
+======================================================================
+  Manha (06-12h)        39/189 (20.6%) ||||||||||||||||||||
+  Tarde (12-18h)        46/302 (15.2%) |||||||||||||||
+  Noite (18-00h)        60/215 (27.9%) |||||||||||||||||||||||||||
+
+======================================================================
+6. ATIVIDADE DURANTE ESCAPES
+======================================================================
+  no sofa                     9
+  sentado                     8
+  jogando/tela                8
+  correndo                    7
+  na rede/balancando          7
+  dormindo                    6
+  assistindo TV               6
+  brincando                   5
+  comendo                     5
+  na escola                   4
+  na cama                     3
+  Dr. Melillo                 2
+  deitado                     1
+  terapia                     1
+  na biblioteca               1
+  (sem registro)           66
+
+======================================================================
+7. ANALISE DE COCO
+======================================================================
+  Total cocos:    51
+  No vaso:        35 (69%)
+  Escape:         16 (31%)
+  Foi sozinho:    20 (39%)
+
+======================================================================
+8. TENDENCIA DE INDEPENDENCIA (sozinho + pediu por semana)
+======================================================================
+  01/12:   5/59  (   8%) ####
+  01/19:  15/78  (  19%) #########
+  01/26:  27/83  (  33%) ################
+  02/02:  27/80  (  34%) ################
+  02/09:  26/81  (  32%) ################
+  02/16:  21/75  (  28%) ##############
+  02/23:  18/68  (  26%) #############
+  03/02:  12/37  (  32%) ################
+
+======================================================================
+9. ESCAPES POR DIA DA SEMANA
+======================================================================
+  seg:  17/102 (16.7%) ||||||||||||||||
+  ter:  22/113 (19.5%) |||||||||||||||||||
+  qua:  20/110 (18.2%) ||||||||||||||||||
+  qui:  21/97  (21.6%) |||||||||||||||||||||
+  sex:  20/103 (19.4%) |||||||||||||||||||
+  sab:  18/94  (19.1%) |||||||||||||||||||
+  dom:  27/87  (31.0%) |||||||||||||||||||||||||||||||
+
+======================================================================
+10. INTERVALO ENTRE IDAS AO BANHEIRO
+======================================================================
+  Media:    59 min
+  Mediana:  56 min
+  P25-P75:  34-71 min
+
+======================================================================
+11. 'LEVOU MAS NAO FEZ'
+======================================================================
+  Total: 101
+  Media/dia: 1.9
+    01/12: 5
+    01/19: 8
+    01/26: 26
+    02/02: 19
+    02/09: 9
+    02/16: 11
+    02/23: 18
+    03/02: 5
+
+======================================================================
+INSIGHTS E OBSERVACOES
+======================================================================
+
+1. TAXA DE SUCESSO ESTAVEL MAS SEM MELHORA CLARA
+   A taxa de sucesso oscila entre 73-85% sem tendencia clara de melhora
+   ao longo das 8 semanas. Isso pode indicar que o protocolo atual
+   atingiu um "platô".
+
+2. NOITE E O PERIODO MAIS CRITICO
+   25.8% de escape à noite vs 15.2% à tarde. Isaac parece ter mais
+   dificuldade de controle no periodo noturno (18h-00h), possivelmente
+   por cansaço/desregulação sensorial.
+
+3. DOMINGOS TEM MAIS ESCAPES
+   Domingos mostram taxa de escape mais alta. Pode estar relacionado
+   a rotina menos estruturada nos fins de semana.
+
+4. COCO TEM BOA AUTONOMIA
+   42% dos cocos Isaac foi sozinho - demonstra boa autopercepção para
+   cocô. A dificuldade maior é com xixi.
+
+5. ESCAPES ASSOCIADOS A ATIVIDADES SEDENTARIAS/HIPERFOCO
+   Sofá/TV, jogando, e na rede são as atividades mais comuns durante
+   escapes. Quando Isaac está em hiperfoco (tela, brincadeira), ele
+   parece não perceber a necessidade.
+
+6. INDEPENDENCIA CRESCEU MAS ESTABILIZOU
+   Independência subiu de ~7% na semana 1 para ~30-32% e estabilizou.
+   O "pediu" (comunicação ativa) ainda é baixo (4.3%).
+
+7. MUITOS "PINGUINHOS"
+   Isaac vai frequentemente ao banheiro fazer pouca quantidade,
+   sugerindo que pode estar usando o banheiro como fuga de demanda
+   (confirmado pelo psicólogo) ou que tem dificuldade de esvaziar
+   completamente.
+
+8. INTERVALO DE ~60 MIN CONSISTENTE
+   O intervalo médio entre idas ao banheiro é ~60 min, alinhado
+   com o protocolo de levar a cada 1h.
+
