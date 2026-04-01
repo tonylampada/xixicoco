@@ -447,7 +447,7 @@ def parse_chat(filepath):
                 'iniciativa': event['iniciativa'] or '',
                 'atividade_escape': event['atividade_escape'] or '',
                 'notas': event['notas'],
-                'texto_original': sub_text if len(sub_messages) > 1 else text,
+                'texto_original': (sub_text if len(sub_messages) > 1 else text).replace('\n', ' '),
             })
 
     return events
@@ -701,8 +701,214 @@ def analyze(events):
 """)
 
 
+def generate_json(events, filepath):
+    """Generate JSON with all dashboard data computed from events."""
+    import json
+    import datetime as dt
+
+    real_events = [e for e in events if e['tipo'] != 'nao_fez']
+    nao_fez = [e for e in events if e['tipo'] == 'nao_fez']
+    successes = [e for e in real_events if e['sucesso'] == 'sim']
+    escapes = [e for e in real_events if e['sucesso'] == 'escape']
+
+    first_date = events[0]['data']
+    last_date = events[-1]['data']
+    d1 = datetime.strptime(first_date, '%Y-%m-%d')
+    d2 = datetime.strptime(last_date, '%Y-%m-%d')
+    total_days = (d2 - d1).days + 1
+
+    # KPIs
+    success_rate = round(100 * len(successes) / len(real_events), 1) if real_events else 0
+    escapes_per_day = round(len(escapes) / total_days, 1)
+    successes_per_day = round(len(successes) / total_days, 1)
+    indep_events = [e for e in successes if e['iniciativa'] in ('sozinho', 'pediu')]
+    independence_rate = round(100 * len(indep_events) / len(successes), 1) if successes else 0
+
+    # Cocô analysis
+    cocos = [e for e in real_events if 'coco' in e['tipo']]
+    coco_success = [e for e in cocos if e['sucesso'] == 'sim']
+    coco_escape = [e for e in cocos if e['sucesso'] == 'escape']
+    coco_sozinho = [e for e in coco_success if e['iniciativa'] == 'sozinho']
+    coco_rate = round(100 * len(coco_success) / len(cocos), 1) if cocos else 0
+
+    # Interval
+    daily_times = defaultdict(list)
+    for e in events:
+        if e['tipo'] != 'nao_fez':
+            h, m = map(int, e['hora'].split(':'))
+            daily_times[e['data']].append(h * 60 + m)
+    all_intervals = []
+    for day, times in sorted(daily_times.items()):
+        times.sort()
+        for i in range(1, len(times)):
+            interval = times[i] - times[i-1]
+            if 5 <= interval <= 300:
+                all_intervals.append(interval)
+    avg_interval = round(sum(all_intervals) / len(all_intervals)) if all_intervals else 0
+
+    # Weekly data
+    weekly = defaultdict(lambda: {'success': 0, 'escape': 0, 'nao_fez': 0, 'days': set(),
+                                   'sozinho': 0, 'pediu': 0, 'total_success': 0})
+    for e in events:
+        d = datetime.strptime(e['data'], '%Y-%m-%d')
+        week_start = d - dt.timedelta(days=d.weekday())
+        week_key = week_start.strftime('%d/%m')
+        weekly[week_key]['days'].add(e['data'])
+        if e['tipo'] == 'nao_fez':
+            weekly[week_key]['nao_fez'] += 1
+        elif e['sucesso'] == 'sim':
+            weekly[week_key]['success'] += 1
+            weekly[week_key]['total_success'] += 1
+            if e['iniciativa'] in ('sozinho', 'pediu'):
+                weekly[week_key]['sozinho'] += 1
+            if e['iniciativa'] == 'pediu':
+                weekly[week_key]['pediu'] += 1
+        else:
+            weekly[week_key]['escape'] += 1
+
+    weekly_rows = []
+    for week in sorted(weekly.keys(), key=lambda w: datetime.strptime(w, '%d/%m')):
+        w = weekly[week]
+        total_w = w['success'] + w['escape']
+        days = len(w['days'])
+        rate = round(100 * w['success'] / total_w, 1) if total_w > 0 else 0
+        esc_per_day = round(w['escape'] / days, 1) if days > 0 else 0
+        indep_rate = round(100 * w['sozinho'] / w['total_success'], 1) if w['total_success'] > 0 else 0
+        weekly_rows.append({
+            'label': week,
+            'days': days,
+            'success': w['success'],
+            'escape': w['escape'],
+            'nao_fez': w['nao_fez'],
+            'success_rate': rate,
+            'escapes_per_day': esc_per_day,
+            'independence': indep_rate,
+        })
+
+    # 7-day rolling success rate
+    daily_data = defaultdict(lambda: {'success': 0, 'escape': 0})
+    for e in real_events:
+        daily_data[e['data']]['success' if e['sucesso'] == 'sim' else 'escape'] += 1
+
+    all_dates = []
+    cur = d1
+    while cur <= d2:
+        all_dates.append(cur.strftime('%Y-%m-%d'))
+        cur += dt.timedelta(days=1)
+
+    rolling = []
+    for i, date in enumerate(all_dates):
+        window_start = max(0, i - 6)
+        window = all_dates[window_start:i+1]
+        s = sum(daily_data[d]['success'] for d in window)
+        e = sum(daily_data[d]['escape'] for d in window)
+        total = s + e
+        rate = round(100 * s / total, 1) if total > 0 else None
+        rolling.append({'date': date[5:], 'rate': rate})
+
+    # Escapes by period
+    period_data = defaultdict(lambda: {'escape': 0, 'total': 0})
+    for e in real_events:
+        h = int(e['hora'].split(':')[0])
+        if 6 <= h < 12:
+            p = 'Manha (6-12h)'
+        elif 12 <= h < 18:
+            p = 'Tarde (12-18h)'
+        elif 18 <= h < 24:
+            p = 'Noite (18-24h)'
+        else:
+            p = 'Madrugada (0-6h)'
+        period_data[p]['total'] += 1
+        if e['sucesso'] == 'escape':
+            period_data[p]['escape'] += 1
+
+    periods = []
+    for p in ['Manha (6-12h)', 'Tarde (12-18h)', 'Noite (18-24h)']:
+        if period_data[p]['total'] > 0:
+            esc = period_data[p]['escape']
+            tot = period_data[p]['total']
+            periods.append({'label': p, 'escape_rate': round(100 * esc / tot, 1), 'escapes': esc, 'total': tot})
+
+    # Escapes by day of week
+    dow_esc = Counter()
+    dow_total = Counter()
+    for e in real_events:
+        dow_total[e['dia_semana']] += 1
+        if e['sucesso'] == 'escape':
+            dow_esc[e['dia_semana']] += 1
+
+    dow_data = []
+    for d in ['seg', 'ter', 'qua', 'qui', 'sex', 'sab', 'dom']:
+        t = dow_total.get(d, 0)
+        esc = dow_esc.get(d, 0)
+        rate = round(100 * esc / t, 1) if t > 0 else 0
+        dow_data.append({'label': d.capitalize(), 'escape_rate': rate})
+
+    # Activities during escapes
+    activities = [e['atividade_escape'] for e in escapes if e['atividade_escape']]
+    act_counter = Counter(activities)
+    act_data = [{'label': act, 'count': count} for act, count in act_counter.most_common(10)]
+
+    # Initiative breakdown
+    init_counts = Counter(e['iniciativa'] for e in successes)
+    init_labels = {
+        'levei': 'Adulto levou',
+        'sozinho': 'Foi sozinho',
+        '': 'Nao especificado',
+        'pediu': 'Pediu',
+        'mandei': 'Adulto mandou/ofertou',
+        'avisou': 'Avisou',
+    }
+    init_data = []
+    for init, count in init_counts.most_common():
+        init_data.append({
+            'label': init_labels.get(init, init),
+            'count': count,
+            'pct': round(100 * count / len(successes), 1),
+        })
+
+    data = {
+        'periodo': {'inicio': first_date, 'fim': last_date, 'dias': total_days, 'total_registros': len(events)},
+        'kpis': {
+            'taxa_sucesso': success_rate,
+            'escapes_por_dia': escapes_per_day,
+            'sucessos_por_dia': successes_per_day,
+            'independencia': independence_rate,
+            'intervalo_medio': avg_interval,
+            'coco_no_vaso': coco_rate,
+        },
+        'semanal': weekly_rows,
+        'tendencia_7d': rolling,
+        'escapes_periodo': periods,
+        'escapes_dia_semana': dow_data,
+        'atividades_escape': act_data,
+        'iniciativa': init_data,
+        'coco': {
+            'total': len(cocos),
+            'no_vaso': len(coco_success),
+            'no_vaso_pct': coco_rate,
+            'escape': len(coco_escape),
+            'escape_pct': round(100 * len(coco_escape) / len(cocos), 1) if cocos else 0,
+            'sozinho': len(coco_sozinho),
+            'sozinho_pct': round(100 * len(coco_sozinho) / len(cocos), 1) if cocos else 0,
+            'por_semana': round(len(cocos) / max((total_days / 7), 1), 1),
+        },
+        'nao_fez': {
+            'total': len(nao_fez),
+            'por_dia': round(len(nao_fez) / total_days, 1),
+        },
+        'gerado_em': datetime.now().strftime('%d/%m/%Y %H:%M'),
+    }
+
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
 if __name__ == '__main__':
-    events = parse_chat('/Users/tony/work/solo/xixicoco/chat.txt')
-    write_csv(events, '/Users/tony/work/solo/xixicoco/isaac_desfralde.csv')
-    print(f"CSV salvo: isaac_desfralde.csv ({len(events)} registros)\n")
+    base = '/Users/tony/work/solo/xixicoco'
+    events = parse_chat(f'{base}/chat.txt')
+    write_csv(events, f'{base}/isaac_desfralde.csv')
+    generate_json(events, f'{base}/data.json')
+    print(f"CSV salvo: isaac_desfralde.csv ({len(events)} registros)")
+    print(f"JSON salvo: data.json")
     analyze(events)

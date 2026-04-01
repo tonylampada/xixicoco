@@ -1,0 +1,586 @@
+{
+  "periodo": {
+    "inicio": "2026-01-13",
+    "fim": "2026-03-31",
+    "dias": 78,
+    "total_registros": 1147
+  },
+  "kpis": {
+    "taxa_sucesso": 83.0,
+    "escapes_por_dia": 2.2,
+    "sucessos_por_dia": 10.7,
+    "independencia": 28.9,
+    "intervalo_medio": 62,
+    "coco_no_vaso": 75.6
+  },
+  "semanal": [
+    {
+      "label": "12/01",
+      "days": 6,
+      "success": 59,
+      "escape": 13,
+      "nao_fez": 5,
+      "success_rate": 81.9,
+      "escapes_per_day": 2.2,
+      "independence": 8.5
+    },
+    {
+      "label": "19/01",
+      "days": 7,
+      "success": 78,
+      "escape": 21,
+      "nao_fez": 8,
+      "success_rate": 78.8,
+      "escapes_per_day": 3.0,
+      "independence": 19.2
+    },
+    {
+      "label": "26/01",
+      "days": 7,
+      "success": 83,
+      "escape": 18,
+      "nao_fez": 26,
+      "success_rate": 82.2,
+      "escapes_per_day": 2.6,
+      "independence": 32.5
+    },
+    {
+      "label": "02/02",
+      "days": 7,
+      "success": 80,
+      "escape": 22,
+      "nao_fez": 19,
+      "success_rate": 78.4,
+      "escapes_per_day": 3.1,
+      "independence": 33.8
+    },
+    {
+      "label": "09/02",
+      "days": 7,
+      "success": 81,
+      "escape": 23,
+      "nao_fez": 9,
+      "success_rate": 77.9,
+      "escapes_per_day": 3.3,
+      "independence": 32.1
+    },
+    {
+      "label": "16/02",
+      "days": 7,
+      "success": 75,
+      "escape": 16,
+      "nao_fez": 11,
+      "success_rate": 82.4,
+      "escapes_per_day": 2.3,
+      "independence": 28.0
+    },
+    {
+      "label": "23/02",
+      "days": 7,
+      "success": 68,
+      "escape": 17,
+      "nao_fez": 18,
+      "success_rate": 80.0,
+      "escapes_per_day": 2.4,
+      "independence": 26.5
+    },
+    {
+      "label": "02/03",
+      "days": 7,
+      "success": 74,
+      "escape": 18,
+      "nao_fez": 9,
+      "success_rate": 80.4,
+      "escapes_per_day": 2.6,
+      "independence": 31.1
+    },
+    {
+      "label": "09/03",
+      "days": 7,
+      "success": 69,
+      "escape": 7,
+      "nao_fez": 5,
+      "success_rate": 90.8,
+      "escapes_per_day": 1.0,
+      "independence": 42.0
+    },
+    {
+      "label": "16/03",
+      "days": 7,
+      "success": 72,
+      "escape": 8,
+      "nao_fez": 10,
+      "success_rate": 90.0,
+      "escapes_per_day": 1.1,
+      "independence": 29.2
+    },
+    {
+      "label": "23/03",
+      "days": 7,
+      "success": 78,
+      "escape": 7,
+      "nao_fez": 17,
+      "success_rate": 91.8,
+      "escapes_per_day": 1.0,
+      "independence": 32.1
+    },
+    {
+      "label": "30/03",
+      "days": 2,
+      "success": 18,
+      "escape": 1,
+      "nao_fez": 4,
+      "success_rate": 94.7,
+      "escapes_per_day": 0.5,
+      "independence": 22.2
+    }
+  ],
+  "tendencia_7d": [
+    {
+      "date": "01-13",
+      "rate": 100.0
+    },
+    {
+      "date": "01-14",
+      "rate": 90.5
+    },
+    {
+      "date": "01-15",
+      "rate": 90.0
+    },
+    {
+      "date": "01-16",
+      "rate": 83.0
+    },
+    {
+      "date": "01-17",
+      "rate": 80.3
+    },
+    {
+      "date": "01-18",
+      "rate": 81.9
+    },
+    {
+      "date": "01-19",
+      "rate": 83.3
+    },
+    {
+      "date": "01-20",
+      "rate": 81.3
+    },
+    {
+      "date": "01-21",
+      "rate": 80.2
+    },
+    {
+      "date": "01-22",
+      "rate": 79.5
+    },
+    {
+      "date": "01-23",
+      "rate": 79.5
+    },
+    {
+      "date": "01-24",
+      "rate": 80.6
+    },
+    {
+      "date": "01-25",
+      "rate": 78.8
+    },
+    {
+      "date": "01-26",
+      "rate": 77.8
+    },
+    {
+      "date": "01-27",
+      "rate": 79.2
+    },
+    {
+      "date": "01-28",
+      "rate": 79.2
+    },
+    {
+      "date": "01-29",
+      "rate": 78.6
+    },
+    {
+      "date": "01-30",
+      "rate": 82.1
+    },
+    {
+      "date": "01-31",
+      "rate": 84.0
+    },
+    {
+      "date": "02-01",
+      "rate": 82.2
+    },
+    {
+      "date": "02-02",
+      "rate": 82.4
+    },
+    {
+      "date": "02-03",
+      "rate": 79.8
+    },
+    {
+      "date": "02-04",
+      "rate": 80.5
+    },
+    {
+      "date": "02-05",
+      "rate": 82.2
+    },
+    {
+      "date": "02-06",
+      "rate": 80.0
+    },
+    {
+      "date": "02-07",
+      "rate": 78.8
+    },
+    {
+      "date": "02-08",
+      "rate": 78.4
+    },
+    {
+      "date": "02-09",
+      "rate": 76.5
+    },
+    {
+      "date": "02-10",
+      "rate": 78.2
+    },
+    {
+      "date": "02-11",
+      "rate": 78.6
+    },
+    {
+      "date": "02-12",
+      "rate": 76.2
+    },
+    {
+      "date": "02-13",
+      "rate": 76.7
+    },
+    {
+      "date": "02-14",
+      "rate": 77.8
+    },
+    {
+      "date": "02-15",
+      "rate": 77.9
+    },
+    {
+      "date": "02-16",
+      "rate": 81.1
+    },
+    {
+      "date": "02-17",
+      "rate": 79.6
+    },
+    {
+      "date": "02-18",
+      "rate": 80.0
+    },
+    {
+      "date": "02-19",
+      "rate": 80.6
+    },
+    {
+      "date": "02-20",
+      "rate": 81.4
+    },
+    {
+      "date": "02-21",
+      "rate": 79.3
+    },
+    {
+      "date": "02-22",
+      "rate": 82.4
+    },
+    {
+      "date": "02-23",
+      "rate": 80.5
+    },
+    {
+      "date": "02-24",
+      "rate": 82.0
+    },
+    {
+      "date": "02-25",
+      "rate": 83.1
+    },
+    {
+      "date": "02-26",
+      "rate": 81.9
+    },
+    {
+      "date": "02-27",
+      "rate": 83.5
+    },
+    {
+      "date": "02-28",
+      "rate": 82.1
+    },
+    {
+      "date": "03-01",
+      "rate": 80.0
+    },
+    {
+      "date": "03-02",
+      "rate": 77.9
+    },
+    {
+      "date": "03-03",
+      "rate": 76.2
+    },
+    {
+      "date": "03-04",
+      "rate": 72.2
+    },
+    {
+      "date": "03-05",
+      "rate": 72.6
+    },
+    {
+      "date": "03-06",
+      "rate": 72.4
+    },
+    {
+      "date": "03-07",
+      "rate": 75.6
+    },
+    {
+      "date": "03-08",
+      "rate": 80.4
+    },
+    {
+      "date": "03-09",
+      "rate": 83.3
+    },
+    {
+      "date": "03-10",
+      "rate": 85.7
+    },
+    {
+      "date": "03-11",
+      "rate": 87.4
+    },
+    {
+      "date": "03-12",
+      "rate": 90.4
+    },
+    {
+      "date": "03-13",
+      "rate": 90.4
+    },
+    {
+      "date": "03-14",
+      "rate": 91.6
+    },
+    {
+      "date": "03-15",
+      "rate": 90.8
+    },
+    {
+      "date": "03-16",
+      "rate": 90.4
+    },
+    {
+      "date": "03-17",
+      "rate": 89.3
+    },
+    {
+      "date": "03-18",
+      "rate": 89.6
+    },
+    {
+      "date": "03-19",
+      "rate": 89.9
+    },
+    {
+      "date": "03-20",
+      "rate": 90.0
+    },
+    {
+      "date": "03-21",
+      "rate": 90.5
+    },
+    {
+      "date": "03-22",
+      "rate": 90.0
+    },
+    {
+      "date": "03-23",
+      "rate": 91.1
+    },
+    {
+      "date": "03-24",
+      "rate": 92.2
+    },
+    {
+      "date": "03-25",
+      "rate": 91.9
+    },
+    {
+      "date": "03-26",
+      "rate": 93.1
+    },
+    {
+      "date": "03-27",
+      "rate": 93.1
+    },
+    {
+      "date": "03-28",
+      "rate": 90.5
+    },
+    {
+      "date": "03-29",
+      "rate": 91.8
+    },
+    {
+      "date": "03-30",
+      "rate": 90.9
+    },
+    {
+      "date": "03-31",
+      "rate": 92.0
+    }
+  ],
+  "escapes_periodo": [
+    {
+      "label": "Manha (6-12h)",
+      "escape_rate": 15.4,
+      "escapes": 42,
+      "total": 272
+    },
+    {
+      "label": "Tarde (12-18h)",
+      "escape_rate": 14.2,
+      "escapes": 63,
+      "total": 443
+    },
+    {
+      "label": "Noite (18-24h)",
+      "escape_rate": 22.7,
+      "escapes": 66,
+      "total": 291
+    }
+  ],
+  "escapes_dia_semana": [
+    {
+      "label": "Seg",
+      "escape_rate": 13.7
+    },
+    {
+      "label": "Ter",
+      "escape_rate": 17.4
+    },
+    {
+      "label": "Qua",
+      "escape_rate": 17.4
+    },
+    {
+      "label": "Qui",
+      "escape_rate": 17.8
+    },
+    {
+      "label": "Sex",
+      "escape_rate": 15.8
+    },
+    {
+      "label": "Sab",
+      "escape_rate": 14.3
+    },
+    {
+      "label": "Dom",
+      "escape_rate": 23.6
+    }
+  ],
+  "atividades_escape": [
+    {
+      "label": "no sofa",
+      "count": 15
+    },
+    {
+      "label": "sentado",
+      "count": 9
+    },
+    {
+      "label": "jogando/tela",
+      "count": 8
+    },
+    {
+      "label": "correndo",
+      "count": 7
+    },
+    {
+      "label": "na rede/balancando",
+      "count": 7
+    },
+    {
+      "label": "dormindo",
+      "count": 7
+    },
+    {
+      "label": "comendo",
+      "count": 7
+    },
+    {
+      "label": "assistindo TV",
+      "count": 7
+    },
+    {
+      "label": "brincando",
+      "count": 5
+    },
+    {
+      "label": "na escola",
+      "count": 4
+    }
+  ],
+  "iniciativa": [
+    {
+      "label": "Adulto levou",
+      "count": 436,
+      "pct": 52.2
+    },
+    {
+      "label": "Foi sozinho",
+      "count": 157,
+      "pct": 18.8
+    },
+    {
+      "label": "Nao especificado",
+      "count": 141,
+      "pct": 16.9
+    },
+    {
+      "label": "Pediu",
+      "count": 84,
+      "pct": 10.1
+    },
+    {
+      "label": "Adulto mandou/ofertou",
+      "count": 17,
+      "pct": 2.0
+    }
+  ],
+  "coco": {
+    "total": 78,
+    "no_vaso": 59,
+    "no_vaso_pct": 75.6,
+    "escape": 19,
+    "escape_pct": 24.4,
+    "sozinho": 28,
+    "sozinho_pct": 35.9,
+    "por_semana": 7.0
+  },
+  "nao_fez": {
+    "total": 141,
+    "por_dia": 1.8
+  },
+  "gerado_em": "01/04/2026 11:33"
+}
