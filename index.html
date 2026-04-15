@@ -2,393 +2,474 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Relatorio Desfralde - Isaac</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Relatório Desfralde — Isaac</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <style>
-  :root {
-    --blue: #3b82f6;
-    --green: #22c55e;
-    --red: #ef4444;
-    --orange: #f59e0b;
-    --purple: #8b5cf6;
-    --gray: #6b7280;
-    --bg: #f8fafc;
-    --card: #ffffff;
-    --border: #e2e8f0;
-    --text: #1e293b;
-    --muted: #64748b;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    padding: 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  h1 { font-size: 1.8rem; margin-bottom: 4px; }
-  .subtitle { color: var(--muted); font-size: 0.95rem; margin-bottom: 24px; }
-  .kpi-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 12px;
-    margin-bottom: 28px;
-  }
-  .kpi {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 16px;
-    text-align: center;
-    border-top: 3px solid var(--border);
-  }
-  .kpi.green { border-top-color: var(--green); }
-  .kpi.red { border-top-color: var(--red); }
-  .kpi.blue { border-top-color: var(--blue); }
-  .kpi.purple { border-top-color: var(--purple); }
-  .kpi.orange { border-top-color: var(--orange); }
-  .kpi .value { font-size: 1.8rem; font-weight: 700; line-height: 1.2; }
-  .kpi .label { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.3px; margin-top: 4px; }
-  .kpi.green .value { color: var(--green); }
-  .kpi.red .value { color: var(--red); }
-  .kpi.blue .value { color: var(--blue); }
-  .kpi.purple .value { color: var(--purple); }
-  .kpi.orange .value { color: var(--orange); }
-
-  .section {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  .section h2 { font-size: 1.1rem; margin-bottom: 16px; }
-  .icon { margin-right: 6px; }
-  .chart-container { position: relative; height: 260px; }
-  .chart-container.tall { height: 320px; }
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
-
-  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
-  th {
-    text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--border);
-    font-weight: 600; color: var(--muted); font-size: 0.78rem;
-    text-transform: uppercase; letter-spacing: 0.3px;
-  }
-  td { padding: 7px 10px; border-bottom: 1px solid var(--border); }
-  tr:last-child td { border-bottom: none; }
-  .num { text-align: right; font-variant-numeric: tabular-nums; }
-  .good { color: var(--green); font-weight: 600; }
-  .bad { color: var(--red); font-weight: 600; }
-  .neutral { color: var(--muted); }
-
-  .bar-bg { background: #e2e8f0; border-radius: 4px; height: 8px; width: 100%; position: relative; overflow: hidden; }
-  .bar-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }
-  .bar-fill.green { background: var(--green); }
-  .bar-fill.red { background: var(--red); }
-  .bar-fill.blue { background: var(--blue); }
-
-  .tag { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
-  .tag-green { background: #dcfce7; color: #166534; }
-  .tag-red { background: #fee2e2; color: #991b1b; }
-  .tag-blue { background: #dbeafe; color: #1e40af; }
-  .tag-orange { background: #fef3c7; color: #92400e; }
-  .tag-neutral { background: #f1f5f9; color: #475569; }
-
-  .footer { text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 24px; padding: 12px; }
+:root {
+  --bg: #0d1117; --surface: #161b22; --border: #30363d;
+  --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff;
+  --green: #3fb950; --red: #f85149; --orange: #d29922; --purple: #bc8cff;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:var(--bg); color:var(--text); padding:16px; padding-bottom:calc(16px + env(safe-area-inset-bottom)); }
+h1 { font-size:1.4em; margin-bottom:4px; }
+.subtitle { color:var(--muted); font-size:0.85em; margin-bottom:16px; }
+.tabs { display:flex; gap:8px; margin-bottom:20px; }
+.tab { padding:8px 16px; border-radius:8px; border:1px solid var(--border); background:var(--surface); color:var(--muted); cursor:pointer; font-size:0.9em; }
+.tab.active { background:var(--accent); color:#fff; border-color:var(--accent); }
+.kpis { display:grid; grid-template-columns:repeat(auto-fit, minmax(140px,1fr)); gap:10px; margin-bottom:24px; }
+.kpi { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; text-align:center; }
+.kpi .value { font-size:1.6em; font-weight:700; }
+.kpi .label { font-size:0.75em; color:var(--muted); margin-top:4px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:16px; margin-bottom:16px; }
+.card h2 { font-size:1em; margin-bottom:12px; color:var(--accent); }
+canvas { max-height:260px; }
+table { width:100%; border-collapse:collapse; font-size:0.8em; }
+th, td { padding:6px 8px; border-bottom:1px solid var(--border); text-align:left; }
+th { color:var(--muted); font-weight:600; }
+.bar-bg { background:var(--border); border-radius:4px; height:8px; width:100%; }
+.bar-fill { height:8px; border-radius:4px; }
+.good { color:var(--green); }
+.bad { color:var(--red); }
+.warn { color:var(--orange); }
+.loading { text-align:center; padding:60px; color:var(--muted); }
+@media(max-width:600px) {
+  .kpis { grid-template-columns:repeat(2,1fr); }
+  table { font-size:0.7em; }
+  th, td { padding:4px; }
+}
 </style>
 </head>
 <body>
-
-<h1>Relatorio de Desfralde - Isaac</h1>
-<p class="subtitle" id="subtitle"></p>
-
-<div class="kpi-grid" id="kpis"></div>
-
-<div class="section">
-  <h2><span class="icon">📈</span> Evolucao Semanal</h2>
-  <div class="chart-container tall"><canvas id="weeklyChart"></canvas></div>
+<h1>Relatório Desfralde — Isaac</h1>
+<div class="subtitle" id="subtitle">Carregando...</div>
+<div class="tabs">
+  <div class="tab active" data-tab="full">Histórico Completo</div>
+  <div class="tab" data-tab="recent">Últimas 4 Semanas</div>
 </div>
-
-<div class="section">
-  <h2><span class="icon">📊</span> Taxa de Sucesso - Media Movel 7 dias</h2>
-  <div class="chart-container"><canvas id="trendChart"></canvas></div>
-</div>
-
-<div class="grid-2">
-  <div class="section">
-    <h2><span class="icon">🧠</span> Independencia por Semana</h2>
-    <div class="chart-container"><canvas id="indepChart"></canvas></div>
-  </div>
-  <div class="section">
-    <h2><span class="icon">🕐</span> Escapes por Periodo</h2>
-    <div class="chart-container"><canvas id="periodChart"></canvas></div>
-  </div>
-</div>
-
-<div class="grid-2">
-  <div class="section">
-    <h2><span class="icon">📅</span> Escapes por Dia da Semana</h2>
-    <div class="chart-container"><canvas id="dowChart"></canvas></div>
-  </div>
-  <div class="section">
-    <h2><span class="icon">🎯</span> Atividade Durante Escapes</h2>
-    <div class="chart-container"><canvas id="actChart"></canvas></div>
-  </div>
-</div>
-
-<div class="section">
-  <h2><span class="icon">📋</span> Dados Semanais Detalhados</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Semana</th><th class="num">Dias</th><th class="num">Sucesso</th>
-        <th class="num">Escape</th><th class="num">Nao Fez</th>
-        <th class="num">% Sucesso</th><th class="num">Esc/Dia</th>
-        <th class="num">% Indep.</th><th>Tendencia</th>
-      </tr>
-    </thead>
-    <tbody id="weeklyTable"></tbody>
-  </table>
-</div>
-
-<div class="grid-2">
-  <div class="section">
-    <h2><span class="icon">🤝</span> Iniciativa nos Sucessos</h2>
-    <table>
-      <thead><tr><th>Tipo</th><th class="num">Qtd</th><th class="num">%</th><th></th></tr></thead>
-      <tbody id="initTable"></tbody>
-    </table>
-  </div>
-  <div class="section">
-    <h2><span class="icon">💩</span> Analise de Coco</h2>
-    <table>
-      <thead><tr><th>Metrica</th><th class="num">Valor</th></tr></thead>
-      <tbody id="cocoTable"></tbody>
-    </table>
-  </div>
-</div>
-
-<div class="footer" id="footer"></div>
+<div id="content"><div class="loading">Carregando CSV...</div></div>
 
 <script>
-const C = {
-  green: '#22c55e', red: '#ef4444', blue: '#3b82f6',
-  orange: '#f59e0b', purple: '#8b5cf6', gray: '#94a3b8',
-  greenBg: 'rgba(34,197,94,0.15)', redBg: 'rgba(239,68,68,0.15)', blueBg: 'rgba(59,130,246,0.15)',
-};
+const CSV_URL = 'xixicoco.csv';
+let allRows = [];
+let currentTab = 'full';
 
-Chart.defaults.font.family = "-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif";
-Chart.defaults.font.size = 12;
-Chart.defaults.plugins.legend.labels.usePointStyle = true;
-Chart.defaults.plugins.legend.labels.pointStyle = 'circle';
+// Parse CSV
+function parseCSV(text) {
+  const lines = text.trim().split('\n');
+  const headers = lines[0].split(',');
+  return lines.slice(1).map(line => {
+    const vals = [];
+    let cur = '', inQ = false;
+    for (let i = 0; i < line.length; i++) {
+      const c = line[i];
+      if (c === '"') { inQ = !inQ; continue; }
+      if (c === ',' && !inQ) { vals.push(cur); cur = ''; continue; }
+      cur += c;
+    }
+    vals.push(cur);
+    const obj = {};
+    headers.forEach((h, i) => obj[h.trim()] = (vals[i] || '').trim());
+    return obj;
+  });
+}
 
-fetch('data.json').then(r => r.json()).then(render);
+// Utils
+function weekKey(dateStr) {
+  const d = new Date(dateStr + 'T12:00:00');
+  const jan1 = new Date(d.getFullYear(), 0, 1);
+  const dayOfYear = Math.floor((d - jan1) / 86400000) + 1;
+  const weekNum = Math.ceil((dayOfYear + jan1.getDay()) / 7);
+  return `${d.getFullYear()}-S${String(weekNum).padStart(2,'0')}`;
+}
 
-function render(D) {
-  // Subtitle
-  document.getElementById('subtitle').innerHTML =
-    `Periodo: ${D.periodo.inicio} a ${D.periodo.fim} (${D.periodo.dias} dias) &middot; ${D.periodo.total_registros} registros totais`;
+function weekLabel(dateStr) {
+  const d = new Date(dateStr + 'T12:00:00');
+  const day = d.getDate();
+  const months = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+  return `${day}/${months[d.getMonth()]}`;
+}
 
-  // KPIs
-  const kpis = [
-    { value: D.kpis.taxa_sucesso + '%', label: 'Taxa de Sucesso', cls: 'green' },
-    { value: D.kpis.escapes_por_dia, label: 'Escapes / Dia', cls: 'red' },
-    { value: D.kpis.sucessos_por_dia, label: 'Sucessos / Dia', cls: 'blue' },
-    { value: D.kpis.independencia + '%', label: 'Independencia', cls: 'purple' },
-    { value: D.kpis.intervalo_medio + 'min', label: 'Intervalo Medio', cls: 'orange' },
-    { value: D.kpis.coco_no_vaso + '%', label: 'Coco no Vaso', cls: 'green' },
-  ];
-  document.getElementById('kpis').innerHTML = kpis.map(k =>
-    `<div class="kpi ${k.cls}"><div class="value">${k.value}</div><div class="label">${k.label}</div></div>`
-  ).join('');
+function getMonday(dateStr) {
+  const d = new Date(dateStr + 'T12:00:00');
+  const day = d.getDay();
+  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+  return new Date(d.getFullYear(), d.getMonth(), diff);
+}
 
-  // Weekly stacked bar
-  const wLabels = D.semanal.map(w => w.label);
-  const wSuccess = D.semanal.map(w => w.success);
-  const wEscape = D.semanal.map(w => w.escape);
-  const wNaoFez = D.semanal.map(w => w.nao_fez);
+function fmtDate(d) {
+  return d.toISOString().slice(0, 10);
+}
 
-  new Chart(document.getElementById('weeklyChart'), {
+function isSuccess(r) {
+  return r.sucesso === 'sim' && r.tipo !== 'escape' && r.tipo !== 'nao_fez' && r.tipo !== 'outro';
+}
+
+function isEscape(r) { return r.tipo === 'escape'; }
+function isNaoFez(r) { return r.tipo === 'nao_fez'; }
+
+function isIndependent(r) {
+  const i = r.iniciativa.toLowerCase();
+  return i === 'sozinho' || i === 'pediu';
+}
+
+function periodOfDay(hora) {
+  if (!hora) return 'Desconhecido';
+  const h = parseInt(hora.split(':')[0]);
+  if (h < 12) return 'Manhã (6h–12h)';
+  if (h < 18) return 'Tarde (12h–18h)';
+  return 'Noite (18h–0h)';
+}
+
+const DOW_NAMES = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+
+function computeData(rows) {
+  if (!rows.length) return null;
+
+  const dates = [...new Set(rows.map(r => r.data))].sort();
+  const firstDate = dates[0];
+  const lastDate = dates[dates.length - 1];
+  const numDays = dates.length;
+
+  const successes = rows.filter(isSuccess);
+  const escapes = rows.filter(isEscape);
+  const naoFez = rows.filter(isNaoFez);
+  const events = rows.filter(r => r.tipo !== 'outro');
+
+  const totalUseful = successes.length + escapes.length;
+  const taxaSucesso = totalUseful > 0 ? (successes.length / totalUseful * 100) : 0;
+
+  const independents = successes.filter(isIndependent);
+  const indPct = successes.length > 0 ? (independents.length / successes.length * 100) : 0;
+
+  // Coco
+  const cocoRows = rows.filter(r => r.tipo === 'coco' || r.tipo === 'xixi_e_coco');
+  const cocoEscape = rows.filter(r => r.tipo === 'escape' && (r.notas || '').toLowerCase().includes('cocô') || (r.texto_original || '').toLowerCase().includes('cocô') || (r.texto_original || '').toLowerCase().includes('coco'));
+  const cocoVaso = cocoRows.length;
+  const cocoTotal = cocoVaso + cocoEscape.length;
+  const cocoPct = cocoTotal > 0 ? (cocoVaso / cocoTotal * 100) : 0;
+
+  // Weekly
+  const weekMap = new Map();
+  dates.forEach(d => {
+    const mon = fmtDate(getMonday(d));
+    if (!weekMap.has(mon)) weekMap.set(mon, { start: d, dates: new Set() });
+    weekMap.get(mon).dates.add(d);
+  });
+
+  const weeks = [];
+  for (const [mon, info] of [...weekMap.entries()].sort()) {
+    const wRows = rows.filter(r => info.dates.has(r.data));
+    const wSucc = wRows.filter(isSuccess);
+    const wEsc = wRows.filter(isEscape);
+    const wNao = wRows.filter(isNaoFez);
+    const wUseful = wSucc.length + wEsc.length;
+    const wInd = wSucc.filter(isIndependent);
+    weeks.push({
+      label: weekLabel(info.start),
+      days: info.dates.size,
+      success: wSucc.length,
+      escape: wEsc.length,
+      nao_fez: wNao.length,
+      success_rate: wUseful > 0 ? (wSucc.length / wUseful * 100) : 0,
+      escapes_per_day: info.dates.size > 0 ? (wEsc.length / info.dates.size) : 0,
+      independence: wSucc.length > 0 ? (wInd.length / wSucc.length * 100) : 0,
+    });
+  }
+
+  // 7-day rolling
+  const daily = new Map();
+  dates.forEach(d => daily.set(d, { success: 0, escape: 0 }));
+  rows.forEach(r => {
+    if (!daily.has(r.data)) return;
+    if (isSuccess(r)) daily.get(r.data).success++;
+    if (isEscape(r)) daily.get(r.data).escape++;
+  });
+  const trend = [];
+  const sortedDates = [...daily.keys()].sort();
+  for (let i = 0; i < sortedDates.length; i++) {
+    const window = sortedDates.slice(Math.max(0, i - 6), i + 1);
+    let s = 0, e = 0;
+    window.forEach(d => { s += daily.get(d).success; e += daily.get(d).escape; });
+    const tot = s + e;
+    trend.push({ date: sortedDates[i], rate: tot > 0 ? (s / tot * 100) : null });
+  }
+
+  // Escapes by period
+  const escPeriod = {};
+  escapes.forEach(r => {
+    const p = periodOfDay(r.hora);
+    escPeriod[p] = (escPeriod[p] || 0) + 1;
+  });
+
+  // Escapes by day of week
+  const escDow = {};
+  const totalDow = {};
+  rows.forEach(r => {
+    const d = new Date(r.data + 'T12:00:00');
+    const dow = DOW_NAMES[d.getDay()];
+    totalDow[dow] = (totalDow[dow] || 0) + 1;
+    if (isEscape(r)) escDow[dow] = (escDow[dow] || 0) + 1;
+  });
+  const dowData = DOW_NAMES.map(d => ({
+    label: d,
+    escape_rate: totalDow[d] ? ((escDow[d] || 0) / totalDow[d] * 100) : 0
+  }));
+
+  // Activities during escape
+  const actMap = {};
+  escapes.forEach(r => {
+    let act = (r.atividade_escape || '').trim();
+    if (!act) act = 'Não informado';
+    actMap[act] = (actMap[act] || 0) + 1;
+  });
+  const activities = Object.entries(actMap)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([label, count]) => ({ label, count }));
+
+  // Initiative
+  const initMap = {};
+  successes.forEach(r => {
+    let ini = (r.iniciativa || '').trim();
+    if (!ini) ini = 'Não informado';
+    initMap[ini] = (initMap[ini] || 0) + 1;
+  });
+  const initiative = Object.entries(initMap)
+    .sort((a, b) => b[1] - a[1])
+    .map(([label, count]) => ({ label, count, pct: (count / successes.length * 100) }));
+
+  // Interval
+  const dayTimes = new Map();
+  rows.filter(r => isSuccess(r) || isEscape(r)).forEach(r => {
+    if (!r.hora) return;
+    const mins = parseInt(r.hora.split(':')[0]) * 60 + parseInt(r.hora.split(':')[1]);
+    if (!dayTimes.has(r.data)) dayTimes.set(r.data, []);
+    dayTimes.get(r.data).push(mins);
+  });
+  let intervals = [];
+  for (const [, times] of dayTimes) {
+    const sorted = times.sort((a, b) => a - b);
+    for (let i = 1; i < sorted.length; i++) intervals.push(sorted[i] - sorted[i - 1]);
+  }
+  const avgInterval = intervals.length > 0 ? Math.round(intervals.reduce((a, b) => a + b, 0) / intervals.length) : 0;
+
+  return {
+    periodo: { inicio: firstDate, fim: lastDate, dias: numDays, total: rows.length },
+    kpis: { taxaSucesso, escapesPerDay: (escapes.length / numDays), sucessosPerDay: (successes.length / numDays), indPct, avgInterval, cocoPct },
+    weeks, trend, escPeriod, dowData, activities, initiative,
+    coco: { total: cocoTotal, noVaso: cocoVaso, escape: cocoEscape.length, pct: cocoPct },
+    naoFez: { total: naoFez.length, perDay: (naoFez.length / numDays) }
+  };
+}
+
+// Destroy existing charts
+let charts = [];
+function destroyCharts() {
+  charts.forEach(c => c.destroy());
+  charts = [];
+}
+
+function render(data) {
+  if (!data) {
+    document.getElementById('content').innerHTML = '<div class="loading">Sem dados para o período</div>';
+    return;
+  }
+  const D = data;
+  const P = D.periodo;
+
+  document.getElementById('subtitle').textContent = `${P.inicio} a ${P.fim} · ${P.dias} dias · ${P.total} registros`;
+
+  destroyCharts();
+
+  const html = `
+    <div class="kpis">
+      <div class="kpi"><div class="value ${D.kpis.taxaSucesso >= 80 ? 'good' : D.kpis.taxaSucesso >= 60 ? 'warn' : 'bad'}">${D.kpis.taxaSucesso.toFixed(0)}%</div><div class="label">Taxa de Sucesso</div></div>
+      <div class="kpi"><div class="value ${D.kpis.escapesPerDay <= 2 ? 'good' : D.kpis.escapesPerDay <= 3 ? 'warn' : 'bad'}">${D.kpis.escapesPerDay.toFixed(1)}</div><div class="label">Escapes / Dia</div></div>
+      <div class="kpi"><div class="value good">${D.kpis.sucessosPerDay.toFixed(1)}</div><div class="label">Sucessos / Dia</div></div>
+      <div class="kpi"><div class="value ${D.kpis.indPct >= 40 ? 'good' : D.kpis.indPct >= 20 ? 'warn' : 'bad'}">${D.kpis.indPct.toFixed(0)}%</div><div class="label">Independência</div></div>
+      <div class="kpi"><div class="value">${D.kpis.avgInterval} min</div><div class="label">Intervalo Médio</div></div>
+      <div class="kpi"><div class="value ${D.kpis.cocoPct >= 70 ? 'good' : D.kpis.cocoPct >= 50 ? 'warn' : 'bad'}">${D.kpis.cocoPct.toFixed(0)}%</div><div class="label">Cocô no Vaso</div></div>
+    </div>
+
+    <div class="card">
+      <h2>Evolução Semanal</h2>
+      <canvas id="weeklyChart"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>Tendência 7 dias (taxa de sucesso)</h2>
+      <canvas id="trendChart"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>Independência Semanal</h2>
+      <canvas id="indChart"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>Escapes por Período</h2>
+      <canvas id="periodChart"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>Escapes por Dia da Semana</h2>
+      <canvas id="dowChart"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>Atividade Durante Escapes</h2>
+      <canvas id="actChart"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>Detalhamento Semanal</h2>
+      <div style="overflow-x:auto">
+        <table>
+          <thead><tr><th>Semana</th><th>Dias</th><th>Sucessos</th><th>Escapes</th><th>Não Fez</th><th>Taxa</th><th>Esc/Dia</th><th>Indep.</th><th></th></tr></thead>
+          <tbody>${D.weeks.map(w => `<tr>
+            <td>${w.label}</td><td>${w.days}</td><td>${w.success}</td><td>${w.escape}</td><td>${w.nao_fez}</td>
+            <td class="${w.success_rate >= 80 ? 'good' : w.success_rate >= 60 ? 'warn' : 'bad'}">${w.success_rate.toFixed(0)}%</td>
+            <td class="${w.escapes_per_day <= 2 ? 'good' : 'bad'}">${w.escapes_per_day.toFixed(1)}</td>
+            <td>${w.independence.toFixed(0)}%</td>
+            <td style="width:80px"><div class="bar-bg"><div class="bar-fill" style="width:${w.success_rate}%;background:${w.success_rate >= 80 ? 'var(--green)' : w.success_rate >= 60 ? 'var(--orange)' : 'var(--red)'}"></div></div></td>
+          </tr>`).join('')}</tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Iniciativa</h2>
+      <table>
+        <thead><tr><th>Tipo</th><th>Qtd</th><th>%</th></tr></thead>
+        <tbody>${D.initiative.map(i => `<tr><td>${i.label}</td><td>${i.count}</td><td>${i.pct.toFixed(1)}%</td></tr>`).join('')}</tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Cocô</h2>
+      <table>
+        <tr><td>No vaso</td><td class="good">${D.coco.noVaso} (${D.coco.pct.toFixed(0)}%)</td></tr>
+        <tr><td>Escape</td><td class="bad">${D.coco.escape} (${D.coco.total > 0 ? (100 - D.coco.pct).toFixed(0) : 0}%)</td></tr>
+        <tr><td>Total</td><td>${D.coco.total}</td></tr>
+      </table>
+    </div>
+  `;
+
+  document.getElementById('content').innerHTML = html;
+
+  // Charts
+  const chartOpts = {
+    responsive: true,
+    plugins: { legend: { labels: { color: '#8b949e', font: { size: 11 } } } },
+    scales: {
+      x: { ticks: { color: '#8b949e', font: { size: 10 } }, grid: { color: '#21262d' } },
+      y: { ticks: { color: '#8b949e', font: { size: 10 } }, grid: { color: '#21262d' } }
+    }
+  };
+
+  // Weekly stacked
+  charts.push(new Chart(document.getElementById('weeklyChart'), {
     type: 'bar',
     data: {
-      labels: wLabels,
+      labels: D.weeks.map(w => w.label),
       datasets: [
-        { label: 'Sucesso', data: wSuccess, backgroundColor: C.green, borderRadius: 4 },
-        { label: 'Escape', data: wEscape, backgroundColor: C.red, borderRadius: 4 },
-        { label: 'Nao Fez', data: wNaoFez, backgroundColor: C.gray, borderRadius: 4 },
+        { label: 'Sucessos', data: D.weeks.map(w => w.success), backgroundColor: '#3fb950' },
+        { label: 'Escapes', data: D.weeks.map(w => w.escape), backgroundColor: '#f85149' },
+        { label: 'Não Fez', data: D.weeks.map(w => w.nao_fez), backgroundColor: '#8b949e' },
       ]
     },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: {
-        tooltip: {
-          callbacks: {
-            afterBody(ctx) {
-              const i = ctx[0].dataIndex;
-              const pct = Math.round(100 * wSuccess[i] / (wSuccess[i] + wEscape[i]));
-              return 'Taxa sucesso: ' + pct + '%';
-            }
-          }
-        }
-      },
-      scales: {
-        x: { stacked: true, grid: { display: false } },
-        y: { stacked: true, grid: { color: '#f1f5f9' } }
-      }
-    }
-  });
+    options: { ...chartOpts, scales: { ...chartOpts.scales, x: { ...chartOpts.scales.x, stacked: true }, y: { ...chartOpts.scales.y, stacked: true } } }
+  }));
 
-  // 7-day rolling trend
-  const trendLabels = D.tendencia_7d.map(t => t.date);
-  const trendData = D.tendencia_7d.map(t => t.rate);
-
-  new Chart(document.getElementById('trendChart'), {
+  // Trend
+  charts.push(new Chart(document.getElementById('trendChart'), {
     type: 'line',
     data: {
-      labels: trendLabels,
-      datasets: [{
-        label: '% Sucesso (7d)', data: trendData,
-        borderColor: C.green, backgroundColor: C.greenBg,
-        fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2.5,
-      }]
+      labels: D.trend.map(t => t.date.slice(5)),
+      datasets: [{ label: 'Taxa 7d', data: D.trend.map(t => t.rate), borderColor: '#58a6ff', backgroundColor: 'rgba(88,166,255,0.1)', fill: true, tension: 0.3, pointRadius: 0 }]
     },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
-      scales: {
-        x: { grid: { display: false }, ticks: { maxTicksLimit: 12 } },
-        y: { min: 50, max: 100, grid: { color: '#f1f5f9' }, ticks: { callback: v => v + '%' } }
-      }
-    }
-  });
+    options: { ...chartOpts, scales: { ...chartOpts.scales, y: { ...chartOpts.scales.y, min: 0, max: 100 } } }
+  }));
 
-  // Independence trend
-  new Chart(document.getElementById('indepChart'), {
+  // Independence
+  charts.push(new Chart(document.getElementById('indChart'), {
     type: 'bar',
     data: {
-      labels: wLabels,
-      datasets: [{ label: '% Independente', data: D.semanal.map(w => w.independence), backgroundColor: C.purple, borderRadius: 6 }]
+      labels: D.weeks.map(w => w.label),
+      datasets: [{ label: 'Independência %', data: D.weeks.map(w => w.independence), backgroundColor: '#bc8cff' }]
     },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
-      scales: {
-        x: { grid: { display: false } },
-        y: { min: 0, max: 60, grid: { color: '#f1f5f9' }, ticks: { callback: v => v + '%' } }
-      }
-    }
-  });
+    options: { ...chartOpts, scales: { ...chartOpts.scales, y: { ...chartOpts.scales.y, min: 0, max: 100 } } }
+  }));
 
-  // Period chart
-  new Chart(document.getElementById('periodChart'), {
+  // Escapes by period
+  const periods = Object.entries(D.escPeriod).sort((a, b) => b[1] - a[1]);
+  charts.push(new Chart(document.getElementById('periodChart'), {
     type: 'bar',
     data: {
-      labels: D.escapes_periodo.map(p => p.label),
-      datasets: [{
-        label: '% Escape',
-        data: D.escapes_periodo.map(p => p.escape_rate),
-        backgroundColor: [C.orange, C.green, C.red],
-        borderRadius: 6,
-      }]
+      labels: periods.map(p => p[0]),
+      datasets: [{ label: 'Escapes', data: periods.map(p => p[1]), backgroundColor: '#f85149' }]
     },
-    options: {
-      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          callbacks: {
-            afterLabel(ctx) {
-              const p = D.escapes_periodo[ctx.dataIndex];
-              return p.escapes + ' escapes de ' + p.total + ' eventos';
-            }
-          }
-        }
-      },
-      scales: {
-        x: { min: 0, max: 35, grid: { color: '#f1f5f9' }, ticks: { callback: v => v + '%' } },
-        y: { grid: { display: false } }
-      }
-    }
-  });
+    options: { ...chartOpts, indexAxis: 'y' }
+  }));
 
   // Day of week
-  const dowRates = D.escapes_dia_semana.map(d => d.escape_rate);
-  new Chart(document.getElementById('dowChart'), {
+  charts.push(new Chart(document.getElementById('dowChart'), {
     type: 'bar',
     data: {
-      labels: D.escapes_dia_semana.map(d => d.label),
-      datasets: [{
-        label: '% Escape', data: dowRates,
-        backgroundColor: dowRates.map(v => v >= 25 ? C.red : (v >= 20 ? C.orange : C.blue)),
-        borderRadius: 6,
-      }]
+      labels: D.dowData.map(d => d.label),
+      datasets: [{ label: 'Taxa Escape %', data: D.dowData.map(d => d.escape_rate), backgroundColor: D.dowData.map(d => d.escape_rate >= 25 ? '#f85149' : d.escape_rate >= 20 ? '#d29922' : '#3fb950') }]
     },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
-      scales: {
-        x: { grid: { display: false } },
-        y: { min: 0, max: 40, grid: { color: '#f1f5f9' }, ticks: { callback: v => v + '%' } }
-      }
-    }
-  });
+    options: chartOpts
+  }));
 
   // Activities
-  new Chart(document.getElementById('actChart'), {
+  charts.push(new Chart(document.getElementById('actChart'), {
     type: 'bar',
     data: {
-      labels: D.atividades_escape.map(a => a.label),
-      datasets: [{ label: 'Escapes', data: D.atividades_escape.map(a => a.count), backgroundColor: C.orange, borderRadius: 6 }]
+      labels: D.activities.map(a => a.label),
+      datasets: [{ label: 'Ocorrências', data: D.activities.map(a => a.count), backgroundColor: '#d29922' }]
     },
-    options: {
-      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
-      scales: { x: { grid: { color: '#f1f5f9' } }, y: { grid: { display: false } } }
-    }
-  });
-
-  // Weekly table
-  document.getElementById('weeklyTable').innerHTML = D.semanal.map(w => {
-    const sucCls = w.success_rate >= 80 ? 'good' : (w.success_rate < 75 ? 'bad' : '');
-    const escCls = w.escapes_per_day >= 3 ? 'bad' : '';
-    return `<tr>
-      <td>${w.label}</td><td class="num">${w.days}</td>
-      <td class="num good">${w.success}</td><td class="num bad">${w.escape}</td>
-      <td class="num neutral">${w.nao_fez}</td>
-      <td class="num ${sucCls}">${w.success_rate}%</td>
-      <td class="num ${escCls}">${w.escapes_per_day}</td>
-      <td class="num">${w.independence}%</td>
-      <td><div class="bar-bg"><div class="bar-fill green" style="width:${w.success_rate}%"></div></div></td>
-    </tr>`;
-  }).join('');
-
-  // Initiative table
-  const tagCls = { 'Adulto levou': 'tag-blue', 'Foi sozinho': 'tag-green', 'Pediu': 'tag-green',
-    'Adulto mandou/ofertou': 'tag-blue', 'Avisou': 'tag-green', 'Nao especificado': 'tag-neutral' };
-  document.getElementById('initTable').innerHTML = D.iniciativa.map(i =>
-    `<tr><td><span class="tag ${tagCls[i.label] || 'tag-neutral'}">${i.label}</span></td>
-     <td class="num">${i.count}</td><td class="num">${i.pct}%</td>
-     <td><div class="bar-bg"><div class="bar-fill blue" style="width:${i.pct}%"></div></div></td></tr>`
-  ).join('');
-
-  // Coco table
-  const cc = D.coco;
-  document.getElementById('cocoTable').innerHTML = `
-    <tr><td>Total de cocos</td><td class="num">${cc.total}</td></tr>
-    <tr><td>No vaso</td><td class="num good">${cc.no_vaso} (${cc.no_vaso_pct}%)</td></tr>
-    <tr><td>Escape</td><td class="num bad">${cc.escape} (${cc.escape_pct}%)</td></tr>
-    <tr><td>Foi sozinho</td><td class="num good">${cc.sozinho} (${cc.sozinho_pct}%)</td></tr>
-    <tr><td>Media por semana</td><td class="num">${cc.por_semana}</td></tr>`;
-
-  // Footer
-  document.getElementById('footer').innerHTML =
-    `Gerado em ${D.gerado_em} &middot; Dados de ${D.periodo.dias} dias de registro &middot; ${D.periodo.total_registros} eventos totais`;
+    options: { ...chartOpts, indexAxis: 'y' }
+  }));
 }
-</script>
 
+// Tab switching
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    currentTab = tab.dataset.tab;
+    applyFilter();
+  });
+});
+
+function applyFilter() {
+  let rows = allRows;
+  if (currentTab === 'recent') {
+    const dates = [...new Set(rows.map(r => r.data))].sort();
+    if (dates.length > 0) {
+      const last = new Date(dates[dates.length - 1] + 'T12:00:00');
+      const cutoff = new Date(last);
+      cutoff.setDate(cutoff.getDate() - 27);
+      const cutStr = fmtDate(cutoff);
+      rows = rows.filter(r => r.data >= cutStr);
+    }
+  }
+  render(computeData(rows));
+}
+
+// Load CSV
+fetch(CSV_URL)
+  .then(r => { if (!r.ok) throw new Error('CSV not found'); return r.text(); })
+  .then(text => {
+    allRows = parseCSV(text);
+    applyFilter();
+  })
+  .catch(err => {
+    document.getElementById('content').innerHTML = `<div class="loading">Erro: ${err.message}</div>`;
+  });
+</script>
 </body>
 </html>
