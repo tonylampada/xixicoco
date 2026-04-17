@@ -122,6 +122,41 @@ function periodOfDay(hora) {
   return 'Noite (18h–0h)';
 }
 
+function escapeSubtype(r) {
+  const text = `${r.texto_original || ''} ${r.notas || ''}`.toLowerCase();
+  const local = (r.local || '').toLowerCase();
+  const hasBathroomTransition = [
+    'foi no banheiro', 'foi ao banheiro', 'foi para o banheiro', 'foi pro banheiro',
+    'correu para o banheiro', 'correu pro banheiro', 'depois foi no banheiro',
+    'depois foi pro banheiro', 'terminou no banheiro', 'entrou no banheiro',
+    'voltou pro banheiro', 'voltou ao banheiro'
+  ].some(k => text.includes(k));
+  const hasWetClothes = [
+    'roupa', 'cueca', 'calça', 'calca', 'calção', 'calcao', 'fralda'
+  ].some(k => local === k) || [
+    'na roupa', 'na cueca', 'na calça', 'na calca', 'na calção', 'na calcao', 'na fralda',
+    'na calça', 'na calca'
+  ].some(k => text.includes(k));
+  const sofaLike = local === 'sofa' || local === 'cadeira' || local === 'tapete' || [
+    'sofá', 'sofa', 'cadeira', 'tapete', 'cama'
+  ].some(k => text.includes(k));
+  const noPerception = ['não percebeu', 'nao percebeu', 'nem percebeu', 'sem perceber', 'não percebe', 'nao percebe', 'não notou', 'nao notou']
+    .some(k => text.includes(k));
+  const alreadyWet = ['já tava mijado', 'ja tava mijado', 'já estava mijado', 'ja estava mijado', 'já tinha feito', 'ja tinha feito']
+    .some(k => text.includes(k));
+
+  if (sofaLike && (noPerception || text.includes('mijou no sofá') || text.includes('mijou no sofa') || text.includes('escape no sofa') || text.includes('escape no sofá'))) {
+    return 'Sofá / sem perceber';
+  }
+  if (hasWetClothes && (hasBathroomTransition || alreadyWet)) {
+    return 'Roupa -> banheiro';
+  }
+  if (sofaLike) return 'Sofá / sem perceber';
+  if (hasWetClothes) return 'Roupa -> banheiro';
+  if (hasBathroomTransition || alreadyWet) return 'Roupa -> banheiro';
+  return 'Outro escape';
+}
+
 const DOW_NAMES = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
 
 function computeData(rows) {
@@ -229,6 +264,25 @@ function computeData(rows) {
     .slice(0, 10)
     .map(([label, count]) => ({ label, count }));
 
+  // Escape subtypes (heurísticos)
+  const escapeSubtypeTotals = { 'Sofá / sem perceber': 0, 'Roupa -> banheiro': 0, 'Outro escape': 0 };
+  const escapeSubtypeWeekly = [];
+  for (const [mon, info] of [...weekMap.entries()].sort()) {
+    const wRows = rows.filter(r => info.dates.has(r.data) && isEscape(r));
+    const counts = { 'Sofá / sem perceber': 0, 'Roupa -> banheiro': 0, 'Outro escape': 0 };
+    wRows.forEach(r => {
+      const key = escapeSubtype(r);
+      counts[key] = (counts[key] || 0) + 1;
+      escapeSubtypeTotals[key] = (escapeSubtypeTotals[key] || 0) + 1;
+    });
+    escapeSubtypeWeekly.push({
+      label: weekLabel(info.start),
+      'Sofá / sem perceber': counts['Sofá / sem perceber'],
+      'Roupa -> banheiro': counts['Roupa -> banheiro'],
+      'Outro escape': counts['Outro escape'],
+    });
+  }
+
   // Initiative
   const initMap = {};
   successes.forEach(r => {
@@ -259,6 +313,7 @@ function computeData(rows) {
     periodo: { inicio: firstDate, fim: lastDate, dias: numDays, total: rows.length },
     kpis: { taxaSucesso, escapesPerDay: (escapes.length / numDays), sucessosPerDay: (successes.length / numDays), indPct, avgInterval, cocoPct },
     weeks, trend, escPeriod, dowData, activities, initiative,
+    escapeSubtypeTotals, escapeSubtypeWeekly,
     coco: { total: cocoTotal, noVaso: cocoVaso, escape: cocoEscape.length, pct: cocoPct },
     naoFez: { total: naoFez.length, perDay: (naoFez.length / numDays) }
   };
@@ -321,6 +376,24 @@ function render(data) {
     <div class="card">
       <h2>Atividade Durante Escapes</h2>
       <canvas id="actChart"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>Subtipos de Escape</h2>
+      <div style="font-size:0.8em;color:var(--muted);margin-bottom:8px">Classificação heurística a partir de texto_original/notas.</div>
+      <table>
+        <thead><tr><th>Subtipo</th><th>Qtd</th></tr></thead>
+        <tbody>
+          <tr><td>Sofá / sem perceber</td><td>${D.escapeSubtypeTotals['Sofá / sem perceber']}</td></tr>
+          <tr><td>Roupa → banheiro</td><td>${D.escapeSubtypeTotals['Roupa -> banheiro']}</td></tr>
+          <tr><td>Outro escape</td><td>${D.escapeSubtypeTotals['Outro escape']}</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Evolução dos Subtipos de Escape</h2>
+      <canvas id="escapeSubtypeChart"></canvas>
     </div>
 
     <div class="card">
@@ -432,6 +505,20 @@ function render(data) {
       datasets: [{ label: 'Ocorrências', data: D.activities.map(a => a.count), backgroundColor: '#d29922' }]
     },
     options: { ...chartOpts, indexAxis: 'y' }
+  }));
+
+  // Escape subtype evolution
+  charts.push(new Chart(document.getElementById('escapeSubtypeChart'), {
+    type: 'bar',
+    data: {
+      labels: D.escapeSubtypeWeekly.map(w => w.label),
+      datasets: [
+        { label: 'Sofá / sem perceber', data: D.escapeSubtypeWeekly.map(w => w['Sofá / sem perceber']), backgroundColor: '#f85149' },
+        { label: 'Roupa → banheiro', data: D.escapeSubtypeWeekly.map(w => w['Roupa -> banheiro']), backgroundColor: '#d29922' },
+        { label: 'Outro escape', data: D.escapeSubtypeWeekly.map(w => w['Outro escape']), backgroundColor: '#8b949e' },
+      ]
+    },
+    options: { ...chartOpts, scales: { ...chartOpts.scales, x: { ...chartOpts.scales.x, stacked: true }, y: { ...chartOpts.scales.y, stacked: true } } }
   }));
 }
 
