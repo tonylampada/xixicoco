@@ -46,7 +46,13 @@ th { color:var(--muted); font-weight:600; }
 <div class="subtitle" id="subtitle">Carregando...</div>
 <div class="tabs">
   <div class="tab active" data-tab="full">Histórico Completo</div>
-  <div class="tab" data-tab="recent">Últimas 4 Semanas</div>
+  <div class="tab" data-tab="recent">Histórico Recente</div>
+  <button class="tab" id="downloadDaily" style="margin-left:auto;font-family:inherit;">⬇ CSV diário</button>
+</div>
+<div id="recentControls" style="display:none;margin-bottom:16px;">
+  <label for="daysInput" style="font-size:0.85em;color:var(--muted);margin-right:8px;">Últimos</label>
+  <input id="daysInput" type="number" min="1" value="28" style="width:80px;padding:6px 8px;background:var(--surface);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.9em;">
+  <span style="font-size:0.85em;color:var(--muted);margin-left:8px;">dias</span>
 </div>
 <div id="content"><div class="loading">Carregando CSV...</div></div>
 
@@ -185,12 +191,18 @@ function computeData(rows) {
   const cocoTotal = cocoVaso + cocoEscape.length;
   const cocoPct = cocoTotal > 0 ? (cocoVaso / cocoTotal * 100) : 0;
 
-  // Weekly
+  // Weekly — buckets of 7 days, anchored at the last available date
+  const lastDateObj = new Date(lastDate + 'T12:00:00');
   const weekMap = new Map();
   dates.forEach(d => {
-    const mon = fmtDate(getMonday(d));
-    if (!weekMap.has(mon)) weekMap.set(mon, { start: d, dates: new Set() });
-    weekMap.get(mon).dates.add(d);
+    const dObj = new Date(d + 'T12:00:00');
+    const daysDiff = Math.floor((lastDateObj - dObj) / 86400000);
+    const bucket = Math.floor(daysDiff / 7);
+    const bucketStart = new Date(lastDateObj);
+    bucketStart.setDate(bucketStart.getDate() - (bucket * 7 + 6));
+    const key = fmtDate(bucketStart);
+    if (!weekMap.has(key)) weekMap.set(key, { start: key, dates: new Set() });
+    weekMap.get(key).dates.add(d);
   });
 
   const weeks = [];
@@ -228,7 +240,11 @@ function computeData(rows) {
     let s = 0, e = 0;
     window.forEach(d => { s += daily.get(d).success; e += daily.get(d).escape; });
     const tot = s + e;
-    trend.push({ date: sortedDates[i], rate: tot > 0 ? (s / tot * 100) : null });
+    trend.push({
+      date: sortedDates[i],
+      rate: tot > 0 ? (s / tot * 100) : null,
+      escapes: daily.get(sortedDates[i]).escape,
+    });
   }
 
   // Escapes by period
@@ -354,7 +370,7 @@ function render(data) {
     </div>
 
     <div class="card">
-      <h2>Tendência 7 dias (taxa de sucesso)</h2>
+      <h2>Tendência 7 dias (taxa de sucesso) + escapes/dia</h2>
       <canvas id="trendChart"></canvas>
     </div>
 
@@ -457,13 +473,24 @@ function render(data) {
   }));
 
   // Trend
+  const maxEsc = Math.max(1, ...D.trend.map(t => t.escapes || 0));
   charts.push(new Chart(document.getElementById('trendChart'), {
     type: 'line',
     data: {
       labels: D.trend.map(t => t.date.slice(5)),
-      datasets: [{ label: 'Taxa 7d', data: D.trend.map(t => t.rate), borderColor: '#58a6ff', backgroundColor: 'rgba(88,166,255,0.1)', fill: true, tension: 0.3, pointRadius: 0 }]
+      datasets: [
+        { label: 'Taxa 7d (%)', data: D.trend.map(t => t.rate), borderColor: '#58a6ff', backgroundColor: 'rgba(88,166,255,0.1)', fill: true, tension: 0.3, pointRadius: 0, yAxisID: 'y' },
+        { label: 'Escapes/dia', data: D.trend.map(t => t.escapes), borderColor: '#f85149', backgroundColor: 'rgba(248,81,73,0.05)', fill: false, tension: 0.2, pointRadius: 2, pointBackgroundColor: '#f85149', yAxisID: 'y1' }
+      ]
     },
-    options: { ...chartOpts, scales: { ...chartOpts.scales, y: { ...chartOpts.scales.y, min: 0, max: 100 } } }
+    options: {
+      ...chartOpts,
+      scales: {
+        x: chartOpts.scales.x,
+        y: { ...chartOpts.scales.y, position: 'left', min: 0, max: 100, title: { display: true, text: 'Taxa %', color: '#8b949e' } },
+        y1: { ticks: { color: '#8b949e', font: { size: 10 }, precision: 0 }, grid: { drawOnChartArea: false }, position: 'right', min: 0, max: maxEsc + 1, title: { display: true, text: 'Escapes', color: '#8b949e' } }
+      }
+    }
   }));
 
   // Independence
@@ -528,18 +555,59 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
     currentTab = tab.dataset.tab;
+    document.getElementById('recentControls').style.display = currentTab === 'recent' ? 'block' : 'none';
     applyFilter();
   });
+});
+
+document.getElementById('daysInput').addEventListener('input', () => {
+  if (currentTab === 'recent') applyFilter();
+});
+
+function buildDailyCSV(rows) {
+  const byDay = new Map();
+  rows.forEach(r => {
+    if (!byDay.has(r.data)) byDay.set(r.data, []);
+    byDay.get(r.data).push(r);
+  });
+  const headers = ['data','dia_semana','eventos','sucessos','escapes','nao_fez','xixi_vaso','coco_vaso','independentes','taxa_sucesso_pct'];
+  const lines = [headers.join(',')];
+  [...byDay.keys()].sort().forEach(date => {
+    const dayRows = byDay.get(date);
+    const succ = dayRows.filter(isSuccess);
+    const esc = dayRows.filter(isEscape);
+    const nao = dayRows.filter(isNaoFez);
+    const xixi = dayRows.filter(r => r.tipo === 'xixi' && r.sucesso === 'sim');
+    const coco = dayRows.filter(r => (r.tipo === 'coco' || r.tipo === 'xixi_e_coco') && r.sucesso === 'sim');
+    const ind = succ.filter(isIndependent);
+    const useful = succ.length + esc.length;
+    const rate = useful > 0 ? (succ.length / useful * 100).toFixed(1) : '';
+    const dow = dayRows[0].dia_semana || '';
+    lines.push([date, dow, dayRows.length, succ.length, esc.length, nao.length, xixi.length, coco.length, ind.length, rate].join(','));
+  });
+  return lines.join('\n');
+}
+
+document.getElementById('downloadDaily').addEventListener('click', () => {
+  const csv = buildDailyCSV(allRows);
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'xixicoco-diario.csv';
+  a.click();
+  URL.revokeObjectURL(url);
 });
 
 function applyFilter() {
   let rows = allRows;
   if (currentTab === 'recent') {
+    const days = Math.max(1, parseInt(document.getElementById('daysInput').value, 10) || 28);
     const dates = [...new Set(rows.map(r => r.data))].sort();
     if (dates.length > 0) {
       const last = new Date(dates[dates.length - 1] + 'T12:00:00');
       const cutoff = new Date(last);
-      cutoff.setDate(cutoff.getDate() - 27);
+      cutoff.setDate(cutoff.getDate() - (days - 1));
       const cutStr = fmtDate(cutoff);
       rows = rows.filter(r => r.data >= cutStr);
     }
