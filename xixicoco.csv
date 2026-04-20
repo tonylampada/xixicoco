@@ -1404,3 +1404,13 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-04-18,sab,19:55,Thomas,escape,sim,roupa,,de pé rindo,Mijou no chão duma vez na hora que disse,"Estava de pé rindo e disse xixi, mijou no chão duma vez na hora que disse"
 2026-04-18,sab,20:54,Tony,xixi,nao,vaso,levei,,Disse que nao queria xixi,Xixi no vaso. Levei. Ele disse que nao queria xixi
 2026-04-18,sab,21:15,Tony,coco,sim,vaso,,,,Cocô no vaso. Avisou.
+2026-04-19,dom,12:02,Tony,nao_fez,nao,vaso,levei,,,levei no banheiro. não fez xixi
+2026-04-19,dom,15:55,Tia Angelica,xixi,sim,vaso,levei,,,Levei ao banheiro e fez xixi 15:55
+2026-04-19,dom,15:56,Samantha,escape,sim,roupa,,da praia,,fez xixi no chão da lavanderia
+2026-04-19,dom,16:22,Samantha,coco,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez cocô
+2026-04-19,dom,18:40,Thomas,xixi,sim,sofa,,assistindo TV,,estava no sofá assistindo TV e fez xixi
+2026-04-19,dom,19:35,Thomas,xixi_e_coco,sim,vaso,levei,,,"Disse xixi, levei no banheiro fez xixi. Logo depois disse cocô e sentou e fez cocô"
+2026-04-19,dom,19:52,Samantha,xixi_e_coco,sim,vaso,pediu,,,"Falou xixi, levei no banheiro aí fez xixi e depois virou para sentar por fazer cocô e fez"
+2026-04-19,dom,21:05,Samantha,xixi,sim,vaso,levei,,,Levou no banheiro e fez xixi
+2026-04-19,dom,21:22,Thomas,coco,sim,vaso,pediu,,,Falou cocô e fez cocô
+2026-04-19,dom,21:29,Thomas,coco,sim,vaso,pediu,,,Falou cocô denovo e fez
