@@ -1420,3 +1420,11 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-04-20,seg,14:19,Tia Angelica,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
 2026-04-20,seg,18:30,Samantha,xixi,sim,fralda,,,,acordou às 18:30 fez xixi na fralda
 2026-04-20,seg,20:22,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-04-21,ter,11:08,Samantha,escape,sim,cadeira,,,,mijou na cama
+2026-04-21,ter,12:00,Tia Angelica,outro,,,,,Menção de horário de evento não detalhado.,Foi 12:00
+2026-04-21,ter,13:19,Tia Angelica,nao_fez,nao,vaso,levei,,,Levei o Isaac no banheiro e não fez xixi
+2026-04-21,ter,15:24,Tia Angelica,xixi,sim,vaso,,,,Foi ao banheiro e fez xixi
+2026-04-21,ter,16:39,Tia Angelica,nao_fez,nao,vaso,levei,,,Levei ao banheiro e não fez xixi
+2026-04-21,ter,18:00,Tia Angelica,nao_fez,nao,vaso,levei,,,Levei no banheiro e não fez xixi
+2026-04-21,ter,19:43,Tony,nao_fez,nao,vaso,levei,,,Levei no banheiro e nao fez xixi
+2026-04-21,ter,21:31,Thomas,escape,sim,sofa,,,,se esparramar quando mijou pelo sofá inteiro
