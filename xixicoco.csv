@@ -1449,3 +1449,13 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-04-23,qui,18:00,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
 2026-04-23,qui,19:30,Samantha,xixi,sim,chuveiro,,,,Fez xixi no banho as 19:30
 2026-04-23,qui,21:31,Tony,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho.
+2026-04-24,sex,08:00,Andreia,escape,sim,sofa,,deitado no sofá,,Escape de xixi
+2026-04-24,sex,08:42,Andreia,escape,sim,fralda,,,Estava de fralda,Estava de fralda
+2026-04-24,sex,09:54,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso
+2026-04-24,sex,11:30,Andreia,escape,sim,jardim,,brincando no jardim,,"Escape de xixi, estava brincando no jardim."
+2026-04-24,sex,16:20,Andreia,escape,sim,sofa,,dormindo no sofa,,acordou todo molhado
+2026-04-24,sex,18:42,Samantha,nao_fez,nao,vaso,levei,,,não quer fazer xixi
+2026-04-24,sex,19:26,Tony,escape,sim,roupa,,sentado no chao do escritorio,,Mijou ali mesmo.
+2026-04-24,sex,20:30,Tony,xixi,sim,chuveiro,,,,Fez xixi no banho
+2026-04-24,sex,21:32,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-04-24,sex,21:47,Tony,coco,sim,vaso,sozinho,,,Coco no vaso. Foi sozinho
