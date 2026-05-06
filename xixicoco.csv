@@ -1565,3 +1565,16 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-05-04,seg,17:03,Viviane AT,xixi,sim,roupa,pediu,,,"Pediu xixi, chegou no banheiro fez na roupa."
 2026-05-04,seg,18:35,Thomas,xixi,sim,vaso,,,,fez xixi no vaso
 2026-05-04,seg,20:31,Thomas,escape,sim,roupa,,,,Escape estava chorando no chão
+2026-05-05,ter,06:24,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi no vaso
+2026-05-05,ter,08:25,Tia Angelica,xixi,sim,vaso,,,,Foi ao banheiro e fez xixi
+2026-05-05,ter,08:35,Samantha,outro,,,sozinho,,,Ele foi sozinho?
+2026-05-05,ter,08:36,Tia Angelica,outro,,vaso,levei,,,Levei ao banheiro
+2026-05-05,ter,10:15,Dyani AT,xixi,sim,vaso,pediu,,,Xixi pediu 10:15
+2026-05-05,ter,11:08,Tia Angelica,xixi,sim,vaso,sozinho,,,Foi sozinho no banheiro e fez xixi
+2026-05-05,ter,12:40,Tia Angelica,xixi,sim,vaso,,,,Foi ao banheiro tomar banho e fez xixi no vaso 12:40
+2026-05-05,ter,13:38,Viviane AT,xixi,sim,vaso,levei,,,Levei ao banheiro fez xixi
+2026-05-05,ter,15:05,Viviane AT,xixi,sim,vaso,pediu,,,"Falou xixi, levei e fez."
+2026-05-05,ter,17:01,Viviane AT,xixi,sim,vaso,levei,,,"Levei ao banheiro, fez xixi"
+2026-05-05,ter,18:15,Tia Angelica,xixi,sim,vaso,,,,Foi tomar banho e fez xixi no vaso 18!15
+2026-05-05,ter,20:25,Tia Angelica,escape,sim,cueca,,sofá,,Fez xixi na cueca e estava no sofá rindo
+2026-05-05,ter,20:25,Tia Angelica,xixi_e_coco,sim,vaso,levei,,,Levei ao banheiro e pediu para fazer cocô e fez xixi
