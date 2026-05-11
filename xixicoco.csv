@@ -1623,3 +1623,13 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-05-09,sab,16:56,Thomas,xixi,sim,vaso,pediu,,,"Pediu pra fazer xixi, levei e fez xixi no vaso"
 2026-05-09,sab,19:23,Thomas,xixi,sim,vaso,levei,,,Levei no banheiro fez xixi
 2026-05-09,sab,19:46,Thomas,escape,sim,sofa,,,,Escape xixi estava no sofá
+2026-05-10,dom,07:15,Samantha,escape,sim,fralda,,acordou,Vazou na cama,"Escape xixi, acordou e fez xixi na fralda e vazou na cama"
+2026-05-10,dom,09:06,Samantha,escape,sim,sofa,,sentado,,"Escape xixi no sofá, estava sentado e mijou"
+2026-05-10,dom,11:43,Thomas,escape,sim,sofa,,estava rindo,,Escape xixi estava rindo no sofá
+2026-05-10,dom,13:23,Thomas,nao_fez,nao,vaso,levei,,,"levei no banheiro falou ""não quero xixi"""
+2026-05-10,dom,13:50,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-05-10,dom,15:20,Thomas,xixi,sim,vaso,levei,,,levei no banheiro fez xixi
+2026-05-10,dom,16:44,Samantha,coco,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez cocô
+2026-05-10,dom,17:52,Samantha,xixi,sim,chuveiro,,,,Fez xixi no banho
+2026-05-10,dom,19:08,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-05-10,dom,20:33,Thomas,xixi,sim,vaso,levei,,,Falou xixi levei no banheiro fez xixi
