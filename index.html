@@ -186,11 +186,7 @@ function computeData(rows) {
 
   // Coco
   const cocoRows = rows.filter(r => r.tipo === 'coco' || r.tipo === 'xixi_e_coco');
-  const cocoEscape = rows.filter(r => r.tipo === 'escape' && (
-    (r.notas || '').toLowerCase().includes('cocô') ||
-    (r.texto_original || '').toLowerCase().includes('cocô') ||
-    (r.texto_original || '').toLowerCase().includes('coco')
-  ));
+  const cocoEscape = rows.filter(r => r.tipo === 'escape' && (r.notas || '').toLowerCase().includes('cocô') || (r.texto_original || '').toLowerCase().includes('cocô') || (r.texto_original || '').toLowerCase().includes('coco'));
   const cocoVaso = cocoRows.length;
   const cocoTotal = cocoVaso + cocoEscape.length;
   const cocoPct = cocoTotal > 0 ? (cocoVaso / cocoTotal * 100) : 0;
