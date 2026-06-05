@@ -1837,3 +1837,13 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-06-03,qua,12:50,Samantha,nao_fez,nao,vaso,levei,,,Levei no banheiro e disse que não quer fazer xixi
 2026-06-03,qua,14:43,Andreia,xixi_e_coco,sim,vaso,sozinho,,,"Foi no banheiro sozinho, fez xixi e cocô"
 2026-06-03,qua,21:06,Samantha,xixi,sim,vaso,sozinho,,,Xixi no vaso foi sozinho
+2026-06-04,qui,07:48,Tony,outro,,fralda,,,Observação de estado (fralda seca).,Acordou com a fralda seca
+2026-06-04,qui,07:48,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei.
+2026-06-04,qui,09:45,Samantha,nao_fez,nao,vaso,recusou,,,disse não quero xixi
+2026-06-04,qui,10:43,Thomas,xixi,sim,vaso,levei,,,Falou xixi levei e fez xixi
+2026-06-04,qui,12:30,Thomas,xixi,sim,vaso,levei,,,Levei no banheiro fez xixi
+2026-06-04,qui,14:36,Samantha,xixi,sim,vaso,levei,,,Falou xixi levei no banheiro e fez xixi
+2026-06-04,qui,16:45,Thomas,xixi,sim,vaso,levei,,"Menciona cocô, mas o evento registrado é xixi.",Falou cocô levei no banheiro mas fez xixi
+2026-06-04,qui,16:59,Thomas,coco,sim,vaso,sozinho,,,Ele foi no banheiro sozinho e fez cocô
+2026-06-04,qui,18:27,Samantha,xixi,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez xixi
+2026-06-04,qui,20:45,Tony,xixi,sim,vaso,levei,,,20:45 / Xixi no vaso. Levei
