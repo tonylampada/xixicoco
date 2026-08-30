@@ -2378,3 +2378,12 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-08-28,sex,18:20,Tia Angelica,xixi,sim,vaso,,,,Fez xixi no vaso 18;20
 2026-08-28,sex,19:43,Tia Angelica,xixi,sim,vaso,levei,,,Fez xixi no vaso levei
 2026-08-28,sex,20:50,Tia Angelica,escape,sim,sala,,assistindo tv,,Escape estava assistindo tv 20:50
+2026-08-29,sab,09:20,Tia Angelica,xixi,sim,vaso,levei,,,Foi ao banheiro e fez xixi no vaso levei
+2026-08-29,sab,12:07,Tia Angelica,xixi,sim,vaso,levei,,,Foi ao banheiro e fez xixi no vaso levei
+2026-08-29,sab,13:29,Tia Angelica,xixi,sim,vaso,levei,,,Foi ao banheiro e fez xixi no vaso levei
+2026-08-29,sab,14:13,Tony,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-08-29,sab,15:31,Samantha,coco,sim,vaso,,,,foi no banheiro sozinha e fez cocô
+2026-08-29,sab,16:22,Tia Angelica,xixi,sim,vaso,,,,Foi ao banheiro e fez xixi
+2026-08-29,sab,17:53,Tia Angelica,xixi_e_coco,sim,outro,,,"Apenas coco, mas o contexto anterior sugere que foi um evento completo.",E fez cocô também
+2026-08-29,sab,17:53,Tia Angelica,escape,sim,cueca,,,Não deu tempo.,Foi ao banheiro e fez xixi na cueca não deu tempo
+2026-08-29,sab,19:36,Tia Angelica,escape,sim,roupa,,assistindo tv,,Escapou xixi estava assistindo tv
