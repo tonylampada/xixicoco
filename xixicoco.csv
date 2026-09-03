@@ -2391,3 +2391,37 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-08-30,dom,10:48,Thomas,xixi,sim,vaso,,,,Falou e fez xixi
 2026-08-30,dom,14:19,Samantha,escape,sim,roupa,,,,Escape xixi as 14 fez na roupa
 2026-08-30,dom,20:32,Tony,coco,sim,vaso,sozinho,,,Coco no vado. Foi sozinho
+2026-08-31,seg,10:30,140686082994242@lid,xixi,sim,vaso,,,,Xixi no vaso as 10:30
+2026-08-31,seg,11:05,147562392748277@lid,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-08-31,seg,13:30,147562392748277@lid,xixi,sim,vaso,levei,,,Xixi no vaso / Professora levou as 13:30hr
+2026-08-31,seg,14:23,147562392748277@lid,coco,sim,vaso,sozinho,,,Coco no vaso. Foi sozinho
+2026-08-31,seg,15:25,147562392748277@lid,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-09-01,ter,10:20,140686082994242@lid,xixi,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez xixi
+2026-09-01,ter,13:44,28931033956428@lid,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-09-01,ter,14:25,28931033956428@lid,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-01,ter,15:14,28931033956428@lid,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-01,ter,16:02,28931033956428@lid,xixi,sim,vaso,pediu,,,Xixi no mictório. Pediu
+2026-09-01,ter,17:02,28931033956428@lid,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-01,ter,18:53,140686082994242@lid,escape,sim,roupa,,hora do almoço,,Escape de xixi hoje na hora do almoço
+2026-09-01,ter,18:53,140686082994242@lid,xixi,sim,vaso,levei,,,Levei no banheiro agora e fez xixi
+2026-09-01,ter,20:25,140686082994242@lid,xixi,sim,vaso,pediu,,,"Falou xixi, fez no vaso"
+2026-09-01,ter,20:58,140686082994242@lid,coco,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez cocô
+2026-09-01,ter,21:23,140686082994242@lid,xixi,sim,vaso,pediu,,,Falou xixi e foi no banheiro e fez no vaso
+2026-09-02,qua,13:38,28931033956428@lid,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-02,qua,14:08,28931033956428@lid,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-02,qua,14:42,28931033956428@lid,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-02,qua,15:13,28931033956428@lid,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-09-02,qua,16:36,28931033956428@lid,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-09-02,qua,17:09,28931033956428@lid,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-02,qua,19:00,5512981440013,xixi,sim,,,,,xixi
+2026-09-02,qua,19:18,5512981440013,coco,sim,vaso,pediu,,,Cocô no vaso. Pediu
+2026-09-02,qua,20:24,5512981440013,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
+2026-09-03,qui,09:45,147562392748277@lid,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-09-03,qui,11:46,140686082994242@lid,xixi,sim,vaso,sozinho,,,xixi no vaso foi sozinho
+2026-09-03,qui,13:14,147562392748277@lid,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-03,qui,13:51,28931033956428@lid,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-09-03,qui,14:22,28931033956428@lid,nao_fez,nao,vaso,pediu,,,"Pediu para ir ao banheiro para fazer cocô, porém não fez"
+2026-09-03,qui,14:48,28931033956428@lid,nao_fez,nao,vaso,pediu,,"Primeira parte: Pediu para ir ao banheiro para fazer cocô, porém não fez. Segunda parte: Xixi no vaso.","Pediu para ir ao banheiro para fazer cocô, porém não fez / Xixi no vaso."
+2026-09-03,qui,15:29,28931033956428@lid,coco,sim,vaso,pediu,,,Cocô no vaso. Pediu
+2026-09-03,qui,16:01,28931033956428@lid,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-03,qui,17:05,28931033956428@lid,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
