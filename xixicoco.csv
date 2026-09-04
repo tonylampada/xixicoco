@@ -2416,12 +2416,14 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-09-02,qua,19:00,5512981440013,xixi,sim,,,,,xixi
 2026-09-02,qua,19:18,5512981440013,coco,sim,vaso,pediu,,,Cocô no vaso. Pediu
 2026-09-02,qua,20:24,5512981440013,xixi,sim,vaso,sozinho,,,Xixi no vaso. Foi sozinho
-2026-09-03,qui,09:45,147562392748277@lid,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
-2026-09-03,qui,11:46,140686082994242@lid,xixi,sim,vaso,sozinho,,,xixi no vaso foi sozinho
-2026-09-03,qui,13:14,147562392748277@lid,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
-2026-09-03,qui,13:51,28931033956428@lid,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
-2026-09-03,qui,14:22,28931033956428@lid,nao_fez,nao,vaso,pediu,,,"Pediu para ir ao banheiro para fazer cocô, porém não fez"
-2026-09-03,qui,14:48,28931033956428@lid,nao_fez,nao,vaso,pediu,,"Primeira parte: Pediu para ir ao banheiro para fazer cocô, porém não fez. Segunda parte: Xixi no vaso.","Pediu para ir ao banheiro para fazer cocô, porém não fez / Xixi no vaso."
-2026-09-03,qui,15:29,28931033956428@lid,coco,sim,vaso,pediu,,,Cocô no vaso. Pediu
-2026-09-03,qui,16:01,28931033956428@lid,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
-2026-09-03,qui,17:05,28931033956428@lid,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-03,qui,09:45,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-09-03,qui,11:46,Samantha,xixi,sim,vaso,sozinho,,,xixi no vaso foi sozinho
+2026-09-03,qui,13:14,Andreia,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-03,qui,13:51,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-09-03,qui,14:22,Vanessa AT,nao_fez,nao,vaso,pediu,,,"Pediu para ir ao banheiro para fazer cocô, porém não fez"
+2026-09-03,qui,14:48,Vanessa AT,nao_fez,nao,vaso,pediu,,"Pediu para ir ao banheiro para fazer cocô, porém não fez","Pediu para ir ao banheiro para fazer cocô, porém não fez / Xixi no vaso."
+2026-09-03,qui,15:29,Vanessa AT,coco,sim,vaso,pediu,,,Cocô no vaso. Pediu
+2026-09-03,qui,16:01,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-03,qui,17:05,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-03,qui,20:30,Tony,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-03,qui,21:55,Samantha,coco,sim,vaso,pediu,,,Cocô no vaso pediu
