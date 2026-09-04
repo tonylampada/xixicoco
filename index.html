@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Relatório Desfralde — Isaac</title>
+<link rel="icon" href="data:,">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <style>
 :root {
@@ -24,6 +25,11 @@ h1 { font-size:1.4em; margin-bottom:4px; }
 .kpi .label { font-size:0.75em; color:var(--muted); margin-top:4px; }
 .card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:16px; margin-bottom:16px; }
 .card h2 { font-size:1em; margin-bottom:12px; color:var(--accent); }
+.card-header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+.card-header h2 { margin-bottom:0; }
+.aggregation-toggle { display:flex; flex-shrink:0; padding:3px; border:1px solid var(--border); border-radius:8px; background:var(--bg); }
+.aggregation-toggle button { padding:5px 10px; border:0; border-radius:5px; background:transparent; color:var(--muted); cursor:pointer; font:inherit; font-size:0.78em; }
+.aggregation-toggle button.active { background:var(--accent); color:#fff; }
 canvas { max-height:260px; }
 table { width:100%; border-collapse:collapse; font-size:0.8em; }
 th, td { padding:6px 8px; border-bottom:1px solid var(--border); text-align:left; }
@@ -36,6 +42,7 @@ th { color:var(--muted); font-weight:600; }
 .loading { text-align:center; padding:60px; color:var(--muted); }
 @media(max-width:600px) {
   .kpis { grid-template-columns:repeat(2,1fr); }
+  .card-header { align-items:flex-start; flex-direction:column; }
   table { font-size:0.7em; }
   th, td { padding:4px; }
 }
@@ -60,6 +67,7 @@ th { color:var(--muted); font-weight:600; }
 const CSV_URL = 'xixicoco.csv';
 let allRows = [];
 let currentTab = 'full';
+let evolutionAggregation = 'weekly';
 
 // Parse CSV
 function parseCSV(text) {
@@ -229,6 +237,27 @@ function computeData(rows) {
     });
   }
 
+  // Monthly — calendar months using only days represented in the filtered CSV
+  const monthMap = new Map();
+  dates.forEach(d => {
+    const key = d.slice(0, 7);
+    if (!monthMap.has(key)) monthMap.set(key, new Set());
+    monthMap.get(key).add(d);
+  });
+  const monthNames = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+  const months = [...monthMap.entries()].sort().map(([key, monthDates]) => {
+    const monthRows = rows.filter(r => monthDates.has(r.data));
+    const monthEscapes = monthRows.filter(isEscape);
+    return {
+      label: `${monthNames[Number(key.slice(5, 7)) - 1]}/${key.slice(0, 4)}`,
+      days: monthDates.size,
+      success: monthRows.filter(isSuccess).length,
+      escape: monthEscapes.length,
+      nao_fez: monthRows.filter(isNaoFez).length,
+      escapes_per_day: monthDates.size > 0 ? monthEscapes.length / monthDates.size : 0,
+    };
+  });
+
   // 7-day rolling
   const daily = new Map();
   dates.forEach(d => daily.set(d, { success: 0, escape: 0 }));
@@ -332,7 +361,7 @@ function computeData(rows) {
   return {
     periodo: { inicio: firstDate, fim: lastDate, dias: numDays, total: rows.length },
     kpis: { taxaSucesso, escapesPerDay: (escapes.length / numDays), sucessosPerDay: (successes.length / numDays), indPct, avgInterval, cocoPct },
-    weeks, trend, escPeriod, dowData, activities, initiative,
+    weeks, months, trend, escPeriod, dowData, activities, initiative,
     escapeSubtypeTotals, escapeSubtypeWeekly,
     coco: { total: cocoTotal, noVaso: cocoVaso, escape: cocoEscape.length, pct: cocoPct },
     naoFez: { total: naoFez.length, perDay: (naoFez.length / numDays) }
@@ -369,7 +398,13 @@ function render(data) {
     </div>
 
     <div class="card">
-      <h2>Evolução Semanal</h2>
+      <div class="card-header">
+        <h2 id="evolutionTitle">Evolução Semanal (blocos de 7 dias)</h2>
+        <div class="aggregation-toggle" role="group" aria-label="Agrupamento do gráfico de evolução">
+          <button type="button" data-aggregation="weekly">Semanal</button>
+          <button type="button" data-aggregation="monthly">Mensal</button>
+        </div>
+      </div>
       <canvas id="weeklyChart"></canvas>
     </div>
 
@@ -462,18 +497,50 @@ function render(data) {
     }
   };
 
-  // Weekly stacked
+  const evolutionData = evolutionAggregation === 'weekly' ? D.weeks : D.months;
+  document.getElementById('evolutionTitle').textContent = evolutionAggregation === 'weekly'
+    ? 'Evolução Semanal (blocos de 7 dias)'
+    : 'Evolução Mensal (mês calendário)';
+  document.querySelectorAll('[data-aggregation]').forEach(button => {
+    const active = button.dataset.aggregation === evolutionAggregation;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-pressed', String(active));
+    button.addEventListener('click', () => {
+      evolutionAggregation = button.dataset.aggregation;
+      applyFilter();
+    });
+  });
+
+  // Evolution: stacked totals plus escapes per represented day
   charts.push(new Chart(document.getElementById('weeklyChart'), {
     type: 'bar',
     data: {
-      labels: D.weeks.map(w => w.label),
+      labels: evolutionData.map(period => period.label),
       datasets: [
-        { label: 'Sucessos', data: D.weeks.map(w => w.success), backgroundColor: '#3fb950' },
-        { label: 'Escapes', data: D.weeks.map(w => w.escape), backgroundColor: '#f85149' },
-        { label: 'Não Fez', data: D.weeks.map(w => w.nao_fez), backgroundColor: '#8b949e' },
+        { label: 'Sucessos', data: evolutionData.map(period => period.success), backgroundColor: '#3fb950', yAxisID: 'y' },
+        { label: 'Escapes', data: evolutionData.map(period => period.escape), backgroundColor: '#f85149', yAxisID: 'y' },
+        { label: 'Não Fez', data: evolutionData.map(period => period.nao_fez), backgroundColor: '#8b949e', yAxisID: 'y' },
+        {
+          type: 'line', label: 'Escapes / dia registrado',
+          data: evolutionData.map(period => Number(period.escapes_per_day.toFixed(1))),
+          borderColor: '#58a6ff', backgroundColor: '#58a6ff', pointBackgroundColor: '#58a6ff',
+          pointBorderColor: '#0d1117', pointBorderWidth: 2, pointRadius: 4, pointHoverRadius: 6,
+          tension: 0.25, yAxisID: 'yEscapesPerDay'
+        },
       ]
     },
-    options: { ...chartOpts, scales: { ...chartOpts.scales, x: { ...chartOpts.scales.x, stacked: true }, y: { ...chartOpts.scales.y, stacked: true } } }
+    options: {
+      ...chartOpts,
+      plugins: {
+        ...chartOpts.plugins,
+        tooltip: { callbacks: { label: context => context.dataset.type === 'line' ? `${context.dataset.label}: ${context.parsed.y.toFixed(1)}` : `${context.dataset.label}: ${context.parsed.y}` } }
+      },
+      scales: {
+        x: { ...chartOpts.scales.x, stacked: true },
+        y: { ...chartOpts.scales.y, stacked: true, position: 'left', beginAtZero: true, title: { display: true, text: 'Registros', color: '#8b949e' } },
+        yEscapesPerDay: { position: 'right', beginAtZero: true, grid: { drawOnChartArea: false }, ticks: { color: '#58a6ff', precision: 1 }, title: { display: true, text: 'Escapes / dia', color: '#58a6ff' } }
+      }
+    }
   }));
 
   // Trend
