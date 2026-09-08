@@ -2459,3 +2459,15 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-09-06,dom,18:05,Samantha,coco,sim,vaso,pediu,,,Pediu pra fazer cocô e fez no vaso
 2026-09-06,dom,19:16,Samantha,xixi,sim,vaso,pediu,,,"Falou xixi, foi no banheiro e fez"
 2026-09-06,dom,19:21,Samantha,coco,sim,vaso,pediu,,,Falou cocô foi no banheiro e fez um pouco
+2026-09-07,seg,09:29,Thomas,xixi,sim,vaso,levei,,,Levei no banheiro e fex xixi
+2026-09-07,seg,11:01,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei.
+2026-09-07,seg,12:26,Tony,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-07,seg,13:18,Tony,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-07,seg,13:50,Samantha,nao_fez,nao,vaso,levei,,,Pediu xixi levei no banheiro e não fez nada
+2026-09-07,seg,14:05,Samantha,xixi,sim,vaso,pediu,,,Pediu xixi levei no banheiro e fez
+2026-09-07,seg,16:18,Tony,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-07,seg,16:48,Samantha,coco,sim,vaso,pediu,,,Pediu pra fazer cocô e fez no banheiro
+2026-09-07,seg,18:22,Samantha,escape,sim,roupa,pediu,,Falou xixi mas já tinha feito na roupa,Falou xixi mas já tinha feito na roupa. Estava na loja comigo
+2026-09-07,seg,20:11,Thomas,xixi,sim,vaso,sozinho,,,Fez xixi no vaso sozinho
+2026-09-07,seg,20:50,Tony,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-07,seg,21:58,Samantha,coco,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez cocô
