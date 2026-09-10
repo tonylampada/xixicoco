@@ -2481,3 +2481,11 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-09-08,ter,18:04,Samantha,escape,sim,roupa,,no carro,,Escape xixi no carro
 2026-09-08,ter,19:10,Samantha,xixi,sim,chuveiro,,,,Fez xixi no banho
 2026-09-08,ter,21:30,Samantha,coco,sim,vaso,,,,fez cocô
+2026-09-09,qua,10:18,Tony,coco,sim,vaso,sozinho,,,Coco no vaso. Foi sozinho
+2026-09-09,qua,11:32,Tony,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-09,qua,13:30,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro para fazer xixi as 13:30
+2026-09-09,qua,13:50,Samantha,coco,sim,vaso,pediu,,Fez um pouquinho de cocô.,Pediu para fazer cocô as 13:50 e fez um pouquinho
+2026-09-09,qua,14:30,Tony,coco,sim,vaso,pediu,,,Coco no vaso. Pediu
+2026-09-09,qua,19:07,Tony,xixi,sim,vaso,pediu,,,Xixi no baso pediu
+2026-09-09,qua,21:22,Tony,coco,sim,vaso,pediu,,"Coco no vaso. Pediu xixi, mas era cocô.","Coco no vaso. Pediu xixi, mas era cocô"
+2026-09-09,qua,21:46,Tony,xixi_e_coco,sim,vaso,pediu,,"Coco e xixi no vaso. Pediu xixi, fez mais coco.","Coco no vaso. Pediu xixi, fez mais coco"
