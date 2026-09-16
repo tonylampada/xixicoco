@@ -2510,3 +2510,12 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-09-14,seg,17:32,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
 2026-09-14,seg,19:56,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei. Mas ao uns pinguinhos
 2026-09-14,seg,20:29,Tia Angelica,coco,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez cocô
+2026-09-15,ter,08:41,Tia Angelica,nao_fez,nao,vaso,levei,,,mas não fez xixi
+2026-09-15,ter,10:53,Tia Angelica,nao_fez,nao,vaso,recusou,,,não quis fazer xixi
+2026-09-15,ter,12:20,Samantha,xixi,sim,chuveiro,,banho da natação,,Fez xixi no banho da natação
+2026-09-15,ter,13:40,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-15,ter,15:00,Vanessa AT,xixi,sim,vaso,levei,,,15h00 xixi no vaso. Levei
+2026-09-15,ter,16:16,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-09-15,ter,18:04,Tia Angelica,xixi_e_coco,sim,outro,,,,Fez xixi e cocô antes do banho
+2026-09-15,ter,18:05,Vanessa AT,coco,sim,outro,,,,Fez cocô
+2026-09-15,ter,18:58,Tia Angelica,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
