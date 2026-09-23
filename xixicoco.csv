@@ -2559,3 +2559,10 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-09-21,seg,17:29,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
 2026-09-21,seg,21:01,Tony,coco,sim,vaso,sozinho,,,Coco no vaso. Foi sozinho. Correndo igual uma bala
 2026-09-21,seg,21:03,Tony,coco,sim,fralda,,,,Ja tinha um tanto de cocô na fralda também
+2026-09-22,ter,10:12,Andreia,nao_fez,nao,vaso,levei,,Fralda com pouco xixi.,"Levei no banheiro, nao fez xixi."
+2026-09-22,ter,12:25,Andreia,xixi,sim,vaso,levei,,Fralda molhada.,Xixi no vaso. Levei
+2026-09-22,ter,14:25,Vanessa AT,xixi,sim,vaso,levei,,"Fralda molhada, não troquei.",Xixi no vaso. Levei
+2026-09-22,ter,15:49,Vanessa AT,coco,sim,vaso,pediu,,,Cocô no vaso. Pediu
+2026-09-22,ter,16:41,Vanessa AT,coco,sim,fralda,pediu,,Falou cocô e já tinha feito na fralda.,Cocô na fralda.
+2026-09-22,ter,17:30,Vanessa AT,nao_fez,nao,vaso,pediu,,"Pediu para fazer xixi, mas não fez. Fralda estava com xixi.","Pediu para fazer xixi, mas não fez."
+2026-09-22,ter,19:30,Samantha,nao_fez,nao,vaso,levei,,"Fralda estava suja, troquei.",Levei no bandeiro as 19:30 não fez xixi
