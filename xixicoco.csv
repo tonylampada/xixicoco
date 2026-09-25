@@ -2574,3 +2574,14 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-09-23,qua,13:53,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
 2026-09-23,qua,14:09,Vanessa AT,coco,sim,fralda,,,,Cocô na fralda
 2026-09-23,qua,15:26,Vanessa AT,escape,sim,fralda,pediu,,Pediu xixi mas já tinha feito na fralda,Pediu xixi mas já tinha feito na fralda/ não troquei
+2026-09-24,qui,09:00,Dyani AT,nao_fez,nao,fralda,,,Não quis fazer xixi,Troquei a fralda 9:00 / Não quis fazer xixi
+2026-09-24,qui,11:20,Dyani AT,outro,sim,fralda,,,Tirei fralda,Tirei fralda
+2026-09-24,qui,11:20,Dyani AT,xixi,sim,vaso,,,,Xixi no vaso
+2026-09-24,qui,12:05,Dyani AT,xixi,sim,vaso,,,,Fez xixi no vaso 12:05
+2026-09-24,qui,13:46,Vanessa AT,coco,sim,vaso,,,,Cocô no vaso
+2026-09-24,qui,13:46,Vanessa AT,nao_fez,nao,fralda,,,,Fralda cheia
+2026-09-24,qui,13:46,Vanessa AT,xixi,nao,fralda,pediu,,Já tinha feito na fralda,"Pediu para fazer xixi, mas já tinha feito na fralda"
+2026-09-24,qui,14:45,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi no vaso. Pedii
+2026-09-24,qui,15:20,Vanessa AT,coco,sim,fralda,,,Disse: cocô!? Mas já tinha feito na fralda,Cocô na fralda. Disse: cocô!? Mas já tinha feito na fralda
+2026-09-24,qui,17:34,Vanessa AT,xixi,sim,vaso,levei,,Fralda estava cheia,Xixi no vaso. Levei / Fralda estava cheia
+2026-09-24,qui,19:33,Samantha,coco,sim,vaso,sozinho,,,Foi no banheiro sozinho e fez cocô
