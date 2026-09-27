@@ -2589,3 +2589,8 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-09-25,sex,10:50,Dyani AT,xixi,sim,vaso,pediu,,,Pediu xixi no vaso 10:50
 2026-09-25,sex,14:43,Vanessa AT,coco,sim,vaso,pediu,,,Cocô no vaso. Pediu
 2026-09-25,sex,16:16,Vanessa AT,xixi,sim,vaso,levei,,Fralda estava muito cheia,Xixi no vaso. Levei / Fralda estava muito cheia
+2026-09-26,sab,11:04,Samantha,xixi,sim,vaso,,,,Falou e fez xixi no vaso
+2026-09-26,sab,13:10,Samantha,nao_fez,nao,vaso,levei,,Fralda cheia troquei,"Levei no banheiro para fazer xixi não fez, fralda cheia troquei"
+2026-09-26,sab,13:16,Samantha,xixi,sim,vaso,levei,,,Falou xixi levamos no banheiro e fez um pouquinho
+2026-09-26,sab,15:15,Samantha,xixi,sim,fralda,levei,,"Fez só um pouquinho, fralda cheia, troquei","Levei no banheiro fez só um pouquinho, fralda cheia, troquei"
+2026-09-26,sab,17:24,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
