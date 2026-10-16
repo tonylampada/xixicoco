@@ -2810,3 +2810,16 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-10-14,qua,19:00,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Em pe. Levei
 2026-10-14,qua,20:53,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Em pe. Levei
 2026-10-14,qua,21:30,Samantha,xixi,sim,vaso,,,,Xixi sentado no vaso as 21:30
+2026-10-15,qui,09:39,Andreia,xixi,sim,vaso,levei,,,"Xixi no vaso, em pé. Levei"
+2026-10-15,qui,12:10,Andreia,xixi_e_coco,sim,vaso,levei,,,12:10 hr xixi e coco no vaso. Itamara levou
+2026-10-15,qui,13:15,Andreia,xixi,sim,vaso,levei,,,13:15hr xixi no vaso. Levei Sentado
+2026-10-15,qui,13:22,Andreia,nao_fez,nao,fralda,levei,,Fralda cheia,"Levei no banheiro, nao fez xixi. Fralda cheia"
+2026-10-15,qui,14:02,Vanessa AT,xixi,sim,vaso,pediu,,,Xixi no vaso. Pediu
+2026-10-15,qui,14:59,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-10-15,qui,15:14,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-10-15,qui,16:00,Tony,escape,sim,roupa,,no carro,,Escape xixi. Tava no carro
+2026-10-15,qui,16:18,Vanessa AT,xixi,sim,vaso,levei,,,Xixi no vaso. Levei
+2026-10-15,qui,17:03,Vanessa AT,escape,sim,roupa,,fazendo atividade,,Escape xixi. Estava fazendo atividade
+2026-10-15,qui,19:36,Tony,xixi,sim,vaso,sozinho,,,Xixi no vaso. Em pe. Foi sozinho
+2026-10-15,qui,20:35,Andreia,xixi,sim,vaso,levei,,,Xixi no vaso. Sentado
+2026-10-15,qui,20:35,Samantha,xixi,sim,vaso,mandei,,,"Xixi no vaso, mandei ir"
