@@ -2943,3 +2943,12 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-10-24,sab,19:26,Tony,xixi,sim,vaso,levei,,"Xixi no vaso, em pé.","Xixi no vaso, em pé. Levei."
 2026-10-24,sab,20:13,Tony,escape,sim,roupa,,correndo no quarto,Mijou na roupa,Escape. Mijou na roupa. Tava correndo no quarto
 2026-10-24,sab,21:12,Tony,escape,sim,roupa,,escovando o dente,Mijou na roupa em pé no banheiro,Escape. Tava escovando o dente e mijou na roupa em pe no banheiro
+2026-10-25,dom,09:35,Tony,nao_fez,nao,vaso,levei,,Acordou com a dralda cheia. Coloquei cueca,Levei no banheiro mas nao fez xixi
+2026-10-25,dom,10:30,Tony,xixi,sim,vaso,levei,,,Xixi no vaso. Levei. Em pe
+2026-10-25,dom,12:15,Tony,xixi,sim,vaso,pediu,,,Xixi no vaso. Em pe. Pediu
+2026-10-25,dom,14:24,Samantha,xixi,sim,vaso,,,,Xixi no vaso em pé
+2026-10-25,dom,17:08,Thomas,xixi,sim,vaso,,,,Xixi no vaso em pé
+2026-10-25,dom,17:09,Thomas,xixi,sim,,levei,,,Levei
+2026-10-25,dom,18:40,Tony,xixi,sim,vaso,levei,,,Xixi no vaso em pe. Levei
+2026-10-25,dom,19:45,Tony,xixi,sim,banheiro,,,,Xixi no banho
+2026-10-25,dom,21:02,Samantha,escape,sim,quintal,,quarto,,Escape xixi estava no quarto
