@@ -3008,3 +3008,17 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-10-31,sab,19:02,Thomas,xixi,sim,vaso,,,Sentado,"Xixi no vaso, sentado"
 2026-10-31,sab,20:05,Tia Angelica,xixi,sim,vaso,,,Sentado,Xixi no vaso sentado
 2026-10-31,sab,20:56,Tia Angelica,xixi,sim,vaso,levei,,Fez sentado,Xixi no vaso levei fez sentado
+2026-11-01,dom,08:58,Tia Angelica,nao_fez,nao,vaso,levei,,,Levei ao banheiro e não fez xixi
+2026-11-01,dom,09:53,Tia Angelica,xixi,sim,vaso,levei,,sentado,Levei no banheiro e fez xixi sentado
+2026-11-01,dom,11:01,Thomas,xixi,sim,vaso,,,sentado,"Xixi no vaso, sentado"
+2026-11-01,dom,12:27,Thomas,xixi,sim,vaso,,,,"Xixi no vaso, sentado"
+2026-11-01,dom,12:57,Thomas,xixi_e_coco,sim,vaso,pediu,,Pediu pra fazer cocô,"Xixi no vaso, sentado. Pediu pra fazer cocô"
+2026-11-01,dom,13:23,Thomas,xixi,sim,vaso,,,sentado,"Xixi no vaso, sentado"
+2026-11-01,dom,14:43,Tia Angelica,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi no vaso sentado
+2026-11-01,dom,14:43,Tia Angelica,xixi,sim,vaso,levei,,sentado,Levei no banheiro e fez xixi sentado
+2026-11-01,dom,15:36,Tia Angelica,xixi_e_coco,sim,vaso,sozinho,,,Foi sozinho no banheiro e fez xixi e cocô
+2026-11-01,dom,17:17,Tia Angelica,xixi,sim,vaso,levei,,sentado,Levei ele no banheiro e fez xixi sentado
+2026-11-01,dom,17:32,Tia Angelica,xixi,sim,chuveiro,,,,Fez xixi no banho
+2026-11-01,dom,18:36,Tia Angelica,xixi,sim,vaso,,,,Xixi no vaso sentado
+2026-11-01,dom,20:05,Tia Angelica,xixi,sim,vaso,,,,Xixi no vaso sentado
+2026-11-01,dom,21:13,Tia Angelica,xixi,sim,vaso,,,,Xixi no vaso sentado
