@@ -3252,3 +3252,8 @@ data,dia_semana,hora,quem_registrou,tipo,sucesso,local,iniciativa,atividade_esca
 2026-11-21,sab,16:15,Thomas,xixi,sim,vaso,levei,,,Levei fez xixi em pé em casa
 2026-11-21,sab,18:30,Samantha,coco,sim,calção,levei,,,"Quase fez cocô na calça, eu vi a tempo, e levei no banheiro"
 2026-11-21,sab,19:33,Samantha,xixi,sim,vaso,,,,Xixi sentado
+2026-11-22,dom,11:15,Thomas,escape,sim,sofa,,,,Escape xixi no Sofá
+2026-11-22,dom,12:17,Samantha,nao_fez,nao,vaso,levei,,,Levei no banheiro não fez xixi
+2026-11-22,dom,16:33,Samantha,xixi,sim,vaso,levei,,,Levei no banheiro e fez xixi
+2026-11-22,dom,17:30,Samantha,xixi,sim,vaso,,,,Xixi no vaso as 17:30
+2026-11-22,dom,18:30,Samantha,xixi,sim,vaso,,,,Xixi sentado as 18:30
